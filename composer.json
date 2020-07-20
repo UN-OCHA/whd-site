@@ -1,0 +1,96 @@
+{
+    "name": "unocha/whd",
+    "description": "World Humanitarian Day",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "UNOCHA",
+            "role": "ops@reliefweb.int"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/core": "8.9.2",
+        "symfony/flex": "^1.9",
+        "webflo/drupal-finder": "^1.2",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+        "drupal/coder": "^8.3",
+        "drupal/devel": "^2.1",
+        "drupal/devel_entity_updates": "^1.0@RC",
+        "drupal/devel_php": "^1.1",
+        "phpmd/phpmd": "^2.6",
+        "weitzman/drupal-test-traits": "^1.2",
+        "weitzman/logintrait": "^1.1"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+    "bin-dir": "vendor/bin/",
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+    "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches-file": "composer.patches.json",
+        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-paths": {
+            "html/core": ["type:drupal-core"],
+            "html/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "html/modules/contrib/{$name}": ["type:drupal-module"],
+            "html/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "html/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        }
+    }
+}
