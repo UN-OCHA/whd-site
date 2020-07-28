@@ -1,5 +1,5 @@
 uuid: dd71e2d2-6baa-4354-921e-2a3435ba2c68
-name: Site-Install
+name: 'World Humanitarian Day'
 mail: admin@example.com
 slogan: ''
 page:
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ops@reliefweb.int
