@@ -1,0 +1,22 @@
+uuid: bcc914f2-fc2f-4b52-a789-abe5b71e6bca
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - whd
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: whd_messages
+theme: whd
+region: content
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

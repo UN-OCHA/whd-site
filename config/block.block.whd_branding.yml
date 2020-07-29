@@ -1,0 +1,25 @@
+uuid: e91a44a2-5ab6-4314-a580-4bbe5ab98e1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - whd
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: whd_branding
+theme: whd
+region: header_logo
+weight: -3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

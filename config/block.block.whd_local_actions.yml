@@ -1,0 +1,20 @@
+uuid: 5efc5189-61bc-4fff-8321-1e2862836e4b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whd
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: whd_local_actions
+theme: whd
+region: content
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,32 @@
+uuid: 0c17a56e-dc4d-482c-8dd7-0c5eaa839851
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_content
+    - node.type.basic_page
+  module:
+    - entity_reference_revisions
+id: node.basic_page.field_media_content
+field_name: field_media_content
+entity_type: node
+bundle: basic_page
+label: 'Media content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles: null
+    target_bundles_drag_drop:
+      text_and_image:
+        weight: 4
+        enabled: false
+      video:
+        weight: 3
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,73 @@
+uuid: 8eee53e4-8385-417f-a249-5fdda652ffbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.responsive_image
+  module:
+    - inline_responsive_images
+    - media
+name: 'Full HTML'
+format: full_html
+weight: 0
+filters:
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <drupal-media data-entity-type, data-entity-uuid data-entity-type data-view-mode data-align data-caption alt title>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types:
+        image: image
+        video: video
+      allowed_view_modes:
+        responsive_image: responsive_image
+  filter_responsive_image_style:
+    id: filter_responsive_image_style
+    provider: inline_responsive_images
+    status: true
+    weight: 0
+    settings:
+      responsive_style_mobile: '1'
+  filter_imagestyle:
+    id: filter_imagestyle
+    provider: inline_responsive_images
+    status: false
+    weight: 0
+    settings:
+      image_style_desktop_x1: '0'
+      image_style_desktop_x2: '0'
+      image_style_large: '0'
+      image_style_media_library: '0'
+      image_style_medium: '0'
+      image_style_mobile_x1: '0'
+      image_style_mobile_x2: '0'
+      image_style_tablet_x1: '0'
+      image_style_tablet_x2: '0'
+      image_style_thumbnail: '0'
+      image_style_video_embed_wysiwyg_preview: '0'
+      image_style_xlarge_x: '0'
+      image_style_xlarge_x1: '0'
