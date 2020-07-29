@@ -1,0 +1,45 @@
+<li>
+	{% if content.field_image|render %}
+	<img src="{{content.field_image}}" data-aos="fade-up">
+	{% endif %}
+	<article data-aos="fade-up">
+		<h3>{{content.field_label}}</h3>
+		{% if content.field_location|render %}
+		{% endif %}
+		<p>{{content.body}}</p>
+	</article>
+	<div class="cta">{{content.field_cta}}</div>
+	{% if content.field_detail|render %}
+	<aside style="background-image: url({{content.field_background_image}});" data-aos="fade-up">
+		<div class="button-close">
+			<svg viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+			    <defs></defs>
+			    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			        <g id="Victim-story---modal" transform="translate(-1352.000000, 0.000000)">
+			            <g id="button/close" transform="translate(1352.000000, 0.000000)">
+			                <g id="Close-btn">
+			                    <rect id="close-btn-bg" fill="#000000" x="0" y="0" width="88" height="88"></rect>
+			                    <g id="icon/close/blue" transform="translate(30.000000, 30.000000)" stroke="#00A9E0" stroke-linecap="square">
+			                        <g id="X">
+			                            <path d="M28.2842712,0 L0,28.2842712" id="Line" stroke-width="2" transform="translate(14.142136, 14.142136) scale(-1, 1) translate(-14.142136, -14.142136) "></path>
+			                            <path d="M28.2842712,0 L0,28.2842712" id="Line-Copy" stroke-width="2"></path>
+			                        </g>
+			                    </g>
+			                </g>
+			            </g>
+			        </g>
+			    </g>
+			</svg>
+		</div>
+		{% if content.field_image|render %}
+		<img src="{{content.field_image}}">
+		{% endif %}
+		<article>
+			<h3>{{content.field_label}}</h3>
+			<p class="location">{{content.field_location}}</p>
+			{{content.field_detail}}
+		</article>
+	</aside>
+	{% endif %}
+</li>

@@ -1,0 +1,23 @@
+name: whd-2018
+type: theme
+base theme: classy
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+package: Core
+core: 8.x
+libraries:
+  - whd/global-styling
+  - whd/fonts
+libraries-override:
+  classy/base: false
+  stable/base: false
+  #toolbar/toolbar: false
+ckeditor_stylesheets:
+  - css/base/elements.css
+  - css/components/captions.css
+  - css/components/table.css
+  - css/components/text-formatted.css
+regions:
+  blocks: 'Blocks'
+  content: 'Content'
+features:
+  favicon: false

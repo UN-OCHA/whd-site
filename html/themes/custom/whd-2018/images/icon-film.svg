@@ -1,0 +1,21 @@
+
+<svg width="25px" height="12px" viewBox="0 0 25 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop---main" transform="translate(-780.000000, -3417.000000)" fill="#FFFFFF">
+            <g id="right-column" transform="translate(670.000000, 0.000000)">
+                <g id="Protecting-civilians" transform="translate(0.000000, 2361.000000)">
+                    <g id="Doctor" transform="translate(0.000000, 370.000000)">
+                        <g id="watch-film" transform="translate(110.000000, 684.000000)">
+                            <g id="icon/film" transform="translate(0.000000, 2.000000)">
+                                <path d="M3,12 C1.343,12 0,10.657 0,9 L0,3 C0,1.343 1.343,0 3,0 L13,0 C14.657,0 16,1.343 16,3 L16,9 C16,10.657 14.657,12 13,12 L3,12 Z M23.6429,11.7095795 L19.5429,9.60257948 C19.2099,9.43157948 18.9999,9.08757948 18.9999,8.71357948 L18.9999,4.10057948 C18.9999,3.72557948 19.2099,3.38257948 19.5429,3.21057948 L23.6429,1.10457948 C24.2629,0.785579479 24.9999,1.23557948 24.9999,1.93257948 L24.9999,10.8805795 C24.9999,11.5775795 24.2629,12.0275795 23.6429,11.7095795 Z" id="film"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

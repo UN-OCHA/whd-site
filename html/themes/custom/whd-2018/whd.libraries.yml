@@ -1,0 +1,46 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      includes/bootstrap/css/bootstrap.css: {}
+      includes/bootstrap/css/bootstrap-theme.css: {}
+      includes/bootstrap/css/bootstrap-select.css: {}
+    theme:
+      css/bootstrap.min.css: {}
+      css/bootstrap-theme.min.css: {}
+      css/aos.css: {}
+      css/styles.css: {}
+  js:
+    js/jquery-3.2.1.min.js: {}    
+    js/bootstrap.min.js: {}
+    js/bootstrap-select.min.js: {}
+    js/jquery.touchSwipe.min.js: {}
+    js/aos.min.js: {}
+    js/whd.js: {}
+  dependencies:
+    - core/drupal
+
+fonts:
+  css:
+    theme:
+      #//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i: { type: external }
+      //fonts.googleapis.com/css?family=Roboto:300,400,500,700: { type: external }  
+
+color.preview:
+  version: VERSION
+  css:
+    theme:
+      color/preview.css: {}
+  js:
+    color/preview.js: {}
+  dependencies:
+    - color/drupal.color
+
+maintenance_page:
+  version: VERSION
+  css:
+    theme:
+      css/maintenance-page.css: {}
+  dependencies:
+    - system/maintenance
+    - cbtd/global-styling

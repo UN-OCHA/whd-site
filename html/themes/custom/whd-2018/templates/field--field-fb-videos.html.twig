@@ -1,0 +1,5 @@
+<div class="fb-video" id="featured-story-video" data-width="" data-href="" data-show-text="false"></div>
+<script type="text/javascript">
+var video_data = {{items|json_encode|raw}};
+document.getElementById('featured-story-video').setAttribute('data-href',video_data[Math.floor(Math.random()*video_data.length)].content['#context'].value);
+</script>

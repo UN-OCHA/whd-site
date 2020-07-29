@@ -1,0 +1,35 @@
+whd.xs:
+  label: extra small
+  mediaQuery: "(min-width: 0px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+whd.sm:
+  label: small
+  mediaQuery: "(min-width: 576px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+whd.md:
+  label: tablet
+  mediaQuery: "(min-width: 768px)"
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+whd.lg:
+  label: desktop
+  mediaQuery: "(min-width: 1024px)"
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+whd.xl:
+  label: xlarge
+  mediaQuery: "(min-width: 1200px)"
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x

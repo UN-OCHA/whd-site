@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_css_alter().
+ */
+function whd_css_alter(&$css) {
+  // Add CDN FontAwesome (Support from IE8).
+  $fontawesome = '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css';
+  $css[$fontawesome] = [
+    'data' => $fontawesome,
+    'type' => 'external',
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_AGGREGATE_THEME,
+    'browsers' => ['IE' => 'gte IE 8'],
+    'weight' => 1,
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function whd_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  if ($variables['elements']['#node']->getType() == 'page') {
+    $suggestions[] = 'page__node__' . $variables['elements']['#node']->getType();
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function whd_preprocess_page(&$variables) {
+  $variables['logopath'] = '/' . drupal_get_path('theme', 'whd') . '/logo.png';
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function whd_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__node__' . $node->getType();
+  }
+}
+
+// @codingStandardsIgnoreStart
+// phpcs:disable
+// function whd_preprocess_views_view_field(&$variables) {
+//   $field_machine_name = $variables['field']->realField;
+//   if ($field_machine_name == 'nid') {
+//     $article_nid = $variables['field']->getValue($variables['row']);
+//     $node_article = Node::load($article_nid);
+//     $variables['youtubevideoid'] = $node_article->field_video->value;
+//   }
+//   else{
+//     $variables['youtubevideoid'] = 'testing';
+//   }
+// }
+// phpcs:enable
+// @codingStandardsIgnoreEnd
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ */
+function whd_preprocess_views_view_fields(&$variables) {
+  $article_nid = \Drupal::routeMatch()->getRawParameter('node');
+
+  $node_article = Node::load($article_nid);
+  if ($node_article) {
+    if ($node_article->getType() == 'article') {
+      $field_video = explode('/', $node_article->field_video->value);
+      $len_field_video = count($field_video);
+      $variables['videoid'] = $field_video[$len_field_video - 1];
+    }
+    else {
+      $variables['videoid'] = '';
+    }
+  }
+  else {
+    $variables['videoid'] = '';
+  }
+  if (in_array($variables['view']->name, ['together_tumbler'])) {
+    $variables['theme_hook_suggestions'][] = 'views_view_fields__carousel';
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function whd_preprocess_block(&$variables) {
+  $node_load = \Drupal::routeMatch()->getParameter('node');
+  if ($node_load) {
+    $article_name = str_replace("'", "", $node_load->title->value);
+    $variables['article_name'] = $article_name;
+    $variables['#cache']['contexts'][] = 'url.path';
+    $variables['#cache']['contexts'][] = 'url.query_args';
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function whd_preprocess_html(&$variables) {
+  $variables['language'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function whd_preprocess(&$variables, $hook) {
+  // Create a theme_path variable for asset links.
+  $variables['theme_path'] = base_path() . $variables['directory'];
+}
