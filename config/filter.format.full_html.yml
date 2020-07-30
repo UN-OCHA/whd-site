@@ -51,24 +51,31 @@ filters:
     status: true
     weight: 0
     settings:
-      responsive_style_mobile: '0'
       responsive_style_responsive_image: '1'
+      responsive_style_responsive_thumbnail: '1'
   filter_imagestyle:
     id: filter_imagestyle
     provider: inline_responsive_images
     status: false
     weight: 0
     settings:
+      image_style_desktop_thumbnail_x1: '0'
+      image_style_desktop_thumbnail_x2: '0'
       image_style_desktop_x1: '0'
       image_style_desktop_x2: '0'
       image_style_large: '0'
       image_style_media_library: '0'
       image_style_medium: '0'
+      image_style_mobile_thumbnail_x1: '0'
+      image_style_mobile_thumbnail_x2: '0'
       image_style_mobile_x1: '0'
       image_style_mobile_x2: '0'
+      image_style_tablet_thumbnail_x1: '0'
+      image_style_tablet_thumbnail_x2: '0'
       image_style_tablet_x1: '0'
       image_style_tablet_x2: '0'
       image_style_thumbnail: '0'
-      image_style_video_embed_wysiwyg_preview: '0'
+      image_style_xlarge_thumbnail_x1: '0'
+      image_style_xlarge_thumbnail_x2: '0'
       image_style_xlarge_x: '0'
       image_style_xlarge_x1: '0'

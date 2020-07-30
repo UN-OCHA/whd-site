@@ -5,22 +5,21 @@ dependencies:
   config:
     - field.field.media.image.field_media_image
     - media.type.image
-    - responsive_image.styles.responsive_image
   module:
-    - responsive_image
+    - image
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
   field_media_image:
-    label: visually_hidden
+    label: above
     weight: 0
     settings:
-      responsive_image_style: responsive_image
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: responsive_image
+    type: image
     region: content
 hidden:
   created: true
