@@ -26,7 +26,6 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/core": "8.9.2",
         "drupal/fitvids": "^1.1",
-        "drupal/inline_responsive_images": "^2.1",
         "drupal/paragraphs": "^1.12",
         "drupal/video_embed_field": "^2.4",
         "drush/drush": "^9.0.0",
