@@ -1,4 +1,4 @@
-uuid: 64d62195-006e-4172-a0dc-ff8a0689b7f8
+uuid: 30cf63e5-e7dd-46d2-b4f8-353fb038c762
 langcode: en
 status: true
 dependencies:
@@ -13,8 +13,8 @@ dependencies:
     - image.style.xlarge_x1
   theme:
     - whd
-id: mobile
-label: 'responsive image'
+id: responsive_image
+label: 'Responsive image'
 image_style_mappings:
   -
     breakpoint_id: whd.lg

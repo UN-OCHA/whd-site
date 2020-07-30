@@ -51,7 +51,8 @@ filters:
     status: true
     weight: 0
     settings:
-      responsive_style_mobile: '1'
+      responsive_style_mobile: '0'
+      responsive_style_responsive_image: '1'
   filter_imagestyle:
     id: filter_imagestyle
     provider: inline_responsive_images
