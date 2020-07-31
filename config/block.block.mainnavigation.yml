@@ -1,0 +1,25 @@
+uuid: aae52ae1-f0ec-4f6f-b14b-0523b831d5fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - whd
+id: mainnavigation
+theme: whd
+region: header_navigation
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
