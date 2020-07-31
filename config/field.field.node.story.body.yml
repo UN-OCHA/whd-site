@@ -1,18 +1,16 @@
-uuid: 67defeb3-2005-4fdb-be71-939c614ee271
+uuid: 8eb19923-ff1a-48b9-9d51-200b4665820a
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.book
+    - node.type.story
   module:
     - text
-_core:
-  default_config_hash: 718sPNbCWIXxNeDj1kRMyvll4TdMM9sxlzPrShb1dKU
-id: node.book.body
+id: node.story.body
 field_name: body
 entity_type: node
-bundle: book
+bundle: story
 label: Body
 description: ''
 required: false

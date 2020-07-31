@@ -5,10 +5,10 @@
 .cd-nav__btn {
   background: transparent;
   border: 0 none $cd-border-color;
-  border-left: 1px solid $cd-border-color;
-  border-right: 1px solid $cd-border-color;
+  //border-left: 1px solid $cd-border-color;
+  //border-right: 1px solid $cd-border-color;
   @include font-size($cd-font-size-small);
-  color: $cd-default-text-color;
+  color: $cd-white;
   height: $cd-site-header-height;
   padding: 0 20px;
   text-transform: uppercase;
@@ -31,18 +31,18 @@
 
   &[aria-expanded] .cd-icon--arrow-down {
     margin-left: 4px;
-    fill: $cd-highlight-red;
+    fill: $cd-white;
   }
 
   &[aria-expanded='true'] {
     position: relative;
     z-index: 101;
-    color: $cd-dark-text-color;
+    color: $cd-white;
 
     &::before {
       bottom: -3px;
       content: '';
-      background: $cd-highlight-red;
+      background: $cd-white;
       height: 3px;
       left: -1px;
       position: absolute;
@@ -52,14 +52,14 @@
     }
 
     &:focus {
-      background: $cd-white-bg-color;
+      background: $cd-dark-text-color;
     }
   }
 
   &:hover,
   &:focus {
-    color: $cd-dark-text-color;
-    background: $cd-mid-bg-color;
+    color: $cd-white;
+    background: $cd-dark-text-color;
     outline: none; // default browser outline is replaced by background colour change.
   }
 }
@@ -78,12 +78,14 @@
     @include max-width(lg) {
       &[data-cd-hidden='false'] {
         background: $cd-white;
-        height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
+        //height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
+        height: calc(100vh - (#{$cd-site-header-height} + 3px));
         padding: 20px 0 36px;
         position: absolute;
         right: 0;
         left: 0;
-        top: calc(#{$cd-global-header-height} + #{$cd-site-header-height} + 3px);
+        //top: calc(#{$cd-global-header-height} + #{$cd-site-header-height} + 3px);
+        top: calc(#{$cd-site-header-height} + 3px);
       }
 
       &[data-cd-hidden='false'] > ul {
@@ -117,7 +119,7 @@
 
     > ul {
       display: none;
-      background: $cd-white;
+      background: $cd-dark-text-color;
 
       @include desktop {
         background: transparent;
@@ -137,10 +139,10 @@
 
     a,
     button {
-      color: $cd-default-text-color;
+      color: $cd-white;
       padding: 15px 30px;
       text-decoration: none;
-      text-align: left;
+      text-align: center;
       display: block;
 
       @supports (display: flex) {
@@ -149,8 +151,8 @@
 
       &:hover,
       &:focus {
-        background: $cd-mid-bg-color;
-        color: $cd-dark-text-color;
+        background: $cd-dark-text-color;
+        color: $cd-white;
         outline: none; // default browser outline is replaced by background colour change.
       }
     }
@@ -281,10 +283,10 @@
       }
 
       > .menu-item {
-        border-right: 1px solid $cd-border-color;
+        //border-right: 1px solid $cd-border-color;
 
         &:first-child {
-          border-left: 1px solid $cd-border-color;
+          //border-left: 1px solid $cd-border-color;
         }
 
         &:last-child {
@@ -322,11 +324,11 @@
           }
 
           &:hover {
-            background: $cd-mid-bg-color;
+            background: $cd-dark-text-color;
           }
 
           &:focus {
-            background: $cd-white-bg-color;
+            background: $cd-dark-text-color;
           }
 
           &.is-active,
@@ -342,7 +344,7 @@
         a,
         button {
           &:hover {
-            background: $cd-mid-bg-color;
+            background: $cd-dark-text-color;
           }
 
           &.is-active {
@@ -360,7 +362,7 @@
 
 .no-js .cd-site-header__nav-holder .cd-nav {
   display: block;
-  background: $cd-white;
+  background: $cd-dark-text-color;
   padding: 0;
   position: relative;
   right: 0;

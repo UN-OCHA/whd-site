@@ -4,10 +4,6 @@
 
 html {
   height: 100%;
-
-  @include desktop {
-    padding: 0 $cd-site-padding;
-  }
 }
 
 body {
