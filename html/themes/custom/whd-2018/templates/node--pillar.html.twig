@@ -1,0 +1,64 @@
+<li id="pillar-{{content.field_pillar_title|render|trim|replace({' ':''})}}">
+    <h3><span>{{content.field_pillar_title}}</span></h3>
+    <div class="pillar-detail">
+        <div class="col-xs-12 col-md-6 pillar-image">
+            <img class="hero" src="{{content.field_image}}">
+            {% if content.field_photo_credit|render|trim %}
+            <aside>original photo by {{content.field_photo_credit|render|trim}}</aside>
+            {% endif %}
+        </div>
+        <div class="col-xs-12 col-md-6 pillar-content">
+            <div class="col-xs-12 problem">
+                {{content.field_problem}}
+            </div>
+            <div class="col-xs-12 rules">
+                {{content.field_rules}}
+            </div>
+            <div class="col-xs-12 actions">
+                <h4>{{content.field_actions_required_header}}</h4>
+                {{content.field_actions_required}}
+                <br/>
+                <ul class="social">
+                    <li social-share data-service="facebook" data-url="{{content.field_share_link}}" track-click data-ga-category="{{content.field_pillar_title}}" data-ga-action="Click" data-ga-label="Social Share: Facebook">
+                        <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25">
+                                <g id="Home---Children-Drawer-Open---414" transform="translate(-145.000000, -3973.000000)" fill="#231F20">
+                                    <g id="Pillars" transform="translate(0.000000, 2041.000000)">
+                                        <g id="icon-facebook" class="social-icon" transform="translate(6.000000, 377.000000)">
+                                            <path d="M170.216889,1580.88024 L166.150014,1580.88024 L166.150014,1595.377 L160.122822,1595.377 L160.122822,1580.88024 L157.257967,1580.88024 L157.257967,1575.75612 L160.122822,1575.75612 L160.122822,1572.44218 C160.122822,1570.0689 161.250502,1566.36005 166.205311,1566.36005 L170.671354,1566.37726 L170.671354,1571.35063 L167.429793,1571.35063 C166.901963,1571.35063 166.151967,1571.6143 166.151967,1572.74637 L166.151967,1575.75759 L170.743864,1575.75759 L170.216889,1580.88024 Z M164,1555 C150.215155,1555 139,1566.21516 139,1580 C139,1593.78387 150.215155,1605 164,1605 C177.783868,1605 189,1593.78387 189,1580 C189,1566.21516 177.785699,1555 164,1555 L164,1555 Z" id="Page-1"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </li>
+                    <li social-share data-service="twitter" data-url="{{content.field_share_link}}" data-tweet="{{content.field_tweet_text}}" track-click data-ga-category="{{content.field_pillar_title}}" data-ga-action="Click" data-ga-label="Social Share: Twitter">
+                        <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25">
+                                <g id="Home---Children-Drawer-Open---414" transform="translate(-220.000000, -3973.000000)" fill="#231F20">
+                                    <g id="Pillars" transform="translate(0.000000, 2041.000000)">
+                                        <g id="icon-twitter" class="social-icon" transform="translate(6.000000, 377.000000)">
+                                            <path d="M250.152656,1574.27798 C250.163642,1574.52591 250.169379,1574.77578 250.169379,1575.02517 C250.169379,1582.62926 244.383397,1591.39399 233.796778,1591.39399 C230.54716,1591.39399 227.522029,1590.44453 224.976265,1588.81087 C225.426336,1588.86434 225.884586,1588.89156 226.349061,1588.89156 C229.045581,1588.89156 231.526037,1587.97127 233.495388,1586.42868 C230.978189,1586.38242 228.852467,1584.71873 228.120048,1582.43187 C228.47051,1582.49816 228.831959,1582.53527 229.201464,1582.53527 C229.726486,1582.53527 230.235761,1582.46715 230.718302,1582.33507 C228.086235,1581.80761 226.102968,1579.48218 226.102968,1576.69264 C226.102968,1576.66884 226.102968,1576.64357 226.103945,1576.62013 C226.87982,1577.05031 227.766656,1577.31019 228.709401,1577.33925 C227.166318,1576.30922 226.150698,1574.5469 226.150698,1572.55082 C226.150698,1571.49565 226.433411,1570.50664 226.928892,1569.65691 C229.765548,1573.13932 234.006982,1575.42898 238.788209,1575.6708 C238.689577,1575.2488 238.640383,1574.81057 238.640383,1574.35855 C238.640383,1571.18144 241.216298,1568.60455 244.393406,1568.60455 C246.049038,1568.60455 247.542439,1569.30364 248.593459,1570.42131 C249.905708,1570.16338 251.134462,1569.68609 252.248837,1569.02471 C251.815855,1570.36882 250.906558,1571.49565 249.715402,1572.20853 C250.880313,1572.06974 251.992246,1571.76164 253.020317,1571.30351 C252.253109,1572.45548 251.27704,1573.46927 250.152656,1574.27798 M239,1555 C225.215155,1555 214,1566.21516 214,1580 C214,1593.78387 225.215155,1605 239,1605 C252.783868,1605 264,1593.78387 264,1580 C264,1566.21516 252.785699,1555 239,1555" id="Page-1"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</li>
+<style>
+    #pillar-{{content.field_pillar_title|render|trim|replace({' ':''})}} .pillar-content::before {
+        background-image: url({{content.field_image}});
+    }
+    {% if content.field_photo_credit|render|trim %}
+    @media(min-width: 993px) {
+        #pillar-{{content.field_pillar_title|render|trim|replace({' ':''})}} .pillar-content::after {
+            content: 'original photo by {{content.field_photo_credit|render|trim}}';
+        }
+    }
+    {% endif %}
+</style>

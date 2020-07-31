@@ -1,0 +1,8 @@
+<ul class="actions-length-{{ items|length }}">
+{% for action in items %}
+<li>
+	<p class="num">{{loop.index}}.</p>
+	<p>{{action.content}}</p>
+</li>
+{% endfor %}
+</ul>

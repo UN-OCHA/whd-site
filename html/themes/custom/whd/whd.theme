@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Template overrides, preprocess, and alter hooks for the OCHA Common Design theme.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function whd_preprocess_html(&$vars) {
+  // SVG sprite
+  // Get the contents of the SVG sprite.
+  $icons = file_get_contents( drupal_get_path('theme', 'whd') . '/img/icons/cd-icons-sprite.svg');
+
+  // Add a new render array to page_bottom so the icons
+  // get added to the page.
+  $vars['page_bottom']['icons'] = array(
+    '#type' => 'inline_template',
+    '#template' => '<span class="hidden">' . $icons . '</span>',
+  );
+}
+
+///**
+/// * Implements hook_theme_suggestions_HOOK_alter().
+// */
+
+function whd_theme_suggestions_page_alter(array &$suggestions, array $variables, $hook) {
+  /**
+   * error page template suggestions.
+   */
+  if (!is_null(Drupal::requestStack()->getCurrentRequest()->attributes->get('exception'))) {
+    $status_code = Drupal::requestStack()->getCurrentRequest()->attributes->get('exception')->getStatusCode();
+    $suggestions[] = 'page__' . (string) $status_code;
+  }
+}
+
+
+///**
+// * Implements hook_links__language_block().
+// */
+function whd_preprocess_links__language_block(&$vars) {
+  // Current language available in template override.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $vars['language'] = $language;
+}

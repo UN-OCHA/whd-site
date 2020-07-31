@@ -1,0 +1,22 @@
+uuid: e9a72df0-ad67-4434-ba68-6c729043a014
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whd
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: whd_local_tasks
+theme: whd
+region: content
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

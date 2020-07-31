@@ -1,0 +1,20 @@
+{# Displays the site footer #}
+
+<footer class="cd-footer" role="contentinfo">
+  <div class="cd-container cd-footer__inner">
+
+    {% block footer_menu %}
+      {% include '@whd/footer/footer-menu.html.twig' %}
+    {% endblock %}
+    {% block social_menu %}
+      {% include '@whd/footer/social-menu.html.twig' %}
+    {% endblock %}
+{#    {% block mandate %}#}
+{#      {% include '@whd/footer/mandate.html.twig' %}#}
+{#    {% endblock %}#}
+{#    {% block copyright %}#}
+{#      {% include '@whd/footer/copyright.html.twig' %}#}
+{#    {% endblock %}#}
+
+  </div>
+</footer>

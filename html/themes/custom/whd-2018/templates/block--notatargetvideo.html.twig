@@ -1,0 +1,26 @@
+<section id="section-film" class="page site-section">
+    <article>
+        {{content.body}}
+		<a class="btn btn-cta" href="javascript:viewVideo()" track-click data-ga-category="Video" data-ga-action="Play" data-ga-label="Hero Image: Watch Film">{{content.field_cta}}</a>
+    </article>
+    <img src="{{ theme_path }}/images/arrow-down.svg" class="arrow-down">
+</section>
+<style>
+    #section-film::before { background-image: url({{content.field_background_image}}); }
+</style>
+<div id="video-container">
+	<span class="wrapper">
+		<div id="campaign-video"></div>
+		<img src="{{ theme_path }}/images/icon_close.svg" id="video-close" track-click data-ga-category="Video" data-ga-action="Close" data-ga-label="Video: Close">
+	</span>
+</div>
+<script type="text/javascript">
+	var ytVideoPlayer;
+	function onYouTubeIframeAPIReady() {
+		ytVideoPlayer = new YT.Player('campaign-video', {
+			height: '390',
+			width: '640',
+			videoId: '{{content.field_youtube_video_id|render|trim}}',
+		});
+	}
+</script>
