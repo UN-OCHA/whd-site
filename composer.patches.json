@@ -1,4 +1,7 @@
 {
   "patches": {
+    "drupal/fitvids": {
+      "Add composer.json file": "https://www.drupal.org/files/issues/2020-07-10/composer-2881674-6.patch"
+    }
   }
 }
