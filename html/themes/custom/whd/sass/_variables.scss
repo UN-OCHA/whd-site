@@ -34,15 +34,15 @@ $cd-breakpoints: (
 $cd-base-unit: 8px;
 $cd-site-padding: $cd-base-unit;
 
-$cd-max-body-width: 1400px;
+$cd-max-body-width: 1440px;
 $cd-max-width: 1220px;
 
 $cd-container-padding: 12px;
 $cd-container-padding-tablet: 24px;
 $cd-container-padding-xlarge: 40px;
 
-$cd-global-header-height: 35px;
-$cd-site-header-height: 60px;
+$cd-global-header-height: 97px;
+$cd-site-header-height: 97px;
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -58,7 +58,7 @@ $cd-site-header-height: 60px;
   --cd-light-grey: #f2f2f2;
   --cd-mid-grey: #595959;
   --cd-dark-grey: #4a4a4a;
-  --cd-black: #000;
+  --cd-black: #262626;
   --cd-site-bg-color: #e6ecf1;
   --cd-site-bg-color--light: #ebf0f4;
 }
@@ -79,6 +79,13 @@ $cd-light-bluey-grey: #f2f5f8;
 $cd-highlight-red: #eb5c6d;
 $cd-white: #fff;
 $cd-black: #000;
+
+$whd-black: #262626;
+$whd-blue: #418FDE;
+$whd-blue--dark: darken(#418FDE, 5%);
+$whd-blue--light: #82B5E9;
+$whd-grey--light: #9AA0A7;
+$whd-grey: #6D7278;
 
 // This shade of red has been selected based on WCAG AAA requirements for contrast.
 $cd-contrast-red: #e00000;
@@ -123,7 +130,7 @@ $cd-font--system: system-ui;
 // Font sizes
 //——————————————————————————————————————————————————————————————————————————————
 
-$cd-font-size-tiny: 12;
+$cd-font-size-tiny: 13;
 $cd-font-size-small: 14;
 $cd-font-size-base: 16;
 $cd-font-size-medium: 20;

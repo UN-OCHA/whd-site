@@ -7,8 +7,8 @@
 @import 'print';
 
 // Base
-@import 'base/base';
 @import 'base/typography';
+@import 'base/base';
 
 // Layout
 @import 'layout/layout';
@@ -26,4 +26,6 @@
 @import 'footer/footer-menu';
 @import 'footer/mandate';
 @import 'footer/footer-social';
+
+@import "content";
 
