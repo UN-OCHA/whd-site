@@ -223,12 +223,8 @@ section.cd-layout-two-col {
   .cd-layout-sidebar-first {
     margin-top: 1rem;
 
-    // I've styled this as a block with padding and bg colour.
-    padding: 1rem;
-    background-color: $cd-light-bluey-grey;
-
     @include desktop {
-      flex-basis: 285px;
+      flex-basis: 472px; //1192-720 (full - content area = sidebar)
       margin-top: 0;
     }
   }

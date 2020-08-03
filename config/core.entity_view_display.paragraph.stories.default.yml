@@ -1,0 +1,24 @@
+uuid: 104db8f9-4ad3-4fd1-bc8c-acfbe979f866
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stories.field_stories
+    - paragraphs.paragraphs_type.stories
+  module:
+    - viewsreference
+id: paragraph.stories.default
+targetEntityType: paragraph
+bundle: stories
+mode: default
+content:
+  field_stories:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+hidden: {  }

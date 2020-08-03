@@ -27,6 +27,8 @@
         "drupal/core": "8.9.2",
         "drupal/fitvids": "^1.1",
         "drupal/paragraphs": "^1.12",
+        "drupal/pathauto": "^1.8",
+        "drupal/viewsreference": "^1.4",
         "drush/drush": "^9.0.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "symfony/event-dispatcher": "4.3.4 as 3.4.99",

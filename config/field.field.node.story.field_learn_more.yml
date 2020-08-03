@@ -1,0 +1,23 @@
+uuid: 9051923b-0867-4dc5-b7a3-4eca058017ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_learn_more
+    - node.type.story
+  module:
+    - link
+id: node.story.field_learn_more
+field_name: field_learn_more
+entity_type: node
+bundle: story
+label: 'Learn more'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

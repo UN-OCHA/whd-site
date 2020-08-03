@@ -4,14 +4,14 @@
 
 .cd-footer {
   //grid-row: 4 / 4; // Position footer so visible on short pages.
-  background: $cd-dark-text-color;
-  color: $cd-white-text-color;
+  background: $cd-black;
+  color: $cd-white;
   padding: 48px 0 0;
   text-align: center;
   line-height: 1.5;
 
   a {
-    color: $cd-white-text-color;
+    color: $cd-white;
     text-decoration: none;
 
     &:hover,
@@ -21,7 +21,7 @@
     }
 
     &:focus {
-      outline: 3px solid $cd-bright-blue;
+      outline: 3px solid $whd-blue;
       outline-offset: 8px;
     }
   }

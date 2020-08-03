@@ -33,7 +33,7 @@
   }
 
   &:focus {
-    outline: 3px solid $cd-bright-blue;
+    outline: 3px solid $whd-blue;
   }
 }
 
@@ -59,13 +59,13 @@
 
     &:hover,
     &:focus {
-      color: $cd-bright-blue;
+      color: $whd-blue;
     }
 
     &:focus {
       color: $cd-white;
       text-decoration: underline;
-      outline: 3px solid $cd-bright-blue;
+      outline: 3px solid $whd-blue;
     }
   }
 }

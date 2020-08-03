@@ -4,10 +4,7 @@
 
 .cd-header,
 .cd-footer {
-  // Setup font
-  font-family: $cd-font;
   @include font-size($cd-font-size-tiny);
-  font-weight: 300;
 
   // Set box-sizing
   box-sizing: border-box;
