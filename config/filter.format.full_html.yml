@@ -40,9 +40,15 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_view_modes:
-        responsive_image: responsive_image
-        responsive_thumbnail: responsive_thumbnail
       allowed_media_types:
         image: image
         video: video
+      allowed_view_modes:
+        responsive_image: responsive_image
+        responsive_thumbnail: responsive_thumbnail
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

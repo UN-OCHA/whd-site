@@ -2,6 +2,8 @@ uuid: 8947a208-3720-4263-8a72-05256093e1b3
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   theme:
     - whd
 _core:
@@ -17,4 +19,11 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      basic_page: basic_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,23 @@
+uuid: 9691f66d-cb90-48a1-bdbc-dd7a87dc3c67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stories.field_stories
+    - paragraphs.paragraphs_type.stories
+  module:
+    - viewsreference
+id: paragraph.stories.default
+targetEntityType: paragraph
+bundle: stories
+mode: default
+content:
+  field_stories:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,42 @@
+uuid: d0e88d5d-58ee-4b5b-a6af-fbfa3c27816c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stories
+    - paragraphs.paragraphs_type.stories
+  module:
+    - viewsreference
+id: paragraph.stories.field_stories
+field_name: field_stories
+entity_type: paragraph
+bundle: stories
+label: Stories
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    stories: stories
+    block_content: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    user_admin_people: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference
