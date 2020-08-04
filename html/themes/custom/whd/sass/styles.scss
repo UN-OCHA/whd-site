@@ -18,6 +18,7 @@
 @import 'header/header';
 @import 'header/logo';
 @import 'header/nav';
+@import 'header/dropdowns';
 @import 'header/language-switcher';
 
 // Footer
@@ -25,5 +26,5 @@
 @import 'footer/footer-menu';
 @import 'footer/footer-social';
 
-@import "content";
-
+@import 'content';
+@import 'paragraphs';
