@@ -3,18 +3,24 @@
 <footer class="cd-footer" role="contentinfo">
   <div class="cd-container cd-footer__inner">
 
-    {% block footer_menu %}
-      {% include '@whd/footer/footer-menu.html.twig' %}
-    {% endblock %}
-    {% block social_menu %}
-      {% include '@whd/footer/social-menu.html.twig' %}
-    {% endblock %}
-{#    {% block mandate %}#}
-{#      {% include '@whd/footer/mandate.html.twig' %}#}
+    <div class="cd-footer__section cd-footer__section--donate">
+      <a class="donate" href="https://unfoundation.org">{% trans %}Donate to crisis relief{% endtrans %}</a>
+    </div>
+
+    <div class="cd-footer__section cd-footer__section--menu">
+      {{ page.footer_navigation }}
+    </div>
+
+{#    {% block social_menu %}#}
+{#      {% include '@whd/footer/social-menu.html.twig' %}#}
 {#    {% endblock %}#}
-{#    {% block copyright %}#}
-{#      {% include '@whd/footer/copyright.html.twig' %}#}
-{#    {% endblock %}#}
+
+    <div class="cd-footer__section cd-footer__section--logo">
+      <div class="cd-footer-logo">
+        <img class="dark-horse-logo" src="/themes/custom/whd/img/logos/dark-horse-logo.svg" alt="{{ 'OCHA logo'|t }}" />
+        <img class="un-foundation-logo" src="/themes/custom/whd/img/logos/un-foundation.svg" alt="{{ 'UN Foundation logo'|t }}" />
+      </div>
+    </div>
 
   </div>
 </footer>
