@@ -1,0 +1,9 @@
+uuid: 2a50e0dd-5887-4395-9431-4be0012a7901
+langcode: en
+status: true
+dependencies: {  }
+id: zh-hans
+label: 'Chinese, Simplified'
+direction: ltr
+weight: 2
+locked: false
