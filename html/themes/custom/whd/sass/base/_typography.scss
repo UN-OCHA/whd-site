@@ -66,6 +66,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
+  // sass-lint:disable no-duplicate-properties
   src: url('../fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Roboto'), local('Roboto-Regular'),
   url('../fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -81,6 +82,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
+  // sass-lint:disable no-duplicate-properties
   src: url('../fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Roboto Bold'), local('Roboto-Bold'),
   url('../fonts/roboto-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -96,6 +98,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 700;
+  // sass-lint:disable no-duplicate-properties
   src: url('../fonts/work-sans-v8-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
   url('../fonts/work-sans-v8-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -151,6 +154,7 @@ h5 {
     position: relative;
     top: -3px;
     left: -3px;
+    // sass-lint:disable no-duplicate-properties
     text-shadow: 1px 1px $whd-blue--light,
     2px 2px $whd-blue--light,
     3px 3px $whd-blue--light,

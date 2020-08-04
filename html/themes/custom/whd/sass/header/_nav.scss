@@ -233,11 +233,12 @@
       > .menu-item {
         //border-right: 1px solid $cd-border-color;
 
-        &:first-child {
-          //border-left: 1px solid $cd-border-color;
-        }
+        //&:first-child {
+        //  border-left: 1px solid $cd-border-color;
+        //}
 
         &:last-child {
+          // sass-lint:disable nesting-depth
           > ul.menu {
             left: auto;
             right: -1px;
