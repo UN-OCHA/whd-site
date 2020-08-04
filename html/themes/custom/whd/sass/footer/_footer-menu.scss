@@ -19,8 +19,9 @@
     display: inline-block;
     margin: 0 8px;
   }
+
   @include desktop {
-    margin: 0 32px 0 0;
+    margin: 0 0 0 32px;
   }
 }
 
