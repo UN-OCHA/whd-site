@@ -69,4 +69,5 @@ content:
     region: content
 hidden:
   field_teaser_image: true
+  langcode: true
   links: true
