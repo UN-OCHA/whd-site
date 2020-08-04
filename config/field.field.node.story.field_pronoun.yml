@@ -12,7 +12,7 @@ bundle: story
 label: Pronoun
 description: "For \"See Her/His Story\" link.\r\nDefaults to \"Her\". Check the box to change to \"His\"\r\n"
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     value: 0

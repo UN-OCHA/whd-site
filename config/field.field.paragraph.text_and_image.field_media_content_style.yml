@@ -1,21 +1,21 @@
-uuid: 6efff87e-0b43-4b0a-94db-31ded964888f
+uuid: d90a5e82-bb34-44e5-8606-b9794d185024
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_media_content_text
+    - field.storage.paragraph.field_media_content_style
     - paragraphs.paragraphs_type.text_and_image
   module:
-    - text
-id: paragraph.text_and_image.field_media_content_text
-field_name: field_media_content_text
+    - options
+id: paragraph.text_and_image.field_media_content_style
+field_name: field_media_content_style
 entity_type: paragraph
 bundle: text_and_image
-label: Text
+label: Style
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: list_string

@@ -41,5 +41,4 @@ hidden:
   field_media_content: true
   field_profile_image: true
   field_pronoun: true
-  langcode: true
   links: true

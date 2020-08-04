@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_and_image.field_media_content_image
+    - field.field.paragraph.text_and_image.field_media_content_style
     - field.field.paragraph.text_and_image.field_media_content_text
     - paragraphs.paragraphs_type.text_and_image
   module:
@@ -20,6 +21,12 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_media_content_style:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_media_content_text:
     weight: 1
