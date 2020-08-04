@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_and_image.field_media_content_image
+    - field.field.paragraph.text_and_image.field_media_content_image_align
+    - field.field.paragraph.text_and_image.field_media_content_style
     - field.field.paragraph.text_and_image.field_media_content_text
     - paragraphs.paragraphs_type.text_and_image
   module:
@@ -21,6 +23,18 @@ content:
     third_party_settings: {  }
     type: media_library_widget
     region: content
+  field_media_content_image_align:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_media_content_style:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_media_content_text:
     weight: 1
     settings:
@@ -28,6 +42,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

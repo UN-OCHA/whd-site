@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.text_and_image.field_media_content_image
+    - field.field.paragraph.text_and_image.field_media_content_image_align
+    - field.field.paragraph.text_and_image.field_media_content_style
     - field.field.paragraph.text_and_image.field_media_content_text
     - paragraphs.paragraphs_type.text_and_image
   module:
@@ -29,4 +31,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  field_media_content_image_align: true
+  field_media_content_style: true

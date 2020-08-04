@@ -1,0 +1,24 @@
+uuid: 0066f5b8-8c30-4fc4-a143-4a275c471a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner.field_media_content_image
+    - paragraphs.paragraphs_type.banner
+  module:
+    - media_library
+id: paragraph.banner.default
+targetEntityType: paragraph
+bundle: banner
+mode: default
+content:
+  field_media_content_image:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+hidden:
+  created: true
+  status: true

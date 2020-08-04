@@ -18,14 +18,13 @@
 @import 'header/header';
 @import 'header/logo';
 @import 'header/nav';
+@import 'header/dropdowns';
 @import 'header/language-switcher';
 
 // Footer
 @import 'footer/footer';
-@import 'footer/footer-copyright';
 @import 'footer/footer-menu';
-@import 'footer/mandate';
 @import 'footer/footer-social';
 
-@import "content";
-
+@import 'content';
+@import 'paragraphs';

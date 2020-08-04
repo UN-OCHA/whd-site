@@ -95,6 +95,10 @@
     {{ content|without('field_teaser_image') }}
 
     <a class="node__read-more" href="{{ url }}" rel="bookmark">
+      <svg class="cd-icon cd-icon--story">
+        <use xlink:href="#cd-icon--story"></use>
+      </svg>
+
       {% if node.field_pronoun.value %}
         {% trans %}See his story{% endtrans %}
       {% else %}

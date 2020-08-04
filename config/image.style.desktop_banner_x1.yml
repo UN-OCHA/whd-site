@@ -1,0 +1,15 @@
+uuid: b30242d8-b351-43a0-950f-8e2924e96a1a
+langcode: en
+status: true
+dependencies: {  }
+name: desktop_banner_x1
+label: 'desktop banner x1'
+effects:
+  09468b45-39ec-46ab-b3a3-82338547b5d8:
+    uuid: 09468b45-39ec-46ab-b3a3-82338547b5d8
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: 480
+      upscale: false

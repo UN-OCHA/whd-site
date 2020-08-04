@@ -1,0 +1,15 @@
+uuid: 82e446ff-ef5e-4fca-9c7a-5240164d0161
+langcode: en
+status: true
+dependencies: {  }
+name: tablet_banner_x2
+label: 'tablet banner x2'
+effects:
+  7f6ee1a3-90c5-420a-8109-0851a2c278e0:
+    uuid: 7f6ee1a3-90c5-420a-8109-0851a2c278e0
+    id: image_scale
+    weight: 1
+    data:
+      width: 1440
+      height: 480
+      upscale: false

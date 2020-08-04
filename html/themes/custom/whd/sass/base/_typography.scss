@@ -66,6 +66,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
+  // sass-lint:disable no-duplicate-properties
   src: url('../fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Roboto'), local('Roboto-Regular'),
   url('../fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -81,6 +82,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
+  // sass-lint:disable no-duplicate-properties
   src: url('../fonts/roboto-v20-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Roboto Bold'), local('Roboto-Bold'),
   url('../fonts/roboto-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -96,6 +98,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 700;
+  // sass-lint:disable no-duplicate-properties
   src: url('../fonts/work-sans-v8-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
   url('../fonts/work-sans-v8-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -115,7 +118,7 @@ h4,
 h5 {
   line-height: 1.2;
   font-weight: bold;
-  color: $cd-ocha-blue;
+  color: $whd-blue;
   font-family: $work-sans;
   margin-top: 0;
 }
@@ -143,19 +146,24 @@ h5 {
 .page-title {
   font-size: 6.875rem;
   font-weight: 700;
-  color: $cd-white;
+  color: $whd-blue;
   text-transform: uppercase;
-  position: relative;
-  top: -3px;
-  left: -3px;
-  text-shadow: 1px 1px $whd-blue--light,
-  2px 2px $whd-blue--light,
-  3px 3px $whd-blue--light,
-  4px 4px $whd-blue--light,
-  5px 5px $whd-blue--light,
-  6px 6px $whd-blue--light,
-  7px 7px $whd-blue--light,
-  8px 8px $whd-blue--light;
+
+  .path-frontpage & {
+    color: $cd-white;
+    position: relative;
+    top: -3px;
+    left: -3px;
+    // sass-lint:disable no-duplicate-properties
+    text-shadow: 1px 1px $whd-blue--light,
+    2px 2px $whd-blue--light,
+    3px 3px $whd-blue--light,
+    4px 4px $whd-blue--light,
+    5px 5px $whd-blue--light,
+    6px 6px $whd-blue--light,
+    7px 7px $whd-blue--light,
+    8px 8px $whd-blue--light;
+  }
 }
 
 a {

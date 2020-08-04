@@ -1,0 +1,27 @@
+uuid: 873c73d8-8028-47db-a441-befc21cc17e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_media_content_image_align
+field_name: field_media_content_image_align
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: left
+    -
+      value: right
+      label: right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

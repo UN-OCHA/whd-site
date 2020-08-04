@@ -1,0 +1,36 @@
+uuid: 8db75527-f1b4-4dac-82a0-4d98ea8c16f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.desktop_banner_x1
+    - image.style.desktop_banner_x2
+    - image.style.tablet_banner_x1
+    - image.style.tablet_banner_x2
+  theme:
+    - whd
+id: responsive_banner
+label: 'Responsive banner'
+image_style_mappings:
+  -
+    breakpoint_id: whd.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: desktop_banner_x1
+  -
+    breakpoint_id: whd.lg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: desktop_banner_x2
+  -
+    breakpoint_id: whd.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: tablet_banner_x1
+  -
+    breakpoint_id: whd.md
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: tablet_banner_x2
+breakpoint_group: whd
+fallback_image_style: tablet_banner_x1

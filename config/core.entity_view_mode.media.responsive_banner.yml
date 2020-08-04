@@ -1,0 +1,10 @@
+uuid: 2b09a34a-7a8e-404d-bab8-e1c1850189e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.responsive_banner
+label: 'Responsive banner'
+targetEntityType: media
+cache: true
