@@ -1,0 +1,18 @@
+uuid: dff2e98c-e77f-4867-bdac-3f4f772f0406
+langcode: en
+status: true
+dependencies: {  }
+id: node__story
+label: 'Content: Story'
+tags:
+  og_url: '[node:url]'
+  og_image_alt: '[node:title]'
+  og_title: '[node:title]'
+  og_image_secure_url: '[node:field_teaser_image:entity:field_media_image:entity:url]'
+  og_image: '[node:field_teaser_image:entity:field_media_image:entity:url]'
+  twitter_cards_image: '[node:field_teaser_image:entity:field_media_image:entity:url]'
+  twitter_cards_donottrack: 'on'
+  twitter_cards_page_url: '[node:url]'
+  twitter_cards_image_alt: '[content:title]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_type: summary_large_image
