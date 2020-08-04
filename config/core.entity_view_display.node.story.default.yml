@@ -57,7 +57,17 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  field_pronoun:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
 hidden:
-  field_pronoun: true
   field_teaser_image: true
+  langcode: true
   links: true
