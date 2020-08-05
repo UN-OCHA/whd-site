@@ -52,7 +52,11 @@
 {% set style = paragraph.field_media_content_style.value %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes).addClass("paragraph--style--#{style}") }}>
+  {% if style %}
+    <div{{ attributes.addClass(classes).addClass("paragraph--style--#{style}") }}>
+  {% else %}
+    <div{{ attributes.addClass(classes) }}>
+  {% endif %}
     {% block content %}
       {{ content }}
     {% endblock %}
