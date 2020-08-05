@@ -1,0 +1,24 @@
+uuid: db219f38-d8d7-4e88-8c69-a90363d12f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.node.field_media_content_node
+    - paragraphs.paragraphs_type.node
+  module:
+    - entity_reference_revisions
+id: paragraph.node.default
+targetEntityType: paragraph
+bundle: node
+mode: default
+content:
+  field_media_content_node:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: reference
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }
