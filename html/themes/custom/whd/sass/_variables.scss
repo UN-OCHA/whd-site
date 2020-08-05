@@ -81,11 +81,11 @@ $cd-white: #fff;
 $cd-black: #000;
 
 $whd-black: #262626;
-$whd-blue: #418FDE;
-$whd-blue--dark: darken(#418FDE, 5%);
-$whd-blue--light: #82B5E9;
-$whd-grey--light: #9AA0A7;
-$whd-grey: #6D7278;
+$whd-blue: #418fde;
+$whd-blue--dark: darken($whd-blue, 5%);
+$whd-blue--light: #82b5e9;
+$whd-grey--light: #9aa0a7;
+$whd-grey: #6d7278;
 
 // This shade of red has been selected based on WCAG AAA requirements for contrast.
 $cd-contrast-red: #e00000;
