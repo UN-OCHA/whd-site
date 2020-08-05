@@ -6,6 +6,9 @@ core: 8.x
 base theme: classy
 logo: 'img/logos/whd.svg'
 
+interface translation project: whd
+interface translation server pattern: themes/custom/whd/translations/%language.po
+
 # Defines libraries group in which we can add css/js.
 libraries:
 - core/drupal
