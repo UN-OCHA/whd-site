@@ -186,10 +186,10 @@
         }
       }
 
-      > a.is-active::before,
-      > button.is-active::before {
-        background: $whd-blue;
-      }
+      //> a.is-active::before,
+      //> button.is-active::before {
+      //  background: $whd-blue;
+      //}
 
       // First level menu item with children.
       // Classes based on Drupal menu item configuration.
@@ -206,19 +206,19 @@
         button {
           position: relative;
 
-          &::before {
-            position: absolute;
-            content: '';
-            width: 3px;
-            top: 0;
-            height: 65px; // Height of menu item.
-            left: 15px; // Half of the left padding.
-            background: rgba($whd-blue, 0.2);
-          }
+          //&::before {
+          //  position: absolute;
+          //  content: '';
+          //  width: 3px;
+          //  top: 0;
+          //  height: 65px; // Height of menu item.
+          //  left: 15px; // Half of the left padding.
+          //  background: rgba($whd-blue, 0.2);
+          //}
 
-          &.is-active::before {
-            background: $whd-blue;
-          }
+          //&.is-active::before {
+          //  background: $whd-blue;
+          //}
         }
       }
     }
@@ -245,10 +245,10 @@
           }
         }
 
-        &.menu-item--active-trail a::before,
-        &.menu-item--active-trail button::before {
-          //background: $whd-blue;
-        }
+        //&.menu-item--active-trail a::before,
+        //&.menu-item--active-trail button::before {
+        //  background: $whd-blue;
+        //}
 
         > a,
         button {
@@ -280,12 +280,12 @@
             background: $whd-black;
           }
 
-          &.is-active,
-          &:focus {
-            &::before {
-              //background: $whd-blue;
-            }
-          }
+          //&.is-active,
+          //&:focus {
+          //  &::before {
+          //    background: $whd-blue;
+          //  }
+          //}
         }
       }
     }
