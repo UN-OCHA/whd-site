@@ -1,7 +1,7 @@
 (function ($) {
   'use strict';
 
-  Drupal.behaviors.myModuleBehavior = {
+  Drupal.behaviors.smoothScroll = {
     attach: function (context, settings) {
       var $root = $('html, body');
 

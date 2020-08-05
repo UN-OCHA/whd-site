@@ -46,10 +46,21 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+{{ attach_library('whd/hero-video') }}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+    <div id="hero__video-container">
+      <div id="player" class="hero__video"></div>
+    </div>
+    <div id="hero__image">
+      <div id="hero__play-button">
+        <svg class="cd-icon cd-icon--play">
+          <use xlink:href="#cd-icon--play"></use>
+        </svg>
+        {% trans %}Play the film{% endtrans %}
+      </div>
+      {{ content.field_media_content_hero_image }}
+    </div>
   </div>
 {% endblock paragraph %}
