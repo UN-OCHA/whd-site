@@ -247,7 +247,7 @@
 
         &.menu-item--active-trail a::before,
         &.menu-item--active-trail button::before {
-          background: $whd-blue;
+          //background: $whd-blue;
         }
 
         > a,
@@ -260,17 +260,17 @@
           position: relative;
           transition: background 0.3s ease;
 
-          &::before {
-            bottom: -3px;
-            content: '';
-            background: transparent;
-            height: 3px;
-            left: -1px;
-            position: absolute;
-            right: -1px;
-            transition: background 0.3s ease;
-            width: calc(100% + 2px);
-          }
+          //&::before {
+          //  bottom: -3px;
+          //  content: '';
+          //  background: transparent;
+          //  height: 3px;
+          //  left: -1px;
+          //  position: absolute;
+          //  right: -1px;
+          //  transition: background 0.3s ease;
+          //  width: calc(100% + 2px);
+          //}
 
           &:hover {
             background: $whd-black;
@@ -283,7 +283,7 @@
           &.is-active,
           &:focus {
             &::before {
-              background: $whd-blue;
+              //background: $whd-blue;
             }
           }
         }

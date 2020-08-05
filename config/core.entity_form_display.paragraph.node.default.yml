@@ -1,0 +1,27 @@
+uuid: 11c33371-2bb4-4a73-a4fa-47803b6b3c72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.node.field_media_content_node
+    - paragraphs.paragraphs_type.node
+  module:
+    - entity_reference_revisions
+id: paragraph.node.default
+targetEntityType: paragraph
+bundle: node
+mode: default
+content:
+  field_media_content_node:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

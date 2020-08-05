@@ -9,6 +9,8 @@ logo: 'img/logos/whd.svg'
 # Defines libraries group in which we can add css/js.
 libraries:
 - core/drupal
+- core/jquery
+- core/jquery.once
 - whd/global-styling
 
 # Regions
