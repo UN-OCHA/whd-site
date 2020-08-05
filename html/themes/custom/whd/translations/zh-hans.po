@@ -28,3 +28,11 @@ msgstr "看他的故事"
 #: templates/content/node--story--teaser.html.twig:105
 msgid "See her story"
 msgstr "看她的故事"
+
+#: unknown:1
+msgid "Read more"
+msgstr "阅读更多"
+
+#: unknown:2
+msgid "Read the comic"
+msgstr "阅读漫画"

@@ -19,20 +19,20 @@ msgstr ""
 
 #: templates/footer/footer.html.twig:7
 msgid "Donate to crisis relief"
-msgstr "Faites un don pour les secours en cas de crise"
+msgstr ""
 
 #: templates/content/node--story--teaser.html.twig:103
 msgid "See his story"
-msgstr "Voir son histoire"
+msgstr ""
 
 #: templates/content/node--story--teaser.html.twig:105
 msgid "See her story"
-msgstr "Voir son histoire"
+msgstr ""
 
 #: unknown:1
 msgid "Read more"
-msgstr "阅读更多"
+msgstr ""
 
 #: unknown:2
 msgid "Read the comic"
-msgstr "阅读漫画"
+msgstr ""
