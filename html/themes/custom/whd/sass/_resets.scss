@@ -21,9 +21,10 @@
     -webkit-appearance: none;
     border-radius: 0;
     box-shadow: none;
+    border: 0 none;
     font-family: $cd-font;
     @include font-size($cd-font-size-tiny);
-    font-weight: 300;
+    font-weight: 700;
 
     &[data-cd-toggler] {
       background-color: transparent;
