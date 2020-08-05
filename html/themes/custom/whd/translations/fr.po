@@ -1,0 +1,30 @@
+# $Id$
+#
+# LANGUAGE translation of WHD
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from theme
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-08-05 12:45+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: templates/footer/footer.html.twig:7
+msgid "Donate to crisis relief"
+msgstr "Faites un don pour les secours en cas de crise"
+
+#: templates/content/node--story--teaser.html.twig:103
+msgid "See his story"
+msgstr "Voir son histoire"
+
+#: templates/content/node--story--teaser.html.twig:105
+msgid "See her story"
+msgstr "Voir son histoire"
