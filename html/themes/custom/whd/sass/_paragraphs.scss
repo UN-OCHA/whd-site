@@ -58,13 +58,13 @@
     }
   }
 
-    //&.paragraph__image--align-left {
-    //  .paragraph__image {
-    //    @include tablet {
-    //      margin-right: 2rem;
-    //    }
-    //  }
-    //}
+  //&.paragraph__image--align-left {
+  //  .paragraph__image {
+  //    @include tablet {
+  //      margin-right: 2rem;
+  //    }
+  //  }
+  //}
 
   &.paragraph__image--align-right {
     //.paragraph__text {
@@ -179,7 +179,7 @@
       object-fit: cover;
       object-position: 50% 50%;
       height: auto;
-      width:100%;
+      width: 100%;
     }
   }
 }
