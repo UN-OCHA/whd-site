@@ -85,16 +85,23 @@
 <section id="what-is-world-humanitarian-day">
   <article{{ attributes.addClass(classes) }}>
 
-    {{ title_prefix }}
-    {% if label and not page %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
-    {% endif %}
-    {{ title_suffix }}
+    <div class="node__title">
+
+      <div class="origin">{% trans %}The Origins{% endtrans %}</div>
+
+      {{ title_prefix }}
+      {% if label and not page %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+    </div>
 
     <div{{ content_attributes.addClass('node__content') }}>
+      {{ content|without('field_learn_more') }}
+    </div>
 
-      {{ content }}
-
+    <div class="node__learn-more">
+      {{ content.field_learn_more }}
     </div>
 
   </article>

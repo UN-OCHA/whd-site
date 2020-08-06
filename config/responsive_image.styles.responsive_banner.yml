@@ -26,11 +26,26 @@ image_style_mappings:
     breakpoint_id: whd.md
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: tablet_banner_x1
+    image_mapping: desktop_banner_x1
   -
     breakpoint_id: whd.md
     multiplier: 2x
     image_mapping_type: image_style
+    image_mapping: desktop_banner_x2
+  -
+    breakpoint_id: whd.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: tablet_banner_x1
+  -
+    breakpoint_id: whd.sm
+    multiplier: 2x
+    image_mapping_type: image_style
     image_mapping: tablet_banner_x2
+  -
+    breakpoint_id: whd.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ''
 breakpoint_group: whd
 fallback_image_style: tablet_banner_x1

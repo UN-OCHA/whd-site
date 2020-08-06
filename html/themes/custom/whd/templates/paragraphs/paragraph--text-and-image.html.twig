@@ -57,17 +57,22 @@
   {% else %}
     <div{{ attributes.addClass(classes) }}>
   {% endif %}
-    {% block content %}
-      {{ content }}
-    {% endblock %}
 
-    {% if style == 'dark' %}
-      <img class="rule" src="/themes/custom/whd/img/decorative/rule--thin--blue.svg">
-    {% endif %}
+      <div class="paragraph__image">
+        {{ content.field_media_content_image }}
+      </div>
 
-    {% if style == 'brand' %}
-      <img class="rule" src="/themes/custom/whd/img/decorative/rule--thick--white.svg">
-    {% endif %}
+      <div class="paragraph__text">
+        {{ content.field_media_content_text }}
+
+        {% if style == 'dark' %}
+          <img class="rule" src="/themes/custom/whd/img/decorative/rule--thin--blue.svg">
+        {% endif %}
+
+        {% if style == 'brand' %}
+          <img class="rule" src="/themes/custom/whd/img/decorative/rule--thick--white.svg">
+        {% endif %}
+      </div>
 
   </div>
 {% endblock paragraph %}

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_learn_more
     - field.field.node.basic_page.field_media_content
     - node.type.basic_page
   module:
@@ -24,7 +25,7 @@ content:
     region: content
   field_media_content:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -32,5 +33,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_learn_more: true
   langcode: true
   links: true

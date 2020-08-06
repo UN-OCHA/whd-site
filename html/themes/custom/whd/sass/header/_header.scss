@@ -93,7 +93,7 @@
     }
 
     @include tablet {
-      max-width: 160px;
+      //max-width: 160px;
 
       @supports(display: flex) {
         flex: 1 1 auto;
@@ -101,7 +101,7 @@
     }
 
     @include xlarge {
-      max-width: 160px;
+      //max-width: 160px;
 
       @supports(display: flex) {
         flex: 1 1 auto;

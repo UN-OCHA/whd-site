@@ -27,6 +27,7 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - HorizontalRule
         -
           name: Media
           items:
@@ -41,12 +42,16 @@ settings:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
-            - Blockquote
+        -
+          name: Styles
+          items:
+            - Styles
+            - Format
   plugins:
+    stylescombo:
+      styles: "p.small|Small\r\nspan.blue|Blue\r\nspan.dark|Dark\r\nspan.white|White"
     language:
       language_list: un
-    stylescombo:
-      styles: ''
 image_upload:
   status: false
   scheme: public

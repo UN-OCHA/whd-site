@@ -18,16 +18,20 @@ input {
 }
 
 body {
-  @include font-size($cd-font-size-base);
   font-family: $roboto;
-  font-size: 1.25rem;
-  line-height: 2.1875rem;
   font-weight: 400;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: $whd-black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  @include tablet {
+    font-size: 1.25rem;
+    line-height: 2.1875rem;
+  }
 
   &.no-scroll {
     overflow: hidden;
