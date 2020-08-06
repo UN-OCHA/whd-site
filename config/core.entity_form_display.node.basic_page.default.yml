@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_learn_more
     - field.field.node.basic_page.field_media_content
     - node.type.basic_page
   module:
+    - link
     - paragraphs
     - path
     - text
@@ -31,6 +33,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_learn_more:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_media_content:
     type: paragraphs
     weight: 3

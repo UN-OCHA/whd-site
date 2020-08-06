@@ -23,7 +23,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <drupal-media data-entity-type, data-entity-uuid data-entity-type data-view-mode data-align data-caption alt title> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <drupal-media data-entity-type, data-entity-uuid data-entity-type data-view-mode data-align data-caption alt title> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style> <p class="small"> <span class="blue dark white"> <hr>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_url:
