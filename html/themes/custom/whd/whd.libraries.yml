@@ -7,3 +7,11 @@ global-styling:
     js/smooth-scroll.js: {}
   dependencies:
     - whd/cd-polyfill
+
+hero-video:
+  js:
+    js/hero-video.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

@@ -1,0 +1,32 @@
+uuid: d23ce9b5-b068-442c-8661-a26963687729
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field_media_content_hero_image
+    - field.field.paragraph.hero.field_media_content_video
+    - paragraphs.paragraphs_type.hero
+  module:
+    - media_library
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field_media_content_hero_image:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_media_content_video:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+hidden:
+  created: true
+  status: true
