@@ -26,6 +26,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/core": "8.9.2",
         "drupal/fitvids": "^1.1",
+        "drupal/maintenance200": "^1.0",
         "drupal/metatag": "^1.13",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
