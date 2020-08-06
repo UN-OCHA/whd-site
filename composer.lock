@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3326f9e0f68a5ae91631b4f3556f22c",
+    "content-hash": "d333f57f9e129e618cf24986e1c3859a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1911,6 +1911,50 @@
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
             "time": "2019-03-30T10:41:38+00:00"
+        },
+        {
+            "name": "drupal/admin_denied",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/admin_denied.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_denied-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "598a367e904dd8062500f69033cde2442ff79156"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1506603544",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                }
+            ],
+            "description": "Prevents password based logins by uid 1.",
+            "homepage": "https://www.drupal.org/project/admin_denied",
+            "support": {
+                "source": "https://git.drupalcode.org/project/admin_denied"
+            }
         },
         {
             "name": "drupal/core",
