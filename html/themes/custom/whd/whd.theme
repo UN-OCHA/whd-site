@@ -5,6 +5,8 @@
  * Template overrides, preprocess, and alter hooks for the OCHA Common Design theme.
  */
 
+use Drupal\Core\Url;
+
 /**
  * Implements hook_preprocess_html().
  */
@@ -43,4 +45,87 @@ function whd_preprocess_links__language_block(&$vars) {
   // Current language available in template override.
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $vars['language'] = $language;
+}
+
+/**
+ * Prepares variables for book navigation templates.
+ *
+ * Default template: book-navigation.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing the following key:
+ *   - book_link: An associative array of book link properties.
+ *     Properties used: bid, link_title, depth, pid, nid.
+ */
+function whd_preprocess_book_navigation(&$variables) {
+  $book_link = $variables['book_link'];
+
+  // Provide extra variables for themers. Not needed by default.
+  $variables['book_id'] = $book_link['bid'];
+  $variables['book_title'] = $book_link['link_title'];
+  $variables['book_url'] = Url::fromRoute('entity.node.canonical', ['node' => $book_link['bid']])->toString();
+  $variables['current_depth'] = $book_link['depth'];
+  $variables['tree'] = '';
+
+  /** @var \Drupal\book\BookOutline $book_outline */
+  $book_outline = \Drupal::service('book.outline');
+
+  if ($book_link['nid']) {
+    $variables['tree'] = $book_outline->childrenLinks($book_link);
+
+    $build = [];
+
+    $prev = $book_outline->prevLink($book_link);
+    if ($prev['pid'] == 0) {
+      // Parent node, link to last.
+      $book_manager = \Drupal::service('book.manager');
+      $flat = $book_manager->bookTreeGetFlat($book_link);
+      $prev = array_pop($flat);
+    }
+
+    if ($prev) {
+      $prev_href = Url::fromRoute('entity.node.canonical', ['node' => $prev['nid']])->toString();
+      $build['#attached']['html_head_link'][][] = [
+        'rel' => 'prev',
+        'href' => $prev_href,
+      ];
+      $variables['prev_url'] = $prev_href;
+      $variables['prev_title'] = $prev['title'];
+    }
+
+    $next = $book_outline->nextLink($book_link);
+    if (!$next) {
+      // Link to first page.
+      $book_link['nid'] = $book_link['pid'];
+      $next = $book_outline->nextLink($book_link);
+    }
+
+    if ($next) {
+      $next_href = Url::fromRoute('entity.node.canonical', ['node' => $next['nid']])->toString();
+      $build['#attached']['html_head_link'][][] = [
+        'rel' => 'next',
+        'href' => $next_href,
+      ];
+      $variables['next_url'] = $next_href;
+      $variables['next_title'] = $next['title'];
+    }
+  }
+
+  if (!empty($build)) {
+    \Drupal::service('renderer')->render($build);
+  }
+
+  $variables['has_links'] = FALSE;
+  // Link variables to filter for values and set state of the flag variable.
+  $links = ['prev_url', 'prev_title', 'parent_url', 'parent_title', 'next_url', 'next_title'];
+  foreach ($links as $link) {
+    if (isset($variables[$link])) {
+      // Flag when there is a value.
+      $variables['has_links'] = TRUE;
+    }
+    else {
+      // Set empty to prevent notices.
+      $variables[$link] = '';
+    }
+  }
 }
