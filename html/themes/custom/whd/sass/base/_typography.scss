@@ -129,6 +129,29 @@ h1 {
   font-weight: normal;
 }
 
+h2 {
+  font-size: 2.625rem;
+
+  @include tablet {
+    font-family: $work-sans;
+    font-weight: 700;
+    font-size: 4.375rem;
+    line-height: 4.375rem;
+  }
+}
+
+h3 {
+  font-size: 1.625rem;
+  line-height: 1.625rem;
+
+  @include tablet {
+    font-family: $work-sans;
+    font-weight: 700;
+    font-size: 2.1875rem;
+    line-height: 2.1875rem;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -200,11 +223,6 @@ dd {
 }
 
 @include min-width(sm) {
-
-  h2 {
-    font-weight: normal;
-  }
-
   h1,
   h2,
   h3,
