@@ -26,8 +26,17 @@
   }
 }
 
-.hero__play-button {
+.hero__wrapper {
   position: absolute;
+  z-index: 1;
+}
+
+.page-title {
+  z-index: 1;
+}
+
+.hero__play-button {
+  //position: absolute;
   z-index: 1;
   display: flex;
   align-items: center;
