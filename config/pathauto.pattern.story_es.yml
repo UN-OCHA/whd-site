@@ -1,33 +1,33 @@
-uuid: 87e8fefd-65ac-480f-8836-9c3ff916fca0
+uuid: 9e99fec6-fede-43f1-acae-954034222de5
 langcode: en
 status: true
 dependencies:
   module:
     - language
     - node
-id: story
-label: Story
+id: story_es
+label: 'Story - ES'
 type: 'canonical_entities:node'
-pattern: 'story/[node:title]'
+pattern: 'historias/[node:title]'
 selection_criteria:
-  b739161f-514f-4261-8297-8c294236bb01:
+  5a61f31c-d22d-4ef3-9d82-d2411b96c14d:
     id: node_type
     bundles:
       story: story
     negate: false
     context_mapping:
       node: node
-    uuid: b739161f-514f-4261-8297-8c294236bb01
-  9012aa74-7cfe-463c-ae2f-6bc1bb5ca6cb:
+    uuid: 5a61f31c-d22d-4ef3-9d82-d2411b96c14d
+  0aa33a90-de91-47f2-97b0-0d73fdad0a62:
     id: language
     langcodes:
-      en: en
+      es: es
     negate: false
     context_mapping:
       language: 'node:langcode:language'
-    uuid: 9012aa74-7cfe-463c-ae2f-6bc1bb5ca6cb
+    uuid: 0aa33a90-de91-47f2-97b0-0d73fdad0a62
 selection_logic: and
-weight: -5
+weight: -10
 relationships:
   'node:langcode:language':
     label: Language
