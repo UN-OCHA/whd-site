@@ -92,9 +92,12 @@
 
   &.paragraph--style--dark {
     .paragraph__text {
-      padding: 2rem 2rem 3rem;
       background-color: $whd-black;
       color: $cd-white;
+      padding: 2rem;
+      @include tablet {
+        padding: 2rem 2rem 3rem;
+      }
     }
 
     .paragraph__image {
@@ -109,28 +112,29 @@
     h3 {
       color: $cd-white;
     }
-
-    .rule {
-      order: 3;
-      flex: 1 0 100%;
-      width: 100%;
-    }
   }
 
   &.paragraph--style--brand {
+    margin-bottom: 1rem;
     background-color: $whd-blue--light;
-    padding: 2rem 2rem 3rem;
+    padding: 2rem;
+    @include tablet {
+      padding: 2rem 2rem 3rem;
+    }
 
     .paragraph__text {
-      padding: 2rem;
-      color: $cd-white;
+      color: $whd-black;
+
+      @include tablet {
+        padding: 2rem;
+      }
     }
 
     .paragraph__image {
       width: 100%;
       max-width: unset;
       text-align: center;
-      padding: 2rem;
+      padding: 0 0 2rem;
       margin: 0;
 
       @include tablet {
@@ -150,10 +154,6 @@
     h2,
     h3 {
       color: $cd-white;
-    }
-
-    .rule {
-      order: 3;
     }
   }
 }

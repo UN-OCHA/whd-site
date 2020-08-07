@@ -32,6 +32,7 @@ libraries-override:
   classy/base:
     css:
       component:
+        css/components/book-navigation.css: false
         css/components/button.css: false
         css/components/inline-form.css: false
         css/components/links.css: false

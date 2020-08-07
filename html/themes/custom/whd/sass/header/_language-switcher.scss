@@ -10,7 +10,7 @@
 .cd-language-switcher__btn {
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0 0 0 15px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   box-sizing: content-box;
@@ -35,6 +35,14 @@
 
   &:focus {
     outline: 3px solid $whd-blue;
+  }
+}
+
+.cd-site-header__lang-holder {
+  @include max-width(md) {
+    @supports (display: flex) {
+      order: 1;
+    }
   }
 }
 

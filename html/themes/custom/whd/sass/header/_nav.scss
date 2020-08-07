@@ -10,7 +10,7 @@
   @include font-size($cd-font-size-small);
   color: $cd-white;
   height: $cd-site-header-height;
-  padding: 0 20px;
+  padding: 0 12px;
   text-transform: uppercase;
   transition: background 0.3s ease;
 
@@ -60,6 +60,13 @@
 
 .cd-site-header__nav-holder {
   float: left;
+
+  @include max-width(md) {
+    @supports (display: flex) {
+      order: 2;
+    }
+  }
+
 
   .cd-nav {
     @include z-index(main-menu); // zindex may need adjusting depending on other site content.

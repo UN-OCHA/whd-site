@@ -18,7 +18,16 @@
 }
 
 .cd-site-header__inner {
+  padding: 0 0 0 $cd-container-padding; // Padding-right is on Nav toggle button.
   height: $cd-site-header-height;
+
+  @include tablet {
+    padding: 0 $cd-container-padding-tablet;
+  }
+
+  @include xlarge {
+    padding: 0 $cd-container-padding-xlarge;
+  }
 
   @supports(display: grid) {
     display: grid;
