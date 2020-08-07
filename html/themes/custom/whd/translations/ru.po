@@ -36,3 +36,7 @@ msgstr "Читайте дальше"
 #: unknown:2
 msgid "Read the comic"
 msgstr "Прочитайте комикс"
+
+#: templates/content/node--reference.html.twig:90
+msgid "The Origins"
+msgstr ""
