@@ -75,13 +75,13 @@
       &[data-cd-hidden='false'] {
         background: $cd-black;
         //height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
-        height: calc(100vh - (#{$cd-site-header-height} + 3px));
+        height: calc(100vh - #{$cd-site-header-height});
         padding: 20px 0 36px;
         position: absolute;
         right: 0;
         left: 0;
         //top: calc(#{$cd-global-header-height} + #{$cd-site-header-height} + 3px);
-        top: calc(#{$cd-site-header-height} + 3px);
+        top: $cd-site-header-height;
       }
 
       &[data-cd-hidden='false'] > ul {

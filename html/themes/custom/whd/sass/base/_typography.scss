@@ -130,12 +130,17 @@ h1 {
 }
 
 h2 {
+  font-family: $work-sans;
+  font-weight: 700;
   font-size: 2.625rem;
   line-height: 2.625rem;
 
   @include tablet {
-    font-family: $work-sans;
-    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+  }
+
+  @include desktop {
     font-size: 4.375rem;
     line-height: 4.375rem;
   }
@@ -170,25 +175,33 @@ h5 {
 }
 
 .page-title {
-  font-size: 6.875rem;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
   font-weight: 700;
-  color: $whd-blue;
   text-transform: uppercase;
+  color: $cd-white;
+  margin: 0;
+  position: relative;
+  top: -3px;
+  left: -3px;
+  // sass-lint:disable no-duplicate-properties
+  text-shadow: 1px 1px $whd-blue--light,
+  2px 2px $whd-blue--light,
+  3px 3px $whd-blue--light,
+  4px 4px $whd-blue--light,
+  5px 5px $whd-blue--light,
+  6px 6px $whd-blue--light,
+  7px 7px $whd-blue--light,
+  8px 8px $whd-blue--light;
 
-  .path-frontpage & {
-    color: $cd-white;
-    position: relative;
-    top: -3px;
-    left: -3px;
-    // sass-lint:disable no-duplicate-properties
-    text-shadow: 1px 1px $whd-blue--light,
-    2px 2px $whd-blue--light,
-    3px 3px $whd-blue--light,
-    4px 4px $whd-blue--light,
-    5px 5px $whd-blue--light,
-    6px 6px $whd-blue--light,
-    7px 7px $whd-blue--light,
-    8px 8px $whd-blue--light;
+  @include tablet {
+    font-size: 5.875rem;
+    line-height: 5.875rem;
+  }
+
+  @include desktop {
+    font-size: 6.875rem;
+    line-height: 6.875rem;
   }
 }
 

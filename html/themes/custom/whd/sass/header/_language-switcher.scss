@@ -16,9 +16,10 @@
   box-sizing: content-box;
   line-height: $cd-global-header-height;
   height: $cd-global-header-height;
+  color: $whd-blue;
 
   @include tablet {
-    padding: 0 0 0 20px;
+    padding: 0 24px;
   }
 
   // Language switcher is always on the far edge of the global header.
@@ -31,6 +32,7 @@
   .cd-icon--arrow-down {
     min-height: 100%; // IE11 fix.
     margin: auto; // Center vertically in macOS 10
+    fill: $whd-blue !important;
   }
 
   &:focus {

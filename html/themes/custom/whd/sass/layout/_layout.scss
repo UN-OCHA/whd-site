@@ -9,13 +9,6 @@ html {
 body {
   background: $cd-site-bg-color;
   min-height: 100%;
-
-  // &:not(.user-logged-in) {
-  //   @supports (display: grid) {
-  //     display: grid;
-  //     grid-template-rows: 1fr auto;
-  //   }
-  // }
 }
 
 .cd-layout-container {
@@ -60,11 +53,11 @@ body {
   max-width: $cd-max-width;
 
   @include tablet {
-    padding: 0 $cd-container-padding-tablet;
+    //padding: 0 $cd-container-padding-tablet;
   }
 
   @include xlarge {
-    padding: 0 $cd-container-padding-xlarge;
+    //padding: 0 $cd-container-padding-xlarge;
   }
 }
 
@@ -80,7 +73,7 @@ body {
 // Using the element as a selector, instead of a unique class
 // means I cannot @extend the rule below, for the inner layout rules.
 // .cd-container is used as a utility class on other divs, for common padding, width control.
-.cd-layout-container main.cd-container {
+body:not(.path-frontpage) .cd-layout-container main.cd-container {
   padding-top: 2rem;
 
   @include tablet {
@@ -128,7 +121,7 @@ body {
   //background: lightyellow;
 
   @include tablet {
-    flex-basis: 0;
+    flex-basis: 1440px;
     flex-grow: 999;
     //min-width: 50%;
   }

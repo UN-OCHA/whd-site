@@ -1,3 +1,10 @@
+.paragraph--type--hero {
+  background: $whd-black;
+  @include tablet {
+    margin-top: 2px; // This prevents the main area overlapping the header. I don't know why this is happening but this corrects it visually.
+  }
+}
+
 // https://alistapart.com/article/creating-intrinsic-ratios-for-video/
 .hero__video-container {
   position: relative;
@@ -17,22 +24,78 @@
 }
 
 .hero__image {
+  .field--name-field-media-image {
+    height: 334px;
+    width: auto;
+
+    @include tablet {
+      height: 560px;
+    }
+
+    @include desktop {
+      height: 680px;
+    }
+
+    @include xl {
+      height: 836px;
+    }
+
+    picture {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+
+    picture img {
+      object-fit: cover;
+      object-position: 50% 50%;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+
+.hero__image {
   position: relative;
   display: flex;
   align-items: flex-end;
-
   img {
     display: block;
   }
 }
 
 .hero__wrapper {
-  position: absolute;
+  position: relative;
   z-index: 1;
+  //bottom: 0;
+  margin-top: -7rem;
+
+  @include tablet {
+    margin-top: -500px;
+  }
+
+  @include desktop {
+    margin-top: -580px;
+  }
+
+  @include xl {
+    padding: 0 0 0 3rem;
+  }
 }
 
 .page-title {
   z-index: 1;
+  padding: 0 2rem;
+  max-width: 400px;
+
+  @include tablet {
+    max-width: 500px;
+  }
+
+  @include desktop {
+    max-width: 600px;
+  }
 }
 
 .hero__play-button {
@@ -44,8 +107,13 @@
   font-weight: bold;
   text-transform: uppercase;
   color: $cd-white;
-  padding: 1rem 2rem 2rem;
   cursor: pointer;
+  padding: 1rem 2rem 0;
+  max-width: 300px;
+
+  @include tablet {
+    padding: 1rem 2rem 2rem;
+  }
 
   .cd-icon--play {
     width: 3.5rem;

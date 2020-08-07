@@ -11,8 +11,12 @@
 // Site Header.
 // Bottom header bar, contains Logo, Search and Navigation.
 //
+.cd-header {
+  height: $cd-site-header-height;
+}
+
 .cd-site-header {
-  border-bottom: 3px solid $cd-black;
+  //border-bottom: 3px solid $cd-black;
   background-color: $cd-black;
   color: $cd-white;
 }
@@ -22,11 +26,11 @@
   height: $cd-site-header-height;
 
   @include tablet {
-    padding: 0 $cd-container-padding-tablet;
+    padding: 0 0 0 $cd-container-padding-tablet; // Padding-right is on Lang toggle button.
   }
 
   @include xlarge {
-    padding: 0 $cd-container-padding-xlarge;
+    //padding: 0 16px 0 $cd-container-padding-xlarge; // Some padding-right is on Lang toggle button.
   }
 
   @supports(display: grid) {
