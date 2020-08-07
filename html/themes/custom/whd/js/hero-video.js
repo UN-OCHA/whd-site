@@ -20,7 +20,7 @@
         window.onYouTubeIframeAPIReady = function () {
           window.player = new window.YT.Player('player', {
             width: '100%',
-            height: 'auto',
+            height: '334',
             videoId: '8qfpnFZQWmo',
             playerVars: {
               autoplay: 1,
@@ -41,8 +41,7 @@
       }
 
       $('#hero__play-button').on('click', function () {
-        console.log('play');
-        $(this).hide();
+        $('.hero__wrapper').hide();
         $('#hero__image').hide();
         createVideo();
       });
@@ -66,7 +65,7 @@
         if (event.data === 0) {
           $('#player').remove();
           $('#hero__video-container').append('<div id ="player" width="100%" height="100%"></div>').css('padding-bottom', '0');
-          $('#hero__play-button').show();
+          $('.hero__wrapper').show();
           $('#hero__image').show();
         }
       }

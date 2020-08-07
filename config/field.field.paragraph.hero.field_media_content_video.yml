@@ -10,7 +10,7 @@ id: paragraph.hero.field_media_content_video
 field_name: field_media_content_video
 entity_type: paragraph
 bundle: hero
-label: video
+label: Video
 description: ''
 required: false
 translatable: true

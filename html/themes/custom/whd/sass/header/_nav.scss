@@ -10,7 +10,7 @@
   @include font-size($cd-font-size-small);
   color: $cd-white;
   height: $cd-site-header-height;
-  padding: 0 20px;
+  padding: 0 12px;
   text-transform: uppercase;
   transition: background 0.3s ease;
 
@@ -61,6 +61,13 @@
 .cd-site-header__nav-holder {
   float: left;
 
+  @include max-width(md) {
+    @supports (display: flex) {
+      order: 2;
+    }
+  }
+
+
   .cd-nav {
     @include z-index(main-menu); // zindex may need adjusting depending on other site content.
 
@@ -68,13 +75,13 @@
       &[data-cd-hidden='false'] {
         background: $cd-black;
         //height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
-        height: calc(100vh - (#{$cd-site-header-height} + 3px));
+        height: calc(100vh - #{$cd-site-header-height});
         padding: 20px 0 36px;
         position: absolute;
         right: 0;
         left: 0;
         //top: calc(#{$cd-global-header-height} + #{$cd-site-header-height} + 3px);
-        top: calc(#{$cd-site-header-height} + 3px);
+        top: $cd-site-header-height;
       }
 
       &[data-cd-hidden='false'] > ul {
