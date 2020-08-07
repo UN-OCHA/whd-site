@@ -6,9 +6,12 @@ dependencies:
     - field.field.node.basic_page.body
     - field.field.node.basic_page.field_learn_more
     - field.field.node.basic_page.field_media_content
+    - field.field.node.basic_page.field_social_sharing_image
+    - field.field.node.basic_page.field_social_sharing_title
     - node.type.basic_page
   module:
     - link
+    - media_library
     - paragraphs
     - path
     - text
@@ -59,6 +62,21 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+    region: content
+  field_social_sharing_image:
+    type: media_library_widget
+    weight: 28
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_social_sharing_title:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   langcode:
     type: language_select

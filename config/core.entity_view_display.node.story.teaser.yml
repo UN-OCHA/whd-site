@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.story.field_media_content
     - field.field.node.story.field_profile_image
     - field.field.node.story.field_pronoun
+    - field.field.node.story.field_social_sharing_image
+    - field.field.node.story.field_social_sharing_title
     - field.field.node.story.field_teaser_image
     - node.type.story
   module:
@@ -41,5 +43,7 @@ hidden:
   field_media_content: true
   field_profile_image: true
   field_pronoun: true
+  field_social_sharing_image: true
+  field_social_sharing_title: true
   langcode: true
   links: true
