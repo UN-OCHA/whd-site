@@ -159,9 +159,11 @@
 }
 
 .paragraph--type--banner {
+  display: none;
   margin: 0 0 4rem;
 
   @include tablet {
+    display: block;
     margin: -2rem 0 4rem;
   }
 
