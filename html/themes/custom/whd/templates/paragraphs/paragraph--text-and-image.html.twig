@@ -59,6 +59,12 @@
   {% endif %}
 
       <div class="paragraph__image">
+        {% if style == 'dark' %}
+          <div class="heart">
+            <img class="heart" src="/themes/custom/whd/img/decorative/whdheart--blue.svg">
+          </div>
+        {% endif %}
+
         {{ content.field_media_content_image }}
       </div>
 
