@@ -8,8 +8,8 @@ _core:
   default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
 id: whd_local_tasks
 theme: whd
-region: content
-weight: -1
+region: highlighted
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

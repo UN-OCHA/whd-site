@@ -1,0 +1,10 @@
+uuid: 2e2d9357-8e3a-466e-bb9e-c1efcc1c6729
+langcode: en
+status: true
+dependencies: {  }
+id: screenreader_text
+label: 'Screenreader text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
