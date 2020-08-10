@@ -1,0 +1,27 @@
+uuid: 69bc73d9-9970-4af1-9886-02125c163051
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_frame_description
+    - paragraphs.paragraphs_type.screenreader_text
+  module:
+    - text
+id: paragraph.screenreader_text.field_frame_description
+field_name: field_frame_description
+entity_type: paragraph
+bundle: screenreader_text
+label: 'Frame description'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<h3>Frame 1</h3>\r\n\r\n<p>This is a description of Frame 1 content.</p>\r\n"
+    format: full_html
+  -
+    value: "<h3>Frame 2</h3>\r\n\r\n<p>This is a description of Frame 2 content.</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

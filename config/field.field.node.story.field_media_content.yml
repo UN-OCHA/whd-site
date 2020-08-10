@@ -23,8 +23,23 @@ settings:
     negate: 0
     target_bundles: null
     target_bundles_drag_drop:
+      banner:
+        weight: 10
+        enabled: false
+      hero:
+        weight: 11
+        enabled: false
       image:
         weight: 4
+        enabled: false
+      node:
+        weight: 13
+        enabled: false
+      screenreader_text:
+        weight: 9
+        enabled: false
+      stories:
+        weight: 14
         enabled: false
       text_and_image:
         weight: 5

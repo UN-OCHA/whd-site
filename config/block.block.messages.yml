@@ -1,4 +1,4 @@
-uuid: bcc914f2-fc2f-4b52-a789-abe5b71e6bca
+uuid: 89b578c1-b801-49a5-9d26-fcad494bc19b
 langcode: en
 status: true
 dependencies:
@@ -6,17 +6,15 @@ dependencies:
     - system
   theme:
     - whd
-_core:
-  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
-id: whd_messages
+id: messages
 theme: whd
 region: highlighted
-weight: -5
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: 'Status messages'
+  label: Messages
   provider: system
   label_display: '0'
 visibility: {  }

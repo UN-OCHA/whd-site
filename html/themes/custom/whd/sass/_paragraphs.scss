@@ -32,177 +32,187 @@
     }
   }
 
-  @supports (display: flex) {
-    @include tablet {
-      display: flex;
-      //flex-wrap: wrap;
-      justify-content: space-between;
-
-      .field--name-field-media-content-title {
-        flex: 1 0 100%;
-      }
-
-      &.paragraph__image--align-left,
-      &.paragraph__image--align-right {
-        .paragraph__text {
-          order: 2;
-        }
-
-        .paragraph__image {
-          order: 1;
-        }
-
-        .paragraph__text {
-          @include tablet {
-            flex: 0 1 60%;
-          }
-        }
-
-        .paragraph__image {
-          @include tablet {
-            flex: 1 0 40%;
-          }
-        }
-      }
-    }
-  }
-
-  &.paragraph__image--align-left {
-    .paragraph__image {
-      @include tablet {
-        margin-right: 2rem;
-      }
-    }
-  }
-
-  &.paragraph__image--align-right {
-    .paragraph__text {
-      @include tablet {
-        margin-right: 2rem;
-      }
-    }
-
-    .paragraph__image {
-      text-align: right;
-    }
+  .paragraph--type--text-and-image__inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $cd-max-body-width;
 
     @supports (display: flex) {
       @include tablet {
-        .paragraph__text {
-          order: 1;
-        }
+        display: flex;
+        //flex-wrap: wrap;
+        justify-content: space-between;
 
-        .paragraph__image {
-          order: 2;
+        .field--name-field-media-content-title {
+          flex: 1 0 100%;
         }
       }
     }
   }
+}
 
-  &.paragraph--style--dark {
-    position: relative;
+@supports (display: flex) {
+  .paragraph__image--align-left,
+  .paragraph__image--align-right {
+    .paragraph__text {
+      order: 2;
+    }
 
-    @include xl {
-      padding: 0 5rem;
-      margin-bottom: 6rem;
+    .paragraph__image {
+      order: 1;
     }
 
     .paragraph__text {
-      background-color: $whd-black;
-      color: $cd-white;
-      padding: 2rem;
-
       @include tablet {
-        padding: 2rem 2rem 3rem;
-      }
-
-      @include xl {
-        padding: 4rem 4rem 0;
-        flex: 0 1 560px;
+        flex: 0 1 60%;
       }
     }
 
     .paragraph__image {
-      display: none;
-
       @include tablet {
-        display: block;
-        padding: 2rem 0 3rem;
-      }
-
-      @include xl {
-        flex: 0 1 520px;
-      }
-    }
-
-    h2,
-    h3 {
-      color: $cd-white;
-    }
-
-    p {
-      @include xl {
-        margin-bottom: 4rem;
+        flex: 1 0 40%;
       }
     }
   }
+}
 
-  &.paragraph--style--brand {
-    margin-bottom: 1rem;
-    background-color: $whd-blue--light;
+.paragraph__image--align-left {
+  .paragraph__image {
+    @include tablet {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.paragraph__image--align-right {
+  .paragraph__text {
+    @include tablet {
+      margin-right: 2rem;
+    }
+  }
+
+  .paragraph__image {
+    text-align: right;
+  }
+
+  @supports (display: flex) {
+    @include tablet {
+      .paragraph__text {
+        order: 1;
+      }
+
+      .paragraph__image {
+        order: 2;
+      }
+    }
+  }
+}
+
+.paragraph--style--dark {
+  position: relative;
+
+  @include xl {
+    padding: 0 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .paragraph__text {
+    background-color: $whd-black;
+    color: $cd-white;
     padding: 2rem;
 
     @include tablet {
       padding: 2rem 2rem 3rem;
+      flex: 0 1 560px;
     }
 
-    .paragraph__text {
-      color: $whd-black;
+    @include xl {
+      padding: 4rem 4rem 0;
+      flex: 0 1 560px;
+    }
+  }
+
+  .paragraph__image {
+    display: none;
+
+    @include tablet {
+      display: block;
+      padding: 2rem 0 3rem;
+    }
+
+    @include xl {
+      flex: 0 1 520px;
+    }
+  }
+
+  h2,
+  h3 {
+    color: $cd-white;
+  }
+
+  p {
+    @include xl {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.paragraph--style--brand {
+  margin-bottom: 1rem;
+  background-color: $whd-blue--light;
+  padding: 2rem;
+
+  @include tablet {
+    padding: 2rem 2rem 3rem;
+  }
+
+  .paragraph__text {
+    color: $whd-black;
+
+    @include tablet {
+      padding: 2rem;
+    }
+
+    @include desktop {
+      padding: 2rem 4rem 2rem 3rem;
+    }
+
+    @include xl {
+      padding: 2rem 4rem 2rem 6rem;
+      flex: 1 0 585px;
+    }
+  }
+
+  .paragraph__image {
+    width: 100%;
+    max-width: unset;
+    text-align: center;
+    padding: 0 0 2rem;
+    margin: 0;
+
+    @include tablet {
+      width: unset;
+      padding: 0;
+    }
+
+    @include xl {
+      flex: 0 1 520px;
+      padding: 2rem 0 2rem 3rem;
+    }
+
+    > .field--name-field-media-content-image > .field__item:nth-child(2) {
+      display: none;
 
       @include tablet {
-        padding: 2rem;
-      }
-
-      @include desktop {
-        padding: 2rem 4rem 2rem 3rem;
-      }
-
-      @include xl {
-        padding: 2rem 4rem 2rem 6rem;
-        flex: 1 0 585px;
+        display: block;
+        margin-top: 2rem;
       }
     }
+  }
 
-    .paragraph__image {
-      width: 100%;
-      max-width: unset;
-      text-align: center;
-      padding: 0 0 2rem;
-      margin: 0;
-
-      @include tablet {
-        width: unset;
-        padding: 0;
-      }
-
-      @include xl {
-        flex: 0 1 520px;
-        padding: 2rem 0 2rem 3rem;
-      }
-
-      > .field--name-field-media-content-image > .field__item:nth-child(2) {
-        display: none;
-
-        @include tablet {
-          display: block;
-        }
-      }
-    }
-
-    h2,
-    h3 {
-      color: $cd-white;
-    }
+  h2,
+  h3 {
+    color: $cd-white;
   }
 }
 
@@ -215,7 +225,7 @@
     margin: -2rem 0 4rem;
   }
 
-  .field--name-field-media-image  {
+  .field--name-field-media-image {
     height: 30rem;
     width: 100%;
 
@@ -230,6 +240,51 @@
       object-position: 50% 50%;
       height: auto;
       width: 100%;
+    }
+  }
+}
+
+
+.paragraph--type--stories,
+.paragraph--type--video {
+  margin: 0 auto;
+  max-width: $cd-max-body-width;
+}
+
+.paragraph--type--video {
+  // https://alistapart.com/article/creating-intrinsic-ratios-for-video/
+  .hero__video-container .field--name-field-media-oembed-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+  .hero__video-container .field--name-field-media-oembed-video .field__item iframe,
+  .hero__video-container .field--name-field-media-oembed-video .field__item embed,
+  .hero__video-container .field--name-field-media-oembed-video .field__item object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.paragraph--type--screenreader-text {
+  padding: 2rem 2rem 4rem;
+  margin-bottom: 2rem;
+
+  @supports (display: flex) {
+    @include tablet {
+      .field--name-field-frame-description {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .field__item {
+        flex: 0 0 50%;
+      }
     }
   }
 }

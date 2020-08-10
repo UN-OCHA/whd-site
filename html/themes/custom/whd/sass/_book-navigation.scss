@@ -1,0 +1,94 @@
+// Book module navigation.
+.book-navigation {
+  margin: 2rem 0 1rem;
+}
+
+.book-navigation .book-pager {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.book-pager__item {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.book-pager__item--previous,
+.book-pager__item--next {
+  width: auto;
+  width: unset;
+  text-align: right;
+  flex: 1 0 100%;
+
+  @include tablet {
+    flex: 1 0 50%;
+  }
+}
+
+.book-pager__item {
+  order: 1;
+
+  @include tablet {
+    order: 2;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    text-decoration: none;
+
+    .cd-icon--arrows {
+      height: 50px;
+      width: 54px;
+      flex: 0 0 54px;
+      margin-left: 0.5rem;
+      fill: $whd-blue;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: $whd-blue--dark;
+    }
+  }
+
+  &.book-pager__item--previous {
+    order: 2;
+    margin-top: 1rem;
+    text-align: left;
+
+    @include tablet {
+      order: 1;
+      margin-top: 0;
+    }
+
+    a {
+      justify-content: flex-start;
+      color: $whd-grey--light;
+
+      &:hover,
+      &:focus {
+        color: $whd-grey;
+      }
+
+      .cd-icon--arrows {
+        fill: $whd-grey--light;
+        transform: scale(-1, 1);
+        margin-left: 0;
+        margin-right: 0.5rem;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        fill: $whd-grey;
+      }
+    }
+  }
+}
