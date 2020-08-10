@@ -6,7 +6,6 @@
   }
 
   .paragraph__image {
-    max-width: 500px;
     margin-bottom: 1rem;
   }
 
@@ -21,6 +20,16 @@
   h3,
   p {
     margin-top: 0;
+  }
+
+  .heart {
+    padding: 5rem 0 1rem;
+    text-align: left;
+
+    img {
+      width: 140px;
+      height: auto;
+    }
   }
 
   @supports (display: flex) {
@@ -58,20 +67,20 @@
     }
   }
 
-  //&.paragraph__image--align-left {
-  //  .paragraph__image {
-  //    @include tablet {
-  //      margin-right: 2rem;
-  //    }
-  //  }
-  //}
+  &.paragraph__image--align-left {
+    .paragraph__image {
+      @include tablet {
+        margin-right: 2rem;
+      }
+    }
+  }
 
   &.paragraph__image--align-right {
-    //.paragraph__text {
-    //  @include tablet {
-    //    margin-right: 2rem;
-    //  }
-    //}
+    .paragraph__text {
+      @include tablet {
+        margin-right: 2rem;
+      }
+    }
 
     .paragraph__image {
       text-align: right;
@@ -91,17 +100,38 @@
   }
 
   &.paragraph--style--dark {
+    position: relative;
+
+    @include xl {
+      padding: 0 5rem;
+      margin-bottom: 6rem;
+    }
+
     .paragraph__text {
-      padding: 2rem 2rem 3rem;
       background-color: $whd-black;
       color: $cd-white;
+      padding: 2rem;
+
+      @include tablet {
+        padding: 2rem 2rem 3rem;
+      }
+
+      @include xl {
+        padding: 4rem 4rem 0;
+        flex: 0 1 560px;
+      }
     }
 
     .paragraph__image {
       display: none;
+
       @include tablet {
         display: block;
         padding: 2rem 0 3rem;
+      }
+
+      @include xl {
+        flex: 0 1 520px;
       }
     }
 
@@ -110,32 +140,54 @@
       color: $cd-white;
     }
 
-    .rule {
-      order: 3;
-      flex: 1 0 100%;
-      width: 100%;
+    p {
+      @include xl {
+        margin-bottom: 4rem;
+      }
     }
   }
 
   &.paragraph--style--brand {
+    margin-bottom: 1rem;
     background-color: $whd-blue--light;
-    padding: 2rem 2rem 3rem;
+    padding: 2rem;
+
+    @include tablet {
+      padding: 2rem 2rem 3rem;
+    }
 
     .paragraph__text {
-      padding: 2rem;
-      color: $cd-white;
+      color: $whd-black;
+
+      @include tablet {
+        padding: 2rem;
+      }
+
+      @include desktop {
+        padding: 2rem 4rem 2rem 3rem;
+      }
+
+      @include xl {
+        padding: 2rem 4rem 2rem 6rem;
+        flex: 1 0 585px;
+      }
     }
 
     .paragraph__image {
       width: 100%;
       max-width: unset;
       text-align: center;
-      padding: 2rem;
+      padding: 0 0 2rem;
       margin: 0;
 
       @include tablet {
         width: unset;
         padding: 0;
+      }
+
+      @include xl {
+        flex: 0 1 520px;
+        padding: 2rem 0 2rem 3rem;
       }
 
       > .field--name-field-media-content-image > .field__item:nth-child(2) {
@@ -151,17 +203,15 @@
     h3 {
       color: $cd-white;
     }
-
-    .rule {
-      order: 3;
-    }
   }
 }
 
 .paragraph--type--banner {
+  display: none;
   margin: 0 0 4rem;
 
   @include tablet {
+    display: block;
     margin: -2rem 0 4rem;
   }
 

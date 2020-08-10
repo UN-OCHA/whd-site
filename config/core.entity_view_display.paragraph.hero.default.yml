@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_hero_title
     - field.field.paragraph.hero.field_media_content_hero_image
     - field.field.paragraph.hero.field_media_content_video
     - paragraphs.paragraphs_type.hero
@@ -11,17 +12,25 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
-  field_media_content_hero_image:
-    type: entity_reference_entity_view
-    weight: 1
+  field_hero_title:
+    weight: 0
     label: hidden
     settings:
-      view_mode: responsive_image
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_media_content_hero_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: responsive_hero
       link: false
     third_party_settings: {  }
     region: content
   field_media_content_video:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link: true

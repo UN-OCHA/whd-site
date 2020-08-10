@@ -1,7 +1,7 @@
 .node--view-mode-teaser,
 .node--view-mode-full {
   h2 {
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
 
     @include tablet {
       margin: 0 0 3rem;
@@ -20,9 +20,11 @@
 }
 
 .node--view-mode-teaser {
-  margin-bottom: 3rem;
+  padding: 2rem;
+  //margin-bottom: 2rem;
 
   @include tablet {
+    padding: 0;
     display: flex;
     margin-bottom: 6rem;
   }
@@ -36,22 +38,28 @@
   }
 
   .node__teaser-image {
-    flex: 0 1 50%;
-    order: 1;
+    margin-bottom: 1rem;
   }
 
-  .node__content {
-    flex: 0 1 50%;
-    order: 2;
-  }
-
-  &:nth-child(even) {
+  @include tablet {
     .node__teaser-image {
-      order: 2;
+      flex: 0 1 50%;
+      order: 1;
     }
 
     .node__content {
-      order: 1;
+      flex: 0 1 50%;
+      order: 2;
+    }
+
+    &:nth-child(even) {
+      .node__teaser-image {
+        order: 2;
+      }
+
+      .node__content {
+        order: 1;
+      }
     }
   }
 
@@ -62,6 +70,7 @@
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+    padding: 1rem 0;
 
     svg {
       height: 50px;
@@ -75,6 +84,16 @@
       fill: $whd-blue--dark;
     }
   }
+}
+
+// Comic art on Story.
+.node--type-story .paragraph--type--image {
+  padding: 0 2rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.node--type-story .node__content {
+  padding: 0 2rem 2rem;
 }
 
 .field--name-field-media-content-title {
@@ -100,7 +119,13 @@
     text-decoration: none;
     padding: 0.75rem 1rem;
     border: 2px solid $whd-grey--light;
-    max-width: 330px;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: unset;
+
+    @include tablet {
+      max-width: 330px;
+    }
 
     &:hover,
     &:focus {
@@ -110,6 +135,7 @@
   }
 }
 
+// WYSIWYG Styles.
 .small {
   font-size: 1rem;
   line-height: 1.5;
@@ -135,15 +161,47 @@ hr {
   width: 1rem;
 }
 
+// Book module navigation.
 .book-navigation {
   margin: 2rem 0 1rem;
 }
 
+.book-navigation .book-pager {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .book-pager__item {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.book-pager__item--previous,
+.book-pager__item--next {
+  width: auto;
+  width: unset;
+  text-align: right;
+  flex: 1 0 100%;
+
+  @include tablet {
+    flex: 1 0 50%;
+  }
+}
+
+.book-pager__item {
+  order: 1;
+
+  @include tablet {
+    order: 2;
+  }
+
   a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex: 1;
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 1.5;
@@ -165,26 +223,43 @@ hr {
   }
 
   &.book-pager__item--previous {
+    order: 2;
+    margin-top: 1rem;
+    text-align: left;
+
+    @include tablet {
+      order: 1;
+      margin-top: 0;
+    }
 
     a {
       justify-content: flex-start;
-    }
+      color: $whd-grey--light;
 
-    .cd-icon--arrows {
-      transform: scale(-1, 1);
-      margin-left: 0;
-      margin-right: 0.5rem;
+      &:hover,
+      &:focus {
+        color: $whd-grey;
+      }
+
+      .cd-icon--arrows {
+        fill: $whd-grey--light;
+        transform: scale(-1, 1);
+        margin-left: 0;
+        margin-right: 0.5rem;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        fill: $whd-grey;
+      }
     }
   }
 }
 
-
-.node--type-story .paragraph--type--image {
-  margin-bottom: 2rem;
-}
-
 // What is WHD? On homepage.
 .node--type-basic-page.node--view-mode-reference {
+  padding: 2rem;
+
   .origin {
     text-transform: uppercase;
     font-size: 1rem;
@@ -222,7 +297,13 @@ hr {
       text-decoration: none;
       padding: 0.75rem 1rem;
       border: 2px solid $whd-blue;
-      max-width: 330px;
+      margin: 1rem 0;
+      width: 100%;
+      max-width: unset;
+
+      @include tablet {
+        max-width: 330px;
+      }
 
       &:hover,
       &:focus {

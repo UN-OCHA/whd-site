@@ -9,13 +9,6 @@ html {
 body {
   background: $cd-site-bg-color;
   min-height: 100%;
-
-  // &:not(.user-logged-in) {
-  //   @supports (display: grid) {
-  //     display: grid;
-  //     grid-template-rows: 1fr auto;
-  //   }
-  // }
 }
 
 .cd-layout-container {
@@ -54,17 +47,17 @@ body {
 .cd-container {
   @include clearfix;
   box-sizing: border-box;
-  padding: 0 $cd-container-padding;
+  //padding: 0 $cd-container-padding;
   margin: 0 auto;
   width: 100%;
   max-width: $cd-max-width;
 
   @include tablet {
-    padding: 0 $cd-container-padding-tablet;
+    //padding: 0 $cd-container-padding-tablet;
   }
 
   @include xlarge {
-    padding: 0 $cd-container-padding-xlarge;
+    //padding: 0 $cd-container-padding-xlarge;
   }
 }
 
@@ -80,7 +73,7 @@ body {
 // Using the element as a selector, instead of a unique class
 // means I cannot @extend the rule below, for the inner layout rules.
 // .cd-container is used as a utility class on other divs, for common padding, width control.
-.cd-layout-container main.cd-container {
+body:not(.path-frontpage) .cd-layout-container main.cd-container {
   padding-top: 2rem;
 
   @include tablet {
@@ -109,8 +102,7 @@ body {
 }
 
 // One sidebar.
-.cd-layout-with-sidebar-first .cd-layout-sidebar-first,
-.cd-layout-with-sidebar-second .cd-layout-sidebar-second {
+.cd-layout-with-sidebar-first .cd-layout-sidebar-first {
   @include tablet {
     flex-basis: 285px;
   }
@@ -125,77 +117,25 @@ body {
   }
 }
 
-.cd-layout-sidebar-second {
-  //background: lightpink;
-}
-
-// Both sidebars, individually control.
-.cd-layout-with-sidebar-both {
-  .cd-layout-sidebar-first {
-    margin-bottom: 1rem;
-
-    @include tablet {
-      flex-basis: 285px;
-    }
-
-    @include desktop {
-      margin-bottom: 0;
-    }
-  }
-
-  .cd-layout-sidebar-second {
-    @include tablet {
-      flex-basis: 500px; // Keep this number large so exceeds the available space and thus sits below.
-    }
-    @include desktop {
-      flex-basis: 285px;
-    }
-  }
-}
-
 .cd-layout-content {
   //background: lightyellow;
 
   @include tablet {
-    flex-basis: 0;
+    flex-basis: 1440px;
     flex-grow: 999;
     //min-width: 50%;
   }
 
   // sass-lint:disable no-duplicate-properties
-  .cd-layout-with-sidebar-first &,
-  .cd-layout-with-sidebar-second & {
+  .cd-layout-with-sidebar-first & {
     min-width: auto; //IE11 fix.
     min-width: unset;
-  }
-
-  .cd-layout-with-sidebar-both & {
-    margin-bottom: 1rem;
-
-    @include tablet {
-      margin-left: 3rem;
-    }
-
-    @include desktop {
-      margin-right: 3rem;
-      margin-bottom: 0;
-    }
   }
 
   .cd-layout-with-sidebar-first & {
     @include tablet {
       margin-left: 3rem;
       margin-right: 0;
-    }
-  }
-
-  .cd-layout-with-sidebar-second & {
-    margin-bottom: 1rem;
-
-    @include tablet {
-      margin-left: 0;
-      margin-right: 3rem;
-      margin-bottom: 0;
     }
   }
 }
@@ -221,11 +161,11 @@ section.cd-layout-two-col {
   }
 
   .cd-layout-sidebar-first {
-    margin-top: 1rem;
+    margin-bottom: 2rem;
 
     @include desktop {
       flex-basis: 472px; //1192-720 (full - content area = sidebar)
-      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
