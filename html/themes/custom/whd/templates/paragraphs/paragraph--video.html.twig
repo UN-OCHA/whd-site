@@ -46,10 +46,12 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+{#{{ attach_library('whd/hero-video') }}#}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
+    <div id="hero__video-container" class="hero__video-container">
       {{ content }}
-    {% endblock %}
+    </div>
   </div>
 {% endblock paragraph %}

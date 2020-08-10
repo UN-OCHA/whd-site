@@ -46,7 +46,7 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{{ attach_library('whd/hero-video') }}
+{#{{ attach_library('whd/hero-video') }}#}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
@@ -59,12 +59,14 @@
 
     <div class="hero__wrapper">
       <div class="page-title">{{ content.field_hero_title }}</div>
-      <div id="hero__play-button" class="hero__play-button">
+{#      <div id="hero__play-button" class="hero__play-button">#}
+      <a id="hero__play-button" class="hero__play-button use-ajax" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:99}" href="http://whd-site.docksal/node/9">
         <svg class="cd-icon cd-icon--play">
           <use xlink:href="#cd-icon--play"></use>
         </svg>
         {% trans %}Play the film{% endtrans %}
-      </div>
+      </a>
+{#      </div>#}
     </div>
 
   </div>

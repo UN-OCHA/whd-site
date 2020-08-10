@@ -43,44 +43,13 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished',
-    paragraph.field_media_content_image_align.value == 'right' ? 'paragraph__image--align-right',
-    paragraph.field_media_content_image_align.value == 'left' ? 'paragraph__image--align-left'
+    not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-
-{% set style = paragraph.field_media_content_style.value %}
-
 {% block paragraph %}
-  {% if style %}
-    <div{{ attributes.addClass(classes).addClass("paragraph--style--#{style}") }}>
-  {% else %}
-    <div{{ attributes.addClass(classes) }}>
-  {% endif %}
-    <div class="paragraph--type--text-and-image__inner">
-
-      <div class="paragraph__image">
-        {% if style == 'dark' %}
-          <div class="heart">
-            <img class="heart" src="/themes/custom/whd/img/decorative/whdheart--blue.svg">
-          </div>
-        {% endif %}
-
-        {{ content.field_media_content_image }}
-      </div>
-
-      <div class="paragraph__text">
-        {{ content.field_media_content_text }}
-
-        {% if style == 'dark' %}
-          <img class="rule" src="/themes/custom/whd/img/decorative/rule--thin--blue.svg">
-        {% endif %}
-
-        {% if style == 'brand' %}
-          <img class="rule" src="/themes/custom/whd/img/decorative/rule--thick--white.svg">
-        {% endif %}
-      </div>
-
-    </div>
+  <div{{ attributes.setAttribute('aria-labelledby', heading_id).setAttribute('data-cd-toggable', 'Display screenreader-friendly text'|t).setAttribute('data-cd-label-switch', 'Hide screenreader-friendly text'|t).setAttribute('data-cd-icon', 'arrow-down').setAttribute('data-cd-toggable-expanded', 'Hide screenreader-friendly text'|t).setAttribute('data-cd-component', 'cd-dropdown').setAttribute('data-cd-toggable-keep', '').addClass(classes)|without('role') }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
   </div>
 {% endblock paragraph %}
