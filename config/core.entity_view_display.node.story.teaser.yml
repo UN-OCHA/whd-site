@@ -24,14 +24,14 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 1
+    weight: 0
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
   field_teaser_image:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
