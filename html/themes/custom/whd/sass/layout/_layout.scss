@@ -143,9 +143,9 @@ body:not(.path-frontpage) .cd-layout-container main.cd-container {
 // Faux sidebar in Node content.
 // Requires markup in node-full.html.twig.
 section.cd-layout-two-col {
-  @include desktop {
+  @include tablet {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
   }
 
   .cd-layout-main-content {
@@ -153,19 +153,30 @@ section.cd-layout-two-col {
     // The status of those sidebars are not important to this inner layout.
     margin-left: 0;
 
+    @include tablet {
+      margin-left: 2rem;
+      flex: 0 1 500px;
+    }
+
     @include desktop {
-      margin-right: 2rem;
-      flex-basis: 0;
+      margin-left: 4rem;
+      flex: 1 0 500px;
       flex-grow: 999;
     }
   }
 
   .cd-layout-sidebar-first {
     margin-bottom: 2rem;
+    text-align: center;
+
+    @include tablet {
+      flex: 1 0 50%;
+      margin-bottom: 0;
+      text-align: left;
+    }
 
     @include desktop {
-      flex-basis: 472px; //1192-720 (full - content area = sidebar)
-      margin-bottom: 0;
+      flex: 0 1 420px;
     }
   }
 }

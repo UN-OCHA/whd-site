@@ -88,13 +88,16 @@
   z-index: 1;
   padding: 0 2rem;
   max-width: 400px;
+  min-height: 220px; // Height of 3 lines.
 
   @include tablet {
     max-width: 500px;
+    min-height: 290px; // Height of 3 lines.
   }
 
   @include desktop {
     max-width: 600px;
+    min-height: 330px; // Height of 3 lines.
   }
 }
 

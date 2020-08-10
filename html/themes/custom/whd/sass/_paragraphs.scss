@@ -1,5 +1,17 @@
 .paragraph--type--text-and-image {
   clear: both;
+  //width: 100vw;
+  //position: relative;
+  //left: 50%;
+  //right: 50%;
+  //margin-left: -50vw;
+  //margin-right: -50vw;
+  //
+  //
+  //.paragraph--type--text-and-image__inner {
+  //  max-width: $cd-max-body-width;
+  //  margin: 0 auto;
+  //}
 
   @include tablet {
     margin-bottom: 2rem;
@@ -195,6 +207,7 @@
 
         @include tablet {
           display: block;
+          margin-top: 2rem;
         }
       }
     }
@@ -232,4 +245,10 @@
       width: 100%;
     }
   }
+}
+
+
+.paragraph--type--stories {
+  margin: 0 auto;
+  max-width: $cd-max-body-width;
 }

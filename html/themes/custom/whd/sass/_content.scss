@@ -20,13 +20,17 @@
 }
 
 .node--view-mode-teaser {
-  padding: 2rem;
+  padding: 2rem 2rem 0;
   //margin-bottom: 2rem;
 
   @include tablet {
-    padding: 0;
+    padding: 0 2rem;
     display: flex;
     margin-bottom: 6rem;
+  }
+
+  @include xxl {
+    padding: 0;
   }
 
   h2 {
@@ -43,28 +47,52 @@
 
   @include tablet {
     .node__teaser-image {
+      flex: 1 0 50%;
+      order: 1;
+    }
+
+    .node__content {
+      flex: 0 1 500px;
+      order: 2;
+    }
+
+    &:nth-child(odd) {
+      .node__teaser-image {
+        order: 2;
+        text-align: right;
+      }
+
+      .node__content {
+        order: 1;
+        padding-right: 2rem;
+      }
+    }
+
+    &:nth-child(even) {
+      .node__teaser-image {
+        text-align: left;
+      }
+
+      .node__content {
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  @include desktop {
+    .node__teaser-image {
       flex: 0 1 50%;
       order: 1;
     }
 
     .node__content {
-      flex: 0 1 50%;
+      flex: 1 0 500px;
       order: 2;
-    }
-
-    &:nth-child(even) {
-      .node__teaser-image {
-        order: 2;
-      }
-
-      .node__content {
-        order: 1;
-      }
     }
   }
 
   .node__read-more {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-transform: uppercase;
     font-size: 1rem;
@@ -93,7 +121,17 @@
 }
 
 .node--type-story .node__content {
+  padding: 0 0 2rem;
+}
+
+.node--type-story.node--view-mode-full .node__content {
   padding: 0 2rem 2rem;
+}
+
+.node--type-story.node--view-mode-full .field--name-field-profile-image {
+  img {
+    max-width: 420px;
+  }
 }
 
 .field--name-field-media-content-title {
@@ -135,127 +173,6 @@
   }
 }
 
-// WYSIWYG Styles.
-.small {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.blue {
-  color: $whd-blue;
-}
-
-.dark {
-  color: $whd-black;
-}
-
-.white {
-  color: $cd-white;
-}
-
-hr {
-  border: 0;
-  height: 0;
-  border-top: 1px solid $whd-grey--light;
-  margin: 2rem 0;
-  width: 1rem;
-}
-
-// Book module navigation.
-.book-navigation {
-  margin: 2rem 0 1rem;
-}
-
-.book-navigation .book-pager {
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.book-pager__item {
-  display: inline-flex;
-  list-style-type: none;
-}
-
-.book-pager__item--previous,
-.book-pager__item--next {
-  width: auto;
-  width: unset;
-  text-align: right;
-  flex: 1 0 100%;
-
-  @include tablet {
-    flex: 1 0 50%;
-  }
-}
-
-.book-pager__item {
-  order: 1;
-
-  @include tablet {
-    order: 2;
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 1;
-    text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: bold;
-    text-decoration: none;
-
-    .cd-icon--arrows {
-      height: 50px;
-      width: 54px;
-      flex: 0 0 54px;
-      margin-left: 0.5rem;
-      fill: $whd-blue;
-    }
-
-    &:hover svg,
-    &:focus svg {
-      fill: $whd-blue--dark;
-    }
-  }
-
-  &.book-pager__item--previous {
-    order: 2;
-    margin-top: 1rem;
-    text-align: left;
-
-    @include tablet {
-      order: 1;
-      margin-top: 0;
-    }
-
-    a {
-      justify-content: flex-start;
-      color: $whd-grey--light;
-
-      &:hover,
-      &:focus {
-        color: $whd-grey;
-      }
-
-      .cd-icon--arrows {
-        fill: $whd-grey--light;
-        transform: scale(-1, 1);
-        margin-left: 0;
-        margin-right: 0.5rem;
-      }
-
-      &:hover svg,
-      &:focus svg {
-        fill: $whd-grey;
-      }
-    }
-  }
-}
-
 // What is WHD? On homepage.
 .node--type-basic-page.node--view-mode-reference {
   padding: 2rem;
@@ -278,11 +195,22 @@ hr {
     }
 
     .paragraph__image {
-      margin-top: -298px;
+      margin-top: -330px;
     }
 
     .paragraph__text {
       padding-left: 3rem;
+    }
+  }
+
+  @include desktop {
+    .node__title,
+    .node__learn-more {
+      padding-left: 3rem;
+    }
+
+    .paragraph__image {
+      margin-top: -230px;
     }
   }
 
@@ -313,6 +241,20 @@ hr {
     }
   }
 
+  .paragraph--type--text-and-image.paragraph__image--align-left .paragraph__image {
+    margin-right: 0;
+
+    @include xl {
+      flex: 0 1 520px;
+    }
+  }
+
+  .paragraph--type--text-and-image.paragraph__image--align-left .paragraph__text {
+    @include tablet {
+      flex: 0 0 60%;
+    }
+  }
+
   .field--name-field-media-content-image {
     > .field__item:nth-child(1) {
       padding-bottom: 4rem;
@@ -326,6 +268,13 @@ hr {
       @include tablet {
         display: block;
         padding-left: 3rem;
+        margin-top: 0;
+      }
+    }
+
+    > .field__item:nth-child(3) {
+      @include tablet {
+        margin-top: 2rem;
       }
     }
   }
