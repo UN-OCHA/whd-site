@@ -43,6 +43,7 @@
 
 .cd-footer__inner {
   padding: 0 $cd-container-padding;
+  max-width: 1380px;
 
   @include tablet {
     padding: 0 $cd-container-padding-tablet;

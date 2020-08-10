@@ -6,22 +6,37 @@
 }
 
 // https://alistapart.com/article/creating-intrinsic-ratios-for-video/
-.hero__video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+//.hero__video-container {
+//  position: relative;
+//  padding-bottom: 56.25%; /* 16:9 */
+//  height: 0;
+//}
+//
+//.hero__video-container iframe,
+//.hero__video-container embed,
+//.hero__video-container object {
+//  display: none;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//}
+
+.ui-dialog {
+  width: 98% !important;
+  height: auto !important;
+
+  .ui-dialog-content {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+
+  @include desktop {
+    width: 80% !important;
+  }
 }
 
-.hero__video-container iframe,
-.hero__video-container embed,
-.hero__video-container object {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .hero__image {
   .field--name-field-media-image {
@@ -60,12 +75,21 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+
+  .field--name-field-media-content-hero-image {
+    width: 100%;
+  }
+
   img {
     display: block;
   }
 }
 
 .hero__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
+
   position: relative;
   z-index: 1;
   //bottom: 0;
@@ -80,7 +104,7 @@
   }
 
   @include xl {
-    padding: 0 0 0 3rem;
+    //padding: 0 0 0 3rem;
   }
 }
 
@@ -98,6 +122,10 @@
   @include desktop {
     max-width: 600px;
     min-height: 330px; // Height of 3 lines.
+  }
+
+  @include xxl {
+    padding: 0 4rem 0 0;
   }
 }
 

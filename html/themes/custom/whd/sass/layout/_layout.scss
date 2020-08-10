@@ -61,7 +61,7 @@ body {
   }
 }
 
-.cd-container[role='main'] {
+.cd-container--main {
   padding-bottom: 2rem;
 
   @include desktop {
@@ -73,7 +73,7 @@ body {
 // Using the element as a selector, instead of a unique class
 // means I cannot @extend the rule below, for the inner layout rules.
 // .cd-container is used as a utility class on other divs, for common padding, width control.
-body:not(.path-frontpage) .cd-layout-container main.cd-container {
+body:not(.path-frontpage) .cd-layout-container .cd-container--main {
   padding-top: 2rem;
 
   @include tablet {
@@ -179,4 +179,10 @@ section.cd-layout-two-col {
       flex: 0 1 420px;
     }
   }
+}
+
+.region-highlighted {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
 }

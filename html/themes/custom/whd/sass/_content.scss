@@ -114,10 +114,15 @@
   }
 }
 
+.node--type-story.node--view-mode-full {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
+}
+
 // Comic art on Story.
 .node--type-story .paragraph--type--image {
   padding: 0 2rem 2rem;
-  margin-bottom: 2rem;
 }
 
 .node--type-story .node__content {
@@ -176,6 +181,9 @@
 // What is WHD? On homepage.
 .node--type-basic-page.node--view-mode-reference {
   padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
 
   .origin {
     text-transform: uppercase;
@@ -194,10 +202,6 @@
       padding-left: 3rem;
     }
 
-    .paragraph__image {
-      margin-top: -330px;
-    }
-
     .paragraph__text {
       padding-left: 3rem;
     }
@@ -208,9 +212,24 @@
     .node__learn-more {
       padding-left: 3rem;
     }
+  }
 
+  @include tablet {
     .paragraph__image {
-      margin-top: -230px;
+      margin-top: -330px;
+    }
+  }
+
+  // Special breakpoint for when title font size changes.
+  @media screen and (min-width: 830px) {
+    .paragraph__image {
+      margin-top: -270px;
+    }
+  }
+
+  @include desktop {
+    .paragraph__image {
+      margin-top: -300px;
     }
   }
 
