@@ -46,28 +46,10 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{#{{ attach_library('whd/hero-video') }}#}
-
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    <div id="hero__video-container">
-      <div id="player" class="hero__video"></div>
-    </div>
-    <div id="hero__image" class="hero__image">
-      {{ content.field_media_content_hero_image }}
-    </div>
-
-    <div class="hero__wrapper">
-      <div class="page-title">{{ content.field_hero_title }}</div>
-{#      <div id="hero__play-button" class="hero__play-button">#}
-      <a id="hero__play-button" class="hero__play-button use-ajax" data-dialog-type="modal" href="/video">
-        <svg class="cd-icon cd-icon--play">
-          <use xlink:href="#cd-icon--play"></use>
-        </svg>
-        {% trans %}Play the film{% endtrans %}
-      </a>
-{#      </div>#}
-    </div>
-
+  <div{{ attributes.setAttribute('aria-labelledby', heading_id).setAttribute('data-cd-toggable', 'Display screenreader-friendly text'|t).setAttribute('data-cd-label-switch', 'Hide screenreader-friendly text'|t).setAttribute('data-cd-icon', 'arrow-down').setAttribute('data-cd-toggable-expanded', 'Hide screenreader-friendly text'|t).setAttribute('data-cd-component', 'cd-dropdown').setAttribute('data-cd-toggable-keep', '').addClass(classes)|without('role') }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
   </div>
 {% endblock paragraph %}

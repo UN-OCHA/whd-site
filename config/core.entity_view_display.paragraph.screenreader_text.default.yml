@@ -1,0 +1,22 @@
+uuid: eb3ffc97-1185-4b73-94b9-b25ccb43ddb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.screenreader_text.field_frame_description
+    - paragraphs.paragraphs_type.screenreader_text
+  module:
+    - text
+id: paragraph.screenreader_text.default
+targetEntityType: paragraph
+bundle: screenreader_text
+mode: default
+content:
+  field_frame_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -26,9 +26,12 @@
 @import 'footer/footer-menu';
 @import 'footer/footer-social';
 
+// Components
+@import 'book-navigation';
 @import 'content';
-@import 'paragraphs';
 @import 'hero-video';
+@import 'paragraphs';
+@import 'wysiwyg';
 
 // Social share
 @import 'social-share';

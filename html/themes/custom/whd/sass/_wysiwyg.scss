@@ -1,0 +1,25 @@
+// WYSIWYG Styles.
+.small {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.blue {
+  color: $whd-blue;
+}
+
+.dark {
+  color: $whd-black;
+}
+
+.white {
+  color: $cd-white;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid $whd-grey--light;
+  margin: 2rem 0;
+  width: 1rem;
+}
