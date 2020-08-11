@@ -1,13 +1,13 @@
 {% embed 'page.html.twig' %}
 
   {% block main %}
-    <main role="main" class="cd-container">
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {# Link to skip to the main content is in html.html.twig #}
+    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass('cd-container cd-container--main') }}>
 
       <div class="cd-layout-content">
         <h1 class="page-title">404</h1>
-        <p>{% trans %}Sorry, the page you are looking for cannot be found.{% endtrans %}</p>
-      </div>{# /.layout-content #}
+        <p>{{ page.content }}</p>
+      </div>{# /.cd-layout-content #}
 
     </main>
   {% endblock %}
