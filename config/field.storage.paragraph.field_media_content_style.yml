@@ -17,6 +17,9 @@ settings:
     -
       value: brand
       label: 'Brand colour'
+    -
+      value: exposure
+      label: Exposure
   allowed_values_function: ''
 module: options
 locked: false
