@@ -77,7 +77,9 @@
 
   {{ page.breadcrumb }}
 
-  {{ page.highlighted }}
+  {% if page.highlighted %}
+    {{ page.highlighted }}
+  {% endif %}
 
   {{ page.help }}
 
