@@ -12,12 +12,16 @@
 
 .paragraph--type--video {
   // https://alistapart.com/article/creating-intrinsic-ratios-for-video/
+  .hero__video-container .field--name-field-video-embed-formatted,
   .hero__video-container .field--name-field-media-oembed-video {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
   }
 
+  .hero__video-container .field--name-field-video-embed-formatted iframe,
+  .hero__video-container .field--name-field-video-embed-formatted embed,
+  .hero__video-container .field--name-field-video-embed-formatted object,
   .hero__video-container .field--name-field-media-oembed-video .field__item iframe,
   .hero__video-container .field--name-field-media-oembed-video .field__item embed,
   .hero__video-container .field--name-field-media-oembed-video .field__item object {
@@ -27,54 +31,6 @@
     width: 100%;
     height: 100%;
   }
-}
-
-.ui-dialog {
-  width: 98% !important;
-  height: auto !important;
-  background: $cd-black;
-
-  .ui-dialog-content {
-    height: 100% !important;
-    max-height: 100% !important;
-  }
-
-  @include desktop {
-    width: 80% !important;
-  }
-}
-
-.ui-dialog .ui-dialog-titlebar {
-  border: 0 none;
-  background: transparent;
-  // Hide page title.
-  .ui-dialog-title {
-    display: none;
-  }
-}
-
-.ui-dialog .ui-dialog-titlebar-close {
-  border: 0;
-  background: none;
-}
-
-.ui-dialog .ui-dialog-buttonpane {
-  margin-top: 0;
-  padding: 0.3em 1em;
-  border-width: 1px 0 0 0;
-  border-color: #ccc;
-  background: #f3f4ee;
-}
-
-.ui-icon-closethick {
-  background-position: 0 0;
-  background-image: url('../img/icons/exit.svg') !important;
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -4px !important;
 }
 
 .hero__image {
@@ -202,4 +158,53 @@
   &:focus .cd-icon--play {
     fill: rgba($cd-white, 0.8);
   }
+}
+
+// Dialogue minimal chrome.
+.ui-dialog {
+  width: 98% !important;
+  height: auto !important;
+  background: $cd-black;
+
+  .ui-dialog-content {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+
+  @include desktop {
+    width: 80% !important;
+  }
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  border: 0 none;
+  background: transparent;
+  // Hide page title.
+  .ui-dialog-title {
+    display: none;
+  }
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  border: 0;
+  background: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  margin-top: 0;
+  padding: 0.3em 1em;
+  border-width: 1px 0 0 0;
+  border-color: #ccc;
+  background: #f3f4ee;
+}
+
+.ui-icon-closethick {
+  background-position: 0 0;
+  background-image: url('../img/icons/exit.svg') !important;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4px !important;
 }
