@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: $cd-site-bg-color;
+  background: $cd-white;
   min-height: 100%;
 }
 
@@ -185,4 +185,30 @@ section.cd-layout-two-col {
   margin: 1rem auto;
   width: 100%;
   max-width: $cd-max-body-width;
+}
+
+.maintenance-page {
+  .cd-container {
+    @include clearfix;
+    padding: 0 $cd-container-padding;
+    max-width: $cd-max-body-width;
+
+    @include tablet {
+      padding: 0 $cd-container-padding-tablet;
+    }
+
+    @include xlarge {
+      padding: 0 $cd-container-padding-xlarge;
+    }
+  }
+
+  .cd-container--main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include desktop {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
 }
