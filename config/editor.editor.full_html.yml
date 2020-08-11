@@ -49,7 +49,7 @@ settings:
             - Format
   plugins:
     stylescombo:
-      styles: "p.small|Small\r\nspan.blue|Blue\r\nspan.dark|Dark\r\nspan.white|White"
+      styles: "p.small|Small\r\nspan.blue|Blue\r\nspan.dark|Dark\r\nspan.white|White\r\na.link--exposure|Exposure link"
     language:
       language_list: un
 image_upload:
