@@ -35,16 +35,16 @@
     {% if has_links %}
       <h2 class="visually-hidden" id="book-label-{{ book_id }}">{{ 'Story traversal links for'|t }} {{ book_title }}</h2>
       <ul class="book-pager">
-      {% if prev_url %}
-        <li class="book-pager__item book-pager__item--previous">
-          <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous story'|t }}">
-            <svg class="cd-icon cd-icon--arrows">
-              <use xlink:href="#cd-icon--arrows"></use>
-            </svg>
-            <span>{{ prev_title }}</span>
-          </a>
-        </li>
-      {% endif %}
+{#      {% if prev_url %}#}
+{#        <li class="book-pager__item book-pager__item--previous">#}
+{#          <a href="{{ prev_url }}" rel="prev" title="{{ 'Go to previous story'|t }}">#}
+{#            <svg class="cd-icon cd-icon--arrows">#}
+{#              <use xlink:href="#cd-icon--arrows"></use>#}
+{#            </svg>#}
+{#            <span>{{ prev_title }}</span>#}
+{#          </a>#}
+{#        </li>#}
+{#      {% endif %}#}
 {#      {% if parent_url %}#}
 {#        <li class="book-pager__item book-pager__item--center">#}
 {#          <a href="{{ parent_url }}" title="{{ 'Go to parent page'|t }}">{{ 'Up'|t }}</a>#}
@@ -53,7 +53,7 @@
       {% if next_url %}
         <li class="book-pager__item book-pager__item--next">
           <a href="{{ next_url }}" rel="next" title="{{ 'Go to next story'|t }}">
-            {{ next_title }}
+            {% trans %}See next story{% endtrans %}
             <svg class="cd-icon cd-icon--arrows">
               <use xlink:href="#cd-icon--arrows"></use>
             </svg>
