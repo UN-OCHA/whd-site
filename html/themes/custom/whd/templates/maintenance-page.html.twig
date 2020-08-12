@@ -56,10 +56,10 @@
       <div class="cd-container cd-site-header__inner">
         <div class="region region-header-logo">
           <h1>
-            <a href="/" title="Home" rel="home" class="cd-site-logo">
-              <span class="visually-hidden">World Humanitarian Day</span>
-              <img class="ocha-logo" src="/themes/custom/whd/img/logos/ocha-logo.svg" alt="OCHA logo">
-              <img class="whd-logo" src="/themes/custom/whd/img/logos/whd.svg" alt="Home">
+            <a href="/" title="{{ 'Home'|t }}" rel="home" class="cd-site-logo">
+              <span class="visually-hidden">{{ site_name }}</span>
+              <img class="ocha-logo" src="/themes/custom/whd/img/logos/ocha-logo.svg" alt="{{ 'OCHA logo'|t }}">
+              <img class="whd-logo" src="/themes/custom/whd/img/logos/whd.svg" alt="{{ 'Home'|t }}">
             </a>
           </h1>
         </div>
@@ -81,17 +81,12 @@
   {% block main %}
     {# Link to skip to the main content is in html.html.twig #}
     <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
-
-{#          <h1 class="page-title">{% trans %}WHD 2020{% endtrans %}</h1>#}
-{#          <p>{{ page.content }}</p>#}
-        <img class="splash" src="/themes/custom/whd/img/decorative/splash.png" height="900" width="1440" alt="{% trans %}World Humanitarian Day Website live August 18{% endtrans %}" />
-
+      <img class="splash" src="/themes/custom/whd/img/decorative/splash.png" height="900" width="1440" alt="{% trans %}World Humanitarian Day Website live August 18{% endtrans %}" />
     </main>
   {% endblock %}
-
 
   {% block footer %}
     {% include '@whd/footer/footer.html.twig' %}
   {% endblock %}
 
-    </div>
+</div>
