@@ -132,15 +132,20 @@ h1 {
 h2 {
   font-family: $work-sans;
   font-weight: 700;
-  font-size: 2.625rem;
-  line-height: 2.625rem;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
 
   @include tablet {
-    font-size: 3.75rem;
-    line-height: 3.75rem;
+    font-size: 2.625rem;
+    line-height: 2.625rem;
   }
 
   @include desktop {
+    font-size: 3.75rem;
+    line-height: 3.775rem;
+  }
+
+  @include xl {
     font-size: 4.375rem;
     line-height: 4.375rem;
   }

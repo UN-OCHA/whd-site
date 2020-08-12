@@ -119,6 +119,10 @@
     min-height: 330px; // Height of 3 lines.
   }
 
+  @include xl {
+    padding: 0 4rem 0 2rem;
+  }
+
   @include xxl {
     padding: 0 4rem 0 0;
   }
@@ -145,6 +149,10 @@
 
   @include tablet {
     padding: 1rem 2rem 2rem;
+  }
+
+  @include xxl {
+    padding: 1rem 2rem 2rem 0;
   }
 
   .cd-icon--play {

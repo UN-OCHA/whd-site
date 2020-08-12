@@ -26,6 +26,7 @@
   @include tablet {
     padding: 0 2rem;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 6rem;
   }
 
@@ -64,7 +65,7 @@
 
       .node__content {
         order: 1;
-        padding-right: 2rem;
+        padding-right: 4rem;
       }
     }
 
@@ -74,7 +75,7 @@
       }
 
       .node__content {
-        padding-left: 2rem;
+        padding-left: 4rem;
       }
     }
   }
@@ -88,6 +89,27 @@
     .node__content {
       flex: 1 0 500px;
       order: 2;
+    }
+  }
+
+  @include xl {
+    .node__teaser-image {
+      flex: 0 1 50%;
+      order: 1;
+    }
+
+    .node__content {
+      flex: 1 0 500px;
+      order: 2;
+      padding-right: 6rem;
+      padding-left: 0;
+    }
+
+    &:nth-child(even) {
+      .node__content {
+        padding-right: 0;
+        padding-left: 6rem;
+      }
     }
   }
 
@@ -107,23 +129,55 @@
 
   &:nth-child(odd) {
     .field--name-field-teaser-image article {
-      padding: 3rem 3rem 0 0;
+      padding: 2rem 2rem 0 0;
+
+      @include desktop {
+        padding: 3rem 3rem 0 0;
+      }
 
       &::before {
         top: -2rem;
         right: -2rem;
+
+        @include tablet {
+          top: -1rem;
+          right: -1rem;
+        }
+
+        @include desktop {
+          top: -2rem;
+          right: -2rem;
+        }
       }
     }
   }
 
   &:nth-child(even) {
     .field--name-field-teaser-image article {
-      padding: 3rem 0 0 3rem;
+      padding: 2rem 1rem 0 2rem;
+
+      @include tablet {
+        padding: 2rem 0 0 2rem;
+      }
+
+      @include desktop {
+        padding: 3rem 0 0 3rem;
+      }
 
       &::before {
         top: -2rem;
         left: -2rem;
         background-position: 0 0;
+
+        @include tablet {
+          top: -1rem;
+          left: -1rem;
+        }
+
+        @include desktop {
+          top: -2rem;
+          left: -2rem;
+        }
       }
     }
   }
@@ -178,10 +232,14 @@
 // Comic art on Story.
 .node--type-story .paragraph--type--image {
   padding: 0 2rem;
+
+  @include xxl {
+    padding: 0;
+  }
 }
 
 .node--type-story .node__content {
-  padding: 0 0 2rem;
+  padding-bottom: 2rem;
 }
 
 .node--type-story.node--view-mode-full .node__content {
@@ -257,6 +315,10 @@
   width: 100%;
   max-width: $cd-max-body-width;
 
+  @include xl {
+    padding: 0;
+  }
+
   .origin {
     text-transform: uppercase;
     font-size: 1rem;
@@ -265,43 +327,42 @@
     margin-bottom: 1rem;
   }
 
-  @include tablet {
-    .node__title,
-    .node__learn-more {
+  .node__title,
+  .node__learn-more {
+    @include tablet {
       float: right;
       width: 60%;
       text-align: left;
       padding-left: 3rem;
     }
 
-    .paragraph__text {
+    @include desktop {
       padding-left: 3rem;
     }
   }
 
-  @include desktop {
-    .node__title,
-    .node__learn-more {
+  .paragraph__text {
+    @include tablet {
       padding-left: 3rem;
     }
   }
 
-  @include tablet {
-    .paragraph__image {
-      margin-top: -330px;
+  .paragraph__image {
+    @include tablet {
+      margin-top: -220px;
     }
-  }
 
-  // Special breakpoint for when title font size changes.
-  @media screen and (min-width: 830px) {
-    .paragraph__image {
+    // Special breakpoint for when title font size changes.
+    @media screen and (min-width: 830px) {
+      margin-top: -170px;
+    }
+
+    @include desktop {
       margin-top: -270px;
     }
-  }
 
-  @include desktop {
-    .paragraph__image {
-      margin-top: -300px;
+    @include xl {
+      margin-top: -224px;
     }
   }
 
