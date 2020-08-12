@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: $cd-site-bg-color;
+  background: $cd-white;
   min-height: 100%;
 }
 
@@ -181,8 +181,26 @@ section.cd-layout-two-col {
   }
 }
 
-.region-highlighted {
+.user-logged-in .region-highlighted {
   margin: 1rem auto;
   width: 100%;
   max-width: $cd-max-body-width;
+}
+
+.maintenance-page {
+  .cd-container {
+    max-width: $cd-max-body-width;
+  }
+
+  .cd-container--main {
+    padding: 0;
+  }
+
+  .splash {
+    display: block;
+
+    @include desktop {
+      margin-top: 2px;
+    }
+  }
 }

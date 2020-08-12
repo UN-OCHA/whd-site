@@ -6,7 +6,7 @@
 .book-navigation .book-pager {
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -20,11 +20,11 @@
   width: auto;
   width: unset;
   text-align: right;
-  flex: 1 0 100%;
+  flex: 0 0 auto;
 
-  @include tablet {
-    flex: 1 0 50%;
-  }
+  //@include tablet {
+  //  flex: 1 0 50%;
+  //}
 }
 
 .book-pager__item {
@@ -35,10 +35,10 @@
   }
 
   a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: flex-end;
-    flex: 1;
+    flex: 0 0 auto;
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 1.5;

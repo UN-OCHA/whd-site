@@ -23,7 +23,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <drupal-media data-entity-type, data-entity-uuid data-entity-type data-view-mode data-align data-caption alt title> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style> <p class="small"> <span class="blue dark white"> <hr>'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <drupal-media data-entity-type, data-entity-uuid data-entity-type data-view-mode data-align data-caption alt title> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style> <p class="small"> <span class="blue dark white"> <hr> <iframe src allow cc cc_load_policy cc_lang_pref autoplay width height frameborder> <a href hreflang class="exposure link--exposure"> <h1> <pre>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_url:
@@ -51,4 +51,10 @@ filters:
     provider: filter
     status: true
     weight: 0
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
     settings: {  }
