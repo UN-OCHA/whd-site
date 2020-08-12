@@ -60,7 +60,11 @@
     <div class="hero__wrapper">
       <div class="page-title">{{ content.field_hero_title }}</div>
 {#      <div id="hero__play-button" class="hero__play-button">#}
-      <a id="hero__play-button" class="hero__play-button use-ajax" data-dialog-type="modal" href="/{{ language }}/video">
+      {% if language == 'en' %}
+        <a id="hero__play-button" class="hero__play-button use-ajax" data-dialog-type="modal" href="/video">
+      {% else %}
+          <a id="hero__play-button" class="hero__play-button use-ajax" data-dialog-type="modal" href="/{{ language }}/video">
+      {% endif %}
         <svg class="cd-icon cd-icon--play">
           <use xlink:href="#cd-icon--play"></use>
         </svg>
