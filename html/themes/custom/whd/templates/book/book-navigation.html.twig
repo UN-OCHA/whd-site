@@ -33,7 +33,7 @@
   <nav id="book-navigation-{{ book_id }}" class="book-navigation" role="navigation" aria-labelledby="book-label-{{ book_id }}">
     {{ tree }}
     {% if has_links %}
-      <h2 class="visually-hidden" id="book-label-{{ book_id }}">{{ 'Story traversal links for'|t }} {{ book_title }}</h2>
+      <h2 class="visually-hidden" id="book-label-{{ book_id }}">{{ 'Story navigation links'|t }}</h2>
       <ul class="book-pager">
 {#      {% if prev_url %}#}
 {#        <li class="book-pager__item book-pager__item--previous">#}
@@ -52,7 +52,7 @@
 {#      {% endif %}#}
       {% if next_url %}
         <li class="book-pager__item book-pager__item--next">
-          <a href="{{ next_url }}" rel="next" title="{{ 'Go to next story'|t }}">
+          <a href="{{ next_url }}" rel="next" title="{{ 'See next story'|t }}">
             {% trans %}See next story{% endtrans %}
             <svg class="cd-icon cd-icon--arrows">
               <use xlink:href="#cd-icon--arrows"></use>
