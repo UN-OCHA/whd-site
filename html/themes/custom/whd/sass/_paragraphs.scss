@@ -317,12 +317,20 @@
     font-weight: 700;
     font-size: 1rem;
     color: $whd-grey;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
 
-    &[aria-expanded] .cd-icon--arrow-down,
-    svg {
-      width: 1rem;
-      height: 1rem;
-      fill: $whd-grey;
+    .cd-icon--down-arrow {
+      width: 2rem;
+      height: 2rem;
+      fill: $whd-blue;
+      margin-left: 1rem;
+    }
+
+    &[aria-expanded='true'] .cd-icon--down-arrow {
+      transform: rotate(180deg);
+      fill: $whd-blue--dark;
     }
   }
 }

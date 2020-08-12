@@ -189,26 +189,18 @@ section.cd-layout-two-col {
 
 .maintenance-page {
   .cd-container {
-    @include clearfix;
-    padding: 0 $cd-container-padding;
     max-width: $cd-max-body-width;
-
-    @include tablet {
-      padding: 0 $cd-container-padding-tablet;
-    }
-
-    @include xlarge {
-      padding: 0 $cd-container-padding-xlarge;
-    }
   }
 
   .cd-container--main {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 0;
+  }
+
+  .splash {
+    display: block;
 
     @include desktop {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
+      margin-top: 2px;
     }
   }
 }

@@ -50,7 +50,7 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes)}}>
-    <div aria-labelledby="{{ heading_id }}" id="screenreader-text" data-cd-toggable="{% trans %}Display screenreader-friendly text{% endtrans %}" data-cd-label-switch="{% trans %}Hide screenreader-friendly text{% endtrans %}" data-cd-icon="arrow-down" data-cd-toggable-expanded="{% trans %}Hide screenreader-friendly text{% endtrans %}" data-cd-toggable-keep="">
+    <div aria-labelledby="{{ heading_id }}" id="screenreader-text" data-cd-toggable="{% trans %}Display screenreader-friendly text{% endtrans %}" data-cd-label-switch="{% trans %}Hide screenreader-friendly text{% endtrans %}" data-cd-icon="down-arrow" data-cd-toggable-expanded="{% trans %}Hide screenreader-friendly text{% endtrans %}" data-cd-toggable-keep="">
       <h2 id="{{ heading_id }}" class="visually-hidden">{% trans %}Comic panel text{% endtrans %}</h2>
       {% block content %}
         {{ content }}
