@@ -5,11 +5,10 @@ dependencies:
   config:
     - image.style.desktop_thumbnail_x1
     - image.style.desktop_thumbnail_x2
-    - image.style.desktop_x1
-    - image.style.desktop_x2
     - image.style.mobile_thumbnail_x1
-    - image.style.tablet_x1
-    - image.style.tablet_x2
+    - image.style.mobile_thumbnail_x2
+    - image.style.tablet_thumbnail_x1
+    - image.style.tablet_thumbnail_x2
     - image.style.xlarge_thumbnail_x1
     - image.style.xlarge_thumbnail_x2
   theme:
@@ -44,7 +43,7 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - desktop_x1
+        - tablet_thumbnail_x1
   -
     breakpoint_id: whd.sm
     multiplier: 2x
@@ -52,7 +51,7 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - desktop_x2
+        - tablet_thumbnail_x2
   -
     breakpoint_id: whd.xs
     multiplier: 1x
@@ -60,7 +59,7 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - tablet_x1
+        - mobile_thumbnail_x1
   -
     breakpoint_id: whd.xs
     multiplier: 2x
@@ -68,6 +67,6 @@ image_style_mappings:
     image_mapping:
       sizes: 100vw
       sizes_image_styles:
-        - tablet_x2
+        - mobile_thumbnail_x2
 breakpoint_group: whd
-fallback_image_style: mobile_thumbnail_x1
+fallback_image_style: tablet_thumbnail_x2
