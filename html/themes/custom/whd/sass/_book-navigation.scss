@@ -49,6 +49,11 @@
       flex: 0 0 54px;
       margin-left: 0.5rem;
       fill: $whd-blue;
+
+      // sass-lint:disable nesting-depth
+      [dir='rtl'] & {
+        transform: scaleX(-1);
+      }
     }
 
     &:hover svg,

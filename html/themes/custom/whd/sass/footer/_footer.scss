@@ -68,6 +68,10 @@
     text-align: left;
     float: right;
     width: 70%;
+
+    [dir='rtl'] & {
+      text-align: left;
+    }
   }
 }
 
@@ -80,9 +84,10 @@
 }
 
 .cd-footer__section--donate {
+  max-width: 420px;
+
   @include desktop {
     float: left;
-    max-width: 320px;
     width: 30%;
   }
 
@@ -118,11 +123,20 @@
     float: right;
     max-width: 350px;
     width: 40%;
+
+    [dir='rtl'] & {
+      text-align: left;
+    }
   }
 
   .dark-horse-logo {
     height: 50px;
     margin-right: 1rem;
+
+    [dir='rtl'] & {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
   }
 }
 
@@ -152,8 +166,6 @@
   }
 
   .cd-footer__section--donate {
-    max-width: 320px;
-
     @include tablet {
       flex: 1 0 320px;
     }

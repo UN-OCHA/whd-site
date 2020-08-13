@@ -159,10 +159,20 @@
       left: 30%;
       transform: translate(-50%, 50%);
 
+      [dir='rtl'] & {
+        right: 50%;
+        left: auto;
+        transform: translate(50%, 50%);
+      }
+
       @include desktop {
         width: 350px;
         height: 350px;
         left: 20%;
+
+        [dir='rtl'] & {
+          left: auto;
+        }
       }
     }
   }
@@ -203,6 +213,10 @@
     @include xl {
       padding: 2rem 0 2rem 3rem;
       flex: 1 0 585px;
+
+      [dir='rtl'] & {
+        padding: 2rem 3rem 2rem 0;
+      }
     }
 
     @include xxl {
@@ -288,6 +302,10 @@
   text-align: right;
   padding: 0 2rem 8rem;
 
+  [dir='rtl'] & {
+    text-align: left;
+  }
+
   @include xxl {
     padding: 0 0 8rem;
   }
@@ -296,6 +314,10 @@
     padding: 2rem 2rem 4rem;
     text-align: left;
     background: url('../img/decorative/rule--long-blue.svg') no-repeat 0 100%;
+
+    [dir='rtl'] & {
+      text-align: right;
+    }
   }
 
   .field--name-field-frame-description .field__item {
@@ -303,6 +325,10 @@
 
     @include tablet {
       padding: 0 2rem 2rem 0;
+
+      [dir='rtl'] & {
+        padding: 0 0 2rem 2rem;
+      }
     }
   }
 

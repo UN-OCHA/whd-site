@@ -150,6 +150,27 @@ h2 {
     font-size: 4.375rem;
     line-height: 4.375rem;
   }
+
+  // Because russian.
+  [lang='ru'] & {
+    font-size: 2rem;
+    line-height: 2rem;
+
+    @include tablet {
+      font-size: 2.625rem;
+      line-height: 2.625rem;
+    }
+
+    @include desktop {
+      font-size: 3.75rem;
+      line-height: 3.775rem;
+    }
+
+    @include xl {
+      font-size: 4.375rem;
+      line-height: 4.375rem;
+    }
+  }
 }
 
 h3 {
@@ -209,6 +230,22 @@ h5 {
   @include desktop {
     font-size: 6.875rem;
     line-height: 6.875rem;
+  }
+
+  // Because russian.
+  [lang='ru'] & {
+    font-size: 3rem;
+    line-height: 3rem;
+
+    @include tablet {
+      font-size: 5.875rem;
+      line-height: 5.875rem;
+    }
+
+    @include desktop {
+      font-size: 6.875rem;
+      line-height: 6.875rem;
+    }
   }
 }
 
