@@ -26,15 +26,15 @@
   height: $cd-site-header-height;
   max-width: 1380px;
 
-  [dir="rtl"] & {
-    padding:0 $cd-container-padding 0 0; // Padding-right is on Nav toggle button.
+  [dir='rtl'] & {
+    padding: 0 $cd-container-padding 0 0; // Padding-right is on Nav toggle button.
   }
 
   @include tablet {
     padding: 0 0 0 $cd-container-padding-tablet; // Padding-right is on Lang toggle button.
 
-    [dir="rtl"] & {
-      padding:0 $cd-container-padding-tablet 0 0; // Padding-right is on Lang toggle button.
+    [dir='rtl'] & {
+      padding: 0 $cd-container-padding-tablet 0 0; // Padding-right is on Lang toggle button.
     }
   }
 

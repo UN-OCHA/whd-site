@@ -50,7 +50,8 @@
       margin-left: 0.5rem;
       fill: $whd-blue;
 
-      [dir="rtl"] & {
+      // sass-lint:disable nesting-depth
+      [dir='rtl'] & {
         transform: scaleX(-1);
       }
     }

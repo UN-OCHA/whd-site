@@ -68,7 +68,7 @@ button[aria-expanded] {
     height: 9px;
     margin-left: 4px;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-right: 4px;
       margin-left: 0;
     }

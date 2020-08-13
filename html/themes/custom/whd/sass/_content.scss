@@ -49,7 +49,7 @@
       flex: 1 0 50%;
       order: 1;
 
-      // Let the image shrink to accommodate the text, so word with 16 characters don't break layout or need to be break between chars.
+      // Let the image shrink to accommodate the text, so words with 16 characters don't break layout or need to break between chars.
       [lang='ru'] & {
         flex: 0 1 auto;
       }
@@ -236,7 +236,7 @@
   }
 }
 
-[dir="rtl"] {
+[dir='rtl'] {
   .node--view-mode-teaser {
     @include tablet {
       &:nth-child(odd) {
@@ -388,7 +388,7 @@
       text-align: left;
       padding-left: 3rem;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         float: left;
         text-align: right;
         padding-right: 3rem;
@@ -405,7 +405,7 @@
     @include tablet {
       padding-left: 3rem;
 
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         padding-right: 3rem;
         padding-left: 0;
       }

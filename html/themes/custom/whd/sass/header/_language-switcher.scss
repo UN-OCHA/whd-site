@@ -58,7 +58,7 @@
     left: auto;
     right: 0;
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       left: 0;
       right: auto;
     }
@@ -111,7 +111,7 @@
   }
 }
 
-[dir="rtl"] .cd-user-menu__dropdown-link {
+[dir='rtl'] .cd-user-menu__dropdown-link {
   &.is-active {
     &::after {
       left: 0;
