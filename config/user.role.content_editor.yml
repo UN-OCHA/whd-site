@@ -15,6 +15,7 @@ permissions:
   - 'access media overview'
   - 'access toolbar'
   - 'administer book outlines'
+  - 'administer menu'
   - 'create content translations'
   - 'create image media'
   - 'create media'
