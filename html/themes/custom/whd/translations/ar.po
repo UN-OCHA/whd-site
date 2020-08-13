@@ -43,25 +43,25 @@ msgstr "الأصول"
 
 #: templates/book/book-navigation.html.twig:36
 msgid "Story navigation links"
-msgstr ""
+msgstr "روابط تنقل القصة"
 
 #: templates/book/book-navigation.html.twig:55-56
 msgid "See next story"
-msgstr ""
+msgstr "اعرض القصة التالية"
 
 #: templates/page--maintenance.html.twig:55-56
 msgid "World Humanitarian Day Website live August 18"
-msgstr ""
+msgstr "موقع اليوم العالمي للعمل الإنساني يتم اطلاقه في 18 آب/أغسطس"
 
 #: templates/paragraph/paragraph--screenreader-text.html.twig:53
 msgid "Display screenreader-friendly text"
-msgstr ""
+msgstr "عرض نص ملائم للقراءة في الشاشة"
 msgid "Hide screenreader-friendly text"
-msgstr ""
+msgstr "إخفاء نص ملائم للقراءة في الشاشة"
 
 #: templates/paragraph/paragraph--screenreader-text.html.twig:54
 msgid "Screenreader-friendly text"
-msgstr ""
+msgstr "نص متوافق مع القراءة في الشاشة"
 
 #: templates/paragraph/paragraph--hero.html.twig:71
 msgid "Play the film"
@@ -69,4 +69,4 @@ msgstr "قم بتشغيل الفيلم"
 
 #: templates/block/block--system-menu-block--main.html.twig:71
 msgid "Menu"
-msgstr ""
+msgstr "القائمة"
