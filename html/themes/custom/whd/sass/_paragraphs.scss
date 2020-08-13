@@ -311,12 +311,16 @@
   }
 
   > div {
-    padding: 2rem 2rem 4rem;
+    padding: 2rem 0 4rem;
     text-align: left;
     background: url('../img/decorative/rule--long-blue.svg') no-repeat 0 100%;
 
     [dir='rtl'] & {
       text-align: right;
+    }
+
+    @include tablet {
+      padding: 2rem 2rem 4rem;
     }
   }
 
@@ -367,6 +371,7 @@
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
+    text-align: left;
 
     .cd-icon--down-arrow {
       width: 2rem;

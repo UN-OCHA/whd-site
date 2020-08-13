@@ -113,6 +113,9 @@
 
 [dir='rtl'] .cd-user-menu__dropdown-link {
   &.is-active {
+    padding-left: 12px;
+    padding-right: 0;
+
     &::after {
       left: 0;
       right: unset;
