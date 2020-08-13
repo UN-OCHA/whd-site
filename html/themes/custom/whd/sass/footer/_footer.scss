@@ -54,12 +54,10 @@
     padding: 0 $cd-container-padding-xlarge;
   }
 
-  @supports (display: flex) {
-    @include tablet {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }
 
@@ -140,44 +138,41 @@
   }
 }
 
+.cd-footer__section {
+  float: none;
+}
 
-@supports (display: flex) {
-  .cd-footer__section {
-    float: none;
+.cd-footer__section--menu {
+  @include tablet {
+    flex: 1 0 100%;
   }
-
-  .cd-footer__section--menu {
-    @include tablet {
-      flex: 1 0 100%;
-    }
-    @include desktop {
-      text-align: right;
-      flex: 1 0 50%;
-    }
+  @include desktop {
+    text-align: right;
+    flex: 1 0 50%;
   }
+}
 
-  .cd-footer__section--social {
-    @include tablet {
-      flex: 1 0 100%;
-    }
-    @include desktop {
-      flex: 0 1 auto;
-    }
+.cd-footer__section--social {
+  @include tablet {
+    flex: 1 0 100%;
   }
-
-  .cd-footer__section--donate {
-    @include tablet {
-      flex: 1 0 320px;
-    }
+  @include desktop {
+    flex: 0 1 auto;
   }
+}
 
-  .cd-footer__section--logo {
-    @include tablet {
-      flex: 1 0 100%;
-    }
-    @include desktop {
-      flex: 0 1 350px;
-      margin: 0;
-    }
+.cd-footer__section--donate {
+  @include tablet {
+    flex: 1 0 320px;
+  }
+}
+
+.cd-footer__section--logo {
+  @include tablet {
+    flex: 1 0 100%;
+  }
+  @include desktop {
+    flex: 0 1 350px;
+    margin: 0;
   }
 }

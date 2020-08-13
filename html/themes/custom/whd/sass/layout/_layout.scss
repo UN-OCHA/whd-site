@@ -196,10 +196,24 @@ section.cd-layout-two-col {
   }
 }
 
-.user-logged-in .region-highlighted {
-  margin: 1rem auto;
+// Centering and width restriction.
+.user-login-form,
+.user-pass,
+.region-highlighted,
+.book-navigation {
+  margin: 0 auto;
   width: 100%;
   max-width: $cd-max-body-width;
+}
+
+.user-logged-in .region-highlighted {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+body:not(.user-logged-in) .tabs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .maintenance-page {
