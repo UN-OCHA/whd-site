@@ -44,4 +44,5 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view story revisions'
+  - 'view the administration theme'
   - 'view unpublished paragraphs'
