@@ -10,13 +10,9 @@
   flex-wrap: wrap;
 }
 
-.book-pager__item {
-  display: inline-flex;
-  list-style-type: none;
-}
-
 .book-pager__item--previous,
 .book-pager__item--next {
+  // sass-lint:disable no-duplicate-properties
   width: auto;
   width: unset;
   text-align: right;
@@ -28,6 +24,8 @@
 }
 
 .book-pager__item {
+  display: inline-flex;
+  list-style-type: none;
   order: 1;
 
   @include tablet {

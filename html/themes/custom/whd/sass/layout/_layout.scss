@@ -108,15 +108,6 @@ body:not(.path-frontpage) .cd-layout-container .cd-container--main {
   }
 }
 
-.cd-layout-sidebar-first {
-  //background: lightblue;
-  margin-bottom: 1rem;
-
-  @include tablet {
-    margin-bottom: 0;
-  }
-}
-
 .cd-layout-content {
   //background: lightyellow;
 
@@ -128,12 +119,12 @@ body:not(.path-frontpage) .cd-layout-container .cd-container--main {
 
   // sass-lint:disable no-duplicate-properties
   .cd-layout-with-sidebar-first & {
+    margin-bottom: 1rem;
     min-width: auto; //IE11 fix.
     min-width: unset;
-  }
 
-  .cd-layout-with-sidebar-first & {
     @include tablet {
+      margin-bottom: 0;
       margin-left: 3rem;
       margin-right: 0;
     }

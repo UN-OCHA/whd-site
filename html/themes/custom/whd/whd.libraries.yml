@@ -16,3 +16,8 @@ hero-video:
     - core/drupal
     - core/jquery
     - core/jquery.once
+
+# The nomodule attribute means browsers who support ES6 modules will ignore this file but browsers like IE load it.
+cd-polyfill:
+  js:
+    js/cd-polyfill.js: { attributes: { nomodule: true } }
