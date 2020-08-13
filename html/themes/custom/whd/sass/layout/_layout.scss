@@ -7,15 +7,8 @@ html {
 }
 
 body {
-  background: $cd-site-bg-color;
+  background: $cd-white;
   min-height: 100%;
-
-  // &:not(.user-logged-in) {
-  //   @supports (display: grid) {
-  //     display: grid;
-  //     grid-template-rows: 1fr auto;
-  //   }
-  // }
 }
 
 .cd-layout-container {
@@ -54,21 +47,21 @@ body {
 .cd-container {
   @include clearfix;
   box-sizing: border-box;
-  padding: 0 $cd-container-padding;
+  //padding: 0 $cd-container-padding;
   margin: 0 auto;
   width: 100%;
   max-width: $cd-max-width;
 
   @include tablet {
-    padding: 0 $cd-container-padding-tablet;
+    //padding: 0 $cd-container-padding-tablet;
   }
 
   @include xlarge {
-    padding: 0 $cd-container-padding-xlarge;
+    //padding: 0 $cd-container-padding-xlarge;
   }
 }
 
-.cd-container[role='main'] {
+.cd-container--main {
   padding-bottom: 2rem;
 
   @include desktop {
@@ -80,7 +73,7 @@ body {
 // Using the element as a selector, instead of a unique class
 // means I cannot @extend the rule below, for the inner layout rules.
 // .cd-container is used as a utility class on other divs, for common padding, width control.
-.cd-layout-container main.cd-container {
+body:not(.path-frontpage) .cd-layout-container .cd-container--main {
   padding-top: 2rem;
 
   @include tablet {
@@ -109,47 +102,9 @@ body {
 }
 
 // One sidebar.
-.cd-layout-with-sidebar-first .cd-layout-sidebar-first,
-.cd-layout-with-sidebar-second .cd-layout-sidebar-second {
+.cd-layout-with-sidebar-first .cd-layout-sidebar-first {
   @include tablet {
     flex-basis: 285px;
-  }
-}
-
-.cd-layout-sidebar-first {
-  //background: lightblue;
-  margin-bottom: 1rem;
-
-  @include tablet {
-    margin-bottom: 0;
-  }
-}
-
-.cd-layout-sidebar-second {
-  //background: lightpink;
-}
-
-// Both sidebars, individually control.
-.cd-layout-with-sidebar-both {
-  .cd-layout-sidebar-first {
-    margin-bottom: 1rem;
-
-    @include tablet {
-      flex-basis: 285px;
-    }
-
-    @include desktop {
-      margin-bottom: 0;
-    }
-  }
-
-  .cd-layout-sidebar-second {
-    @include tablet {
-      flex-basis: 500px; // Keep this number large so exceeds the available space and thus sits below.
-    }
-    @include desktop {
-      flex-basis: 285px;
-    }
   }
 }
 
@@ -157,45 +112,26 @@ body {
   //background: lightyellow;
 
   @include tablet {
-    flex-basis: 0;
+    flex-basis: 1440px;
     flex-grow: 999;
     //min-width: 50%;
   }
 
   // sass-lint:disable no-duplicate-properties
-  .cd-layout-with-sidebar-first &,
-  .cd-layout-with-sidebar-second & {
+  .cd-layout-with-sidebar-first & {
+    margin-bottom: 1rem;
     min-width: auto; //IE11 fix.
     min-width: unset;
-  }
-
-  .cd-layout-with-sidebar-both & {
-    margin-bottom: 1rem;
 
     @include tablet {
-      margin-left: 3rem;
-    }
-
-    @include desktop {
-      margin-right: 3rem;
       margin-bottom: 0;
-    }
-  }
-
-  .cd-layout-with-sidebar-first & {
-    @include tablet {
       margin-left: 3rem;
       margin-right: 0;
-    }
-  }
 
-  .cd-layout-with-sidebar-second & {
-    margin-bottom: 1rem;
-
-    @include tablet {
-      margin-left: 0;
-      margin-right: 3rem;
-      margin-bottom: 0;
+      [dir='rtl'] & {
+        margin-right: 3rem;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -203,9 +139,9 @@ body {
 // Faux sidebar in Node content.
 // Requires markup in node-full.html.twig.
 section.cd-layout-two-col {
-  @include desktop {
+  @include tablet {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
   }
 
   .cd-layout-main-content {
@@ -213,19 +149,87 @@ section.cd-layout-two-col {
     // The status of those sidebars are not important to this inner layout.
     margin-left: 0;
 
+    @include tablet {
+      margin-left: 2rem;
+      flex: 0 1 500px;
+
+      [dir='rtl'] & {
+        margin-right: 2rem;
+        margin-left: 0;
+      }
+    }
+
     @include desktop {
-      margin-right: 2rem;
-      flex-basis: 0;
+      margin-left: 4rem;
+      flex: 1 0 500px;
       flex-grow: 999;
+
+      [dir='rtl'] & {
+        margin-right: 4rem;
+        margin-left: 0;
+      }
     }
   }
 
   .cd-layout-sidebar-first {
-    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include tablet {
+      flex: 1 0 50%;
+      margin-bottom: 0;
+      text-align: left;
+
+      [dir='rtl'] & {
+        text-align: right;
+      }
+
+      // Let the image shrink to accommodate the text, so words with 16 characters don't break layout or need to break between chars.
+      [lang='ru'] & {
+        flex: 0 1 auto;
+      }
+    }
 
     @include desktop {
-      flex-basis: 472px; //1192-720 (full - content area = sidebar)
-      margin-top: 0;
+      flex: 0 1 420px;
+    }
+  }
+}
+
+// Centering and width restriction.
+.user-login-form,
+.user-pass,
+.region-highlighted,
+.book-navigation {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
+}
+
+.user-logged-in .region-highlighted {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+body:not(.user-logged-in) .tabs {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.maintenance-page {
+  .cd-container {
+    max-width: $cd-max-body-width;
+  }
+
+  .cd-container--main {
+    padding: 0;
+  }
+
+  .splash {
+    display: block;
+
+    @include desktop {
+      margin-top: 2px;
     }
   }
 }

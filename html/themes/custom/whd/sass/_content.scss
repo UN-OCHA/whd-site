@@ -1,30 +1,35 @@
-.node--view-mode-teaser,
-.node--view-mode-full {
-  h2 {
-    margin: 0 0 1rem;
+.node--view-mode-teaser h2,
+.node--view-mode-full h2 {
+  margin: 0 0 2rem;
 
-    @include tablet {
-      margin: 0 0 3rem;
-    }
+  @include tablet {
+    margin: 0 0 3rem;
+  }
 
-    a {
-      color: $whd-blue;
-      text-decoration: none;
+  a {
+    color: $whd-blue;
+    text-decoration: none;
 
-      &:hover,
-      &:focus {
-        color: $whd-blue--dark;
-      }
+    &:hover,
+    &:focus {
+      color: $whd-blue--dark;
     }
   }
 }
 
 .node--view-mode-teaser {
-  margin-bottom: 3rem;
+  padding: 2rem 2rem 0;
+  //margin-bottom: 2rem;
 
   @include tablet {
+    padding: 0 2rem;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 6rem;
+  }
+
+  @include xxl {
+    padding: 0;
   }
 
   h2 {
@@ -36,32 +41,186 @@
   }
 
   .node__teaser-image {
-    flex: 0 1 50%;
-    order: 1;
+    margin-bottom: 1rem;
   }
 
-  .node__content {
-    flex: 0 1 50%;
-    order: 2;
-  }
-
-  &:nth-child(even) {
+  @include tablet {
     .node__teaser-image {
-      order: 2;
+      flex: 1 0 50%;
+      order: 1;
+
+      // Let the image shrink to accommodate the text, so words with 16 characters don't break layout or need to break between chars.
+      [lang='ru'] & {
+        flex: 0 1 auto;
+      }
     }
 
     .node__content {
+      flex: 0 1 500px;
+      order: 2;
+    }
+
+    &:nth-child(odd) {
+      .node__teaser-image {
+        order: 2;
+        text-align: right;
+      }
+
+      .node__content {
+        order: 1;
+        padding-right: 4rem;
+      }
+    }
+
+    &:nth-child(even) {
+      .node__teaser-image {
+        text-align: left;
+      }
+
+      .node__content {
+        padding-left: 4rem;
+      }
+    }
+  }
+
+  @include desktop {
+    .node__teaser-image {
+      flex: 0 1 50%;
       order: 1;
+    }
+
+    .node__content {
+      flex: 1 0 500px;
+      order: 2;
+    }
+  }
+
+  @include xl {
+    .node__teaser-image {
+      flex: 0 1 50%;
+      order: 1;
+    }
+
+    .node__content {
+      flex: 1 0 500px;
+      order: 2;
+      padding-right: 6rem;
+      padding-left: 0;
+    }
+
+    &:nth-child(even) {
+      .node__content {
+        padding-right: 0;
+        padding-left: 6rem;
+      }
+    }
+  }
+
+  .field--name-field-teaser-image article {
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: block;
+      position: absolute;
+      background: url('../img/decorative/bluebox.svg') no-repeat 100% 100%;
+    }
+  }
+
+  &:nth-child(odd) {
+    .field--name-field-teaser-image article {
+      padding: 2rem 2rem 0 0;
+
+      @include desktop {
+        padding: 3rem 3rem 0 0;
+      }
+
+      &::before {
+        top: -1rem;
+        right: -1rem;
+
+        @include sm {
+          top: -2rem;
+          right: -2rem;
+        }
+
+        @include tablet {
+          top: -1rem;
+          right: -1rem;
+        }
+
+        @include desktop {
+          top: -2rem;
+          right: -2rem;
+        }
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .field--name-field-teaser-image article {
+      padding: 2rem 0 0 2rem;
+
+      @include tablet {
+        padding: 2rem 0 0 2rem;
+      }
+
+      @include desktop {
+        padding: 3rem 0 0 3rem;
+      }
+
+      &::before {
+        top: -1rem;
+        left: -1rem;
+        background-position: 0 0;
+
+        @include sm {
+          top: -2rem;
+          left: -2rem;
+        }
+
+        @include tablet {
+          top: -1rem;
+          left: -1rem;
+        }
+
+        @include desktop {
+          top: -2rem;
+          left: -2rem;
+        }
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .field--name-field-teaser-image article::before {
+      background-image: url('../img/decorative/yellowbox.svg');
+    }
+  }
+
+  &:nth-child(3) {
+    .field--name-field-teaser-image article::before {
+      background-image: url('../img/decorative/greenbox.svg');
+    }
+  }
+
+  &:nth-child(5) {
+    .field--name-field-teaser-image article::before {
+      background-image: url('../img/decorative/orangebox.svg');
     }
   }
 
   .node__read-more {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+    padding: 1rem 0;
 
     svg {
       height: 50px;
@@ -74,6 +233,76 @@
     &:focus svg {
       fill: $whd-blue--dark;
     }
+  }
+}
+
+[dir='rtl'] {
+  .node--view-mode-teaser {
+    @include tablet {
+      &:nth-child(odd) {
+        .node__content {
+          padding-left: 4rem;
+          padding-right: 0;
+        }
+      }
+
+      &:nth-child(even) {
+        .node__content {
+          padding-right: 4rem;
+          padding-left: 0;
+        }
+      }
+    }
+
+    @include xl {
+      .node__content {
+        padding-right: 6rem;
+        padding-left: 0;
+      }
+
+      &:nth-child(even) {
+        .node__content {
+          padding-right: 6rem;
+          padding-left: 0;
+        }
+      }
+    }
+
+    .node__read-more svg {
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+  }
+}
+
+
+.node--type-story.node--view-mode-full {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
+}
+
+// Comic art on Story.
+.node--type-story .paragraph--type--image {
+  padding: 0 2rem;
+
+  @include xxl {
+    padding: 0;
+  }
+}
+
+.node--type-story .node__content {
+  padding-bottom: 2rem;
+}
+
+.node--type-story.node--view-mode-full .node__content {
+  padding: 0 2rem 2rem;
+}
+
+.node--type-story.node--view-mode-full .field--name-field-profile-image {
+  img {
+    max-width: 420px;
+    width: 100%;
   }
 }
 
@@ -100,7 +329,13 @@
     text-decoration: none;
     padding: 0.75rem 1rem;
     border: 2px solid $whd-grey--light;
-    max-width: 330px;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: unset;
+
+    @include tablet {
+      max-width: 330px;
+    }
 
     &:hover,
     &:focus {
@@ -110,81 +345,37 @@
   }
 }
 
-.small {
-  font-size: 1rem;
-  line-height: 1.5;
-}
+.field--name-field-profile-image article {
+  position: relative;
 
-.blue {
-  color: $whd-blue;
-}
-
-.dark {
-  color: $whd-black;
-}
-
-.white {
-  color: $cd-white;
-}
-
-hr {
-  border: 0;
-  height: 0;
-  border-top: 1px solid $whd-grey--light;
-  margin: 2rem 0;
-  width: 1rem;
-}
-
-.book-navigation {
-  margin: 2rem 0 1rem;
-}
-
-.book-pager__item {
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: bold;
-    text-decoration: none;
-
-    .cd-icon--arrows {
-      height: 50px;
-      width: 54px;
-      flex: 0 0 54px;
-      margin-left: 0.5rem;
-      fill: $whd-blue;
-    }
-
-    &:hover svg,
-    &:focus svg {
-      fill: $whd-blue--dark;
-    }
+  &::before {
+    content: '';
+    background: url('../img/decorative/bluebox.svg') no-repeat 50% 50%;
+    width: 90%;
+    height: 90%;
+    display: block;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%, -0%);
   }
-
-  &.book-pager__item--previous {
-
-    a {
-      justify-content: flex-start;
-    }
-
-    .cd-icon--arrows {
-      transform: scale(-1, 1);
-      margin-left: 0;
-      margin-right: 0.5rem;
-    }
-  }
-}
-
-
-.node--type-story .paragraph--type--image {
-  margin-bottom: 2rem;
 }
 
 // What is WHD? On homepage.
 .node--type-basic-page.node--view-mode-reference {
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
+
+  @media all and (-ms-high-contrast: none) {
+    overflow: hidden;
+  }
+
+  @include xl {
+    padding: 0;
+  }
+
   .origin {
     text-transform: uppercase;
     font-size: 1rem;
@@ -193,21 +384,54 @@ hr {
     margin-bottom: 1rem;
   }
 
-  @include tablet {
-    .node__title,
-    .node__learn-more {
+  .node__title,
+  .node__learn-more {
+    @include tablet {
       float: right;
       width: 60%;
       text-align: left;
       padding-left: 3rem;
+
+      [dir='rtl'] & {
+        float: left;
+        text-align: right;
+        padding-right: 3rem;
+        padding-left: 0;
+      }
     }
 
-    .paragraph__image {
-      margin-top: -298px;
-    }
-
-    .paragraph__text {
+    @include desktop {
       padding-left: 3rem;
+    }
+  }
+
+  .paragraph__text {
+    @include tablet {
+      padding-left: 3rem;
+
+      [dir='rtl'] & {
+        padding-right: 3rem;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .paragraph__image {
+    @include tablet {
+      margin-top: -220px;
+    }
+
+    // Special breakpoint for when title font size changes.
+    @media screen and (min-width: 830px) {
+      margin-top: -170px;
+    }
+
+    @include desktop {
+      margin-top: -270px;
+    }
+
+    @include xl {
+      margin-top: -224px;
     }
   }
 
@@ -222,13 +446,33 @@ hr {
       text-decoration: none;
       padding: 0.75rem 1rem;
       border: 2px solid $whd-blue;
-      max-width: 330px;
+      margin: 1rem 0;
+      width: 100%;
+      max-width: unset;
+
+      @include tablet {
+        max-width: 330px;
+      }
 
       &:hover,
       &:focus {
         color: $whd-blue--dark;
         border: 2px solid $whd-blue--dark;
       }
+    }
+  }
+
+  .paragraph--type--text-and-image.paragraph__image--align-left .paragraph__image {
+    margin-right: 0;
+
+    @include xl {
+      flex: 0 1 520px;
+    }
+  }
+
+  .paragraph--type--text-and-image.paragraph__image--align-left .paragraph__text {
+    @include tablet {
+      flex: 0 0 60%;
     }
   }
 
@@ -245,7 +489,15 @@ hr {
       @include tablet {
         display: block;
         padding-left: 3rem;
+        margin-top: 0;
+      }
+    }
+
+    > .field__item:nth-child(3) {
+      @include tablet {
+        margin-top: 2rem;
       }
     }
   }
 }
+

@@ -45,7 +45,7 @@
 
 {%
   set layout_classes = [
-  'cd-container'
+  'cd-container--main'
 ]
 %}
 
@@ -77,22 +77,15 @@
 
   {{ page.breadcrumb }}
 
-  {{ page.highlighted }}
+  {% if page.highlighted %}
+    {{ page.highlighted }}
+  {% endif %}
 
   {{ page.help }}
 
   {% block main %}
-    <main role="main" {{ attributes.addClass(layout_classes) }}>
-      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-      {% if page.sidebar_first %}
-        {# We are using CSS pseudo class :empty to hide these aside elements if the region prints empty.
-          This means we cannot have any white space between tags (as below).
-          Attn: Having the twig debug enabled means the div is no longer empty.
-          See Drupal issues/953034 for description and current status.
-        #}
-        <aside class="cd-layout-sidebar-first" role="complementary">{{ page.sidebar_first }}</aside>
-      {% endif %}
+    {# Link to skip to the main content is in html.html.twig #}
+    <main role="main" {{ attributes.setAttribute('id', 'main-content').addClass(layout_classes) }}>
 
       <div class="cd-layout-content">
         {{ page.content }}

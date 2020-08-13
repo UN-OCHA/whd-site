@@ -1,0 +1,33 @@
+uuid: 2cd420c4-db87-4093-a4f5-09f88e27824a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: story_ru
+label: 'Story - RU'
+type: 'canonical_entities:node'
+pattern: 'истории/[node:title]'
+selection_criteria:
+  f83df7fd-d136-47f3-b8df-fc2d3c1a70ea:
+    id: node_type
+    bundles:
+      story: story
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f83df7fd-d136-47f3-b8df-fc2d3c1a70ea
+  3601b5a4-a238-4b0c-8a9e-b133186ca022:
+    id: language
+    langcodes:
+      ru: ru
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 3601b5a4-a238-4b0c-8a9e-b133186ca022
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

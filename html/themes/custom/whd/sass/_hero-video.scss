@@ -1,19 +1,34 @@
-// https://alistapart.com/article/creating-intrinsic-ratios-for-video/
-.hero__video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+.paragraph--type--hero {
+  background: $whd-black;
+  @include tablet {
+    margin-top: 2px; // This prevents the main area overlapping the header. I don't know why this is happening but this corrects it visually.
+  }
 }
 
-.hero__video-container iframe,
-.hero__video-container embed,
-.hero__video-container object {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.paragraph--type--video {
+  margin: 0 auto;
+  max-width: $cd-max-body-width;
+
+  // https://alistapart.com/article/creating-intrinsic-ratios-for-video/
+  .hero__video-container .field--name-field-video-embed-formatted,
+  .hero__video-container .field--name-field-media-oembed-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+  .hero__video-container .field--name-field-video-embed-formatted iframe,
+  .hero__video-container .field--name-field-video-embed-formatted embed,
+  .hero__video-container .field--name-field-video-embed-formatted object,
+  .hero__video-container .field--name-field-media-oembed-video .field__item iframe,
+  .hero__video-container .field--name-field-media-oembed-video .field__item embed,
+  .hero__video-container .field--name-field-media-oembed-video .field__item object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .hero__image {
@@ -21,27 +36,176 @@
   display: flex;
   align-items: flex-end;
 
+  .field--name-field-media-image {
+    height: 334px;
+    width: auto;
+
+    @include tablet {
+      height: 560px;
+    }
+
+    @include desktop {
+      height: 680px;
+    }
+
+    @include xl {
+      height: 836px;
+    }
+
+    picture {
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+
+    picture img {
+      object-fit: cover;
+      object-position: 50% 50%;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .field--name-field-media-content-hero-image {
+    width: 100%;
+  }
+
   img {
     display: block;
   }
 }
 
+.hero__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $cd-max-body-width;
+
+  position: relative;
+  z-index: 1;
+  //bottom: 0;
+  margin-top: -7rem;
+
+  @include tablet {
+    margin-top: -500px;
+  }
+
+  @include desktop {
+    margin-top: -580px;
+  }
+
+  //@include xl {
+  //  padding: 0 0 0 3rem;
+  //}
+}
+
+.page-title {
+  z-index: 1;
+  padding: 0 2rem;
+  max-width: 400px;
+  min-height: 220px; // Height of 3 lines.
+
+  @include tablet {
+    max-width: 500px;
+    min-height: 290px; // Height of 3 lines.
+  }
+
+  @include desktop {
+    max-width: 600px;
+    min-height: 330px; // Height of 3 lines.
+  }
+
+  @include xl {
+    padding: 0 4rem 0 2rem;
+  }
+
+  @include xxl {
+    padding: 0 4rem 0 0;
+  }
+}
+
 .hero__play-button {
-  position: absolute;
+  //position: absolute;
   z-index: 1;
   display: flex;
   align-items: center;
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: $cd-white;
-  padding: 1rem 2rem 2rem;
   cursor: pointer;
+  padding: 1rem 2rem 0;
+  max-width: 400px;
+  color: $cd-white;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($cd-white, 0.8);
+  }
+
+  @include tablet {
+    padding: 1rem 2rem 2rem;
+  }
+
+  @include xxl {
+    padding: 1rem 2rem 2rem 0;
+  }
 
   .cd-icon--play {
     width: 3.5rem;
     height: 3.5rem;
     fill: $cd-white;
     margin-right: 1rem;
+
+    [dir='rtl'] & {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
   }
+
+  &:hover .cd-icon--play,
+  &:focus .cd-icon--play {
+    fill: rgba($cd-white, 0.8);
+  }
+}
+
+// Dialogue minimal chrome.
+.ui-dialog {
+  width: 98% !important;
+  height: auto !important;
+  background: $cd-black;
+
+  .ui-dialog-content {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+
+  @include desktop {
+    width: 80% !important;
+  }
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  border: 0 none;
+  background: transparent;
+
+  // Hide page title.
+  .ui-dialog-title {
+    display: none;
+  }
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  border: 0;
+  background: none;
+}
+
+.ui-icon-closethick {
+  background-position: 0 0;
+  background-image: url('../img/icons/exit.svg') !important;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4px !important;
 }

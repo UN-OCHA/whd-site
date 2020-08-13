@@ -1,0 +1,15 @@
+uuid: b84e9b99-908f-4d43-963c-5c657b5db150
+langcode: en
+status: true
+dependencies: {  }
+name: tablet_hero_x1
+label: 'tablet hero x1'
+effects:
+  dcd3c8c8-1981-4928-b2d6-b64d5b840219:
+    uuid: dcd3c8c8-1981-4928-b2d6-b64d5b840219
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 480
+      upscale: false

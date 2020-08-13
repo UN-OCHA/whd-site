@@ -6,7 +6,6 @@
   }
 
   .paragraph__image {
-    max-width: 500px;
     margin-bottom: 1rem;
   }
 
@@ -23,149 +22,249 @@
     margin-top: 0;
   }
 
-  @supports (display: flex) {
+  .heart {
+    padding: 5rem 0 1rem;
+    text-align: left;
+
+    img {
+      width: 140px;
+      height: auto;
+    }
+  }
+
+  .paragraph--type--text-and-image__inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $cd-max-body-width;
+
     @include tablet {
       display: flex;
-      //flex-wrap: wrap;
       justify-content: space-between;
 
       .field--name-field-media-content-title {
         flex: 1 0 100%;
       }
-
-      &.paragraph__image--align-left,
-      &.paragraph__image--align-right {
-        .paragraph__text {
-          order: 2;
-        }
-
-        .paragraph__image {
-          order: 1;
-        }
-
-        .paragraph__text {
-          @include tablet {
-            flex: 0 1 60%;
-          }
-        }
-
-        .paragraph__image {
-          @include tablet {
-            flex: 1 0 40%;
-          }
-        }
-      }
-    }
-  }
-
-  //&.paragraph__image--align-left {
-  //  .paragraph__image {
-  //    @include tablet {
-  //      margin-right: 2rem;
-  //    }
-  //  }
-  //}
-
-  &.paragraph__image--align-right {
-    //.paragraph__text {
-    //  @include tablet {
-    //    margin-right: 2rem;
-    //  }
-    //}
-
-    .paragraph__image {
-      text-align: right;
-    }
-
-    @supports (display: flex) {
-      @include tablet {
-        .paragraph__text {
-          order: 1;
-        }
-
-        .paragraph__image {
-          order: 2;
-        }
-      }
-    }
-  }
-
-  &.paragraph--style--dark {
-    .paragraph__text {
-      padding: 2rem 2rem 3rem;
-      background-color: $whd-black;
-      color: $cd-white;
-    }
-
-    .paragraph__image {
-      display: none;
-      @include tablet {
-        display: block;
-        padding: 2rem 0 3rem;
-      }
-    }
-
-    h2,
-    h3 {
-      color: $cd-white;
-    }
-
-    .rule {
-      order: 3;
-      flex: 1 0 100%;
-      width: 100%;
-    }
-  }
-
-  &.paragraph--style--brand {
-    background-color: $whd-blue--light;
-    padding: 2rem 2rem 3rem;
-
-    .paragraph__text {
-      padding: 2rem;
-      color: $cd-white;
-    }
-
-    .paragraph__image {
-      width: 100%;
-      max-width: unset;
-      text-align: center;
-      padding: 2rem;
-      margin: 0;
-
-      @include tablet {
-        width: unset;
-        padding: 0;
-      }
-
-      > .field--name-field-media-content-image > .field__item:nth-child(2) {
-        display: none;
-
-        @include tablet {
-          display: block;
-        }
-      }
-    }
-
-    h2,
-    h3 {
-      color: $cd-white;
-    }
-
-    .rule {
-      order: 3;
     }
   }
 }
 
+.paragraph__image--align-left,
+.paragraph__image--align-right {
+  .paragraph__text {
+    order: 2;
+  }
+
+  .paragraph__image {
+    order: 1;
+  }
+
+  .paragraph__text {
+    @include tablet {
+      flex: 0 1 60%;
+    }
+  }
+
+  .paragraph__image {
+    @include tablet {
+      flex: 1 0 40%;
+    }
+  }
+}
+
+
+.paragraph__image--align-left {
+  .paragraph__image {
+    @include tablet {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.paragraph__image--align-right {
+  .paragraph__text {
+    @include tablet {
+      margin-right: 2rem;
+    }
+  }
+
+  .paragraph__image {
+    text-align: right;
+  }
+
+  @include tablet {
+    .paragraph__text {
+      order: 1;
+    }
+
+    .paragraph__image {
+      order: 2;
+    }
+  }
+}
+
+.paragraph--style--dark {
+  position: relative;
+
+  @include xl {
+    margin-bottom: 6rem;
+  }
+
+  .paragraph__text {
+    background-color: $whd-black;
+    color: $cd-white;
+    padding: 2rem;
+
+    @include tablet {
+      padding: 2rem 2rem 3rem;
+      flex: 0 1 560px;
+    }
+
+    @include xl {
+      padding: 4rem 4rem 0;
+      flex: 0 1 560px;
+    }
+  }
+
+  .paragraph__image {
+    display: none;
+    position: relative;
+
+    @include tablet {
+      display: block;
+      padding: 2rem 0 3rem;
+    }
+
+    @include xl {
+      flex: 0 1 520px;
+    }
+  }
+
+  .field--name-field-media-content-image article {
+    position: relative;
+
+    &::before {
+      content: '';
+      background: url('../img/decorative/bluebox.svg') no-repeat 50% 50%;
+      width: 250px;
+      height: 250px;
+      display: block;
+      position: absolute;
+      bottom: 50%;
+      left: 30%;
+      transform: translate(-50%, 50%);
+
+      [dir='rtl'] & {
+        right: 50%;
+        left: auto;
+        transform: translate(50%, 50%);
+      }
+
+      @include desktop {
+        width: 350px;
+        height: 350px;
+        left: 20%;
+
+        [dir='rtl'] & {
+          left: auto;
+        }
+      }
+    }
+  }
+
+  h2,
+  h3 {
+    color: $cd-white;
+  }
+
+  p {
+    @include xl {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.paragraph--style--brand,
+.paragraph--style--exposure {
+  margin-bottom: 1rem;
+  background-color: $whd-blue--light;
+  padding: 2rem;
+
+  @include tablet {
+    padding: 2rem 2rem 3rem;
+  }
+
+  @include xxl {
+    padding: 2rem 0;
+  }
+
+  .paragraph__text {
+    color: $whd-black;
+
+    @include tablet {
+      padding: 2rem 2rem 2rem 3rem;
+    }
+
+    @include xl {
+      padding: 2rem 0 2rem 3rem;
+      flex: 1 0 585px;
+
+      [dir='rtl'] & {
+        padding: 2rem 3rem 2rem 0;
+      }
+    }
+
+    @include xxl {
+      padding: 2rem 0 2rem 6rem;
+    }
+  }
+
+  .paragraph__image {
+    width: 100%;
+    max-width: unset;
+    text-align: center;
+    padding: 0 0 2rem;
+    margin: 0;
+
+    @include tablet {
+      width: unset;
+      padding: 2rem 0;
+    }
+
+    @include desktop {
+      padding: 2rem 1rem;
+    }
+
+    @include xl {
+      flex: 0 1 520px;
+      padding: 2rem 0;
+    }
+
+    > .field--name-field-media-content-image > .field__item:nth-child(2) {
+      display: none;
+
+      @include tablet {
+        display: block;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  h2,
+  h3 {
+    color: $cd-white;
+  }
+}
+
 .paragraph--type--banner {
+  display: none;
   margin: 0 0 4rem;
 
   @include tablet {
+    display: block;
     margin: -2rem 0 4rem;
   }
 
-  .field--name-field-media-image  {
+  .field--name-field-media-image {
     height: 30rem;
     width: 100%;
 
@@ -180,6 +279,109 @@
       object-position: 50% 50%;
       height: auto;
       width: 100%;
+    }
+  }
+}
+
+.paragraph--type--stories {
+  margin: 0 auto;
+  max-width: $cd-max-body-width;
+
+  @include tablet {
+    padding: 2rem 0 4rem;
+  }
+}
+
+.paragraph--type--screenreader-text {
+  text-align: right;
+  padding: 0 2rem 8rem;
+
+  [dir='rtl'] & {
+    text-align: left;
+  }
+
+  @include xxl {
+    padding: 0 0 8rem;
+  }
+
+  > div {
+    padding: 2rem 0 4rem;
+    text-align: left;
+    background: url('../img/decorative/rule--long-blue.svg') no-repeat 0 100%;
+
+    // IE.
+    @media all and (-ms-high-contrast: none) {
+      background-image: none;
+    }
+
+    [dir='rtl'] & {
+      text-align: right;
+    }
+
+    @include tablet {
+      padding: 2rem 2rem 4rem;
+    }
+  }
+
+  .field--name-field-frame-description .field__item {
+    padding: 0 0 2rem;
+
+    @include tablet {
+      padding: 0 2rem 2rem 0;
+
+      [dir='rtl'] & {
+        padding: 0 0 2rem 2rem;
+      }
+    }
+  }
+
+  @supports (display: flex) {
+    @include tablet {
+      .field--name-field-frame-description {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .field__item {
+        flex: 0 0 50%;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  // Reset button styles.
+  button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0 none;
+    background: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $whd-grey;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+
+    .cd-icon--down-arrow {
+      width: 2rem;
+      height: 2rem;
+      fill: $whd-blue;
+      margin-left: 1rem;
+    }
+
+    &[aria-expanded='true'] .cd-icon--down-arrow {
+      transform: rotate(180deg);
+      fill: $whd-blue--dark;
     }
   }
 }

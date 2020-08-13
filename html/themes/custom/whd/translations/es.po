@@ -19,7 +19,7 @@ msgstr ""
 
 #: templates/footer/footer.html.twig:7
 msgid "Donate to crisis relief"
-msgstr "Donaciones"
+msgstr "Donaciones a la ONU para ayuda en caso de crisis"
 
 #: templates/content/node--story--teaser.html.twig:103
 msgid "See his story"
@@ -36,3 +36,37 @@ msgstr "Leer más"
 #: unknown:2
 msgid "Read the comic"
 msgstr "Lee el cómic"
+
+#: templates/content/node--reference.html.twig:90
+msgid "The Origins"
+msgstr "Los Orígenes"
+
+#: templates/book/book-navigation.html.twig:36
+msgid "Story navigation links"
+msgstr "Enlaces web de navegación de historias"
+
+#: templates/book/book-navigation.html.twig:55-56
+msgid "See next story"
+msgstr "Ver siguiente historia"
+
+#: templates/page--maintenance.html.twig:55-56
+msgid "World Humanitarian Day Website live August 18"
+msgstr "La página web de Día Mundial de la Asistencia Humanitaria estará disponible el 18 de agosto"
+
+#: templates/paragraph/paragraph--screenreader-text.html.twig:53
+msgid "Display screenreader-friendly text"
+msgstr "Mostrar texto apto para lectores de pantalla"
+msgid "Hide screenreader-friendly text"
+msgstr "Ocultar texto apto para lectores de pantalla"
+
+#: templates/paragraph/paragraph--screenreader-text.html.twig:54
+msgid "Screenreader-friendly text"
+msgstr "Texto apto para lectores de pantalla"
+
+#: templates/paragraph/paragraph--hero.html.twig:71
+msgid "Play the film"
+msgstr "Reproducir la película"
+
+#: templates/block/block--system-menu-block--main.html.twig:71
+msgid "Menu"
+msgstr "Menú"

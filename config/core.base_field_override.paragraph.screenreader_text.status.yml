@@ -1,0 +1,22 @@
+uuid: 1c851299-06bd-4da9-8f02-885a768735da
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.screenreader_text
+id: paragraph.screenreader_text.status
+field_name: status
+entity_type: paragraph
+bundle: screenreader_text
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

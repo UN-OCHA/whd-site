@@ -1,0 +1,33 @@
+uuid: d28a0c44-952f-44f0-8a73-a1f5580859dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: story_cn
+label: 'Story - CN'
+type: 'canonical_entities:node'
+pattern: '故事/[node:title]'
+selection_criteria:
+  e5bf4484-4a5c-4718-9f25-81ff06e067ad:
+    id: node_type
+    bundles:
+      story: story
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e5bf4484-4a5c-4718-9f25-81ff06e067ad
+  bb080016-fb8a-446a-b291-1462fba90834:
+    id: language
+    langcodes:
+      zh-hans: zh-hans
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: bb080016-fb8a-446a-b291-1462fba90834
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

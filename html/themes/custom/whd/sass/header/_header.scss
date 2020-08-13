@@ -11,14 +11,36 @@
 // Site Header.
 // Bottom header bar, contains Logo, Search and Navigation.
 //
+.cd-header {
+  height: $cd-site-header-height;
+}
+
 .cd-site-header {
-  border-bottom: 3px solid $cd-black;
+  //border-bottom: 3px solid $cd-black;
   background-color: $cd-black;
   color: $cd-white;
 }
 
 .cd-site-header__inner {
+  padding: 0 0 0 $cd-container-padding; // Padding-right is on Nav toggle button.
   height: $cd-site-header-height;
+  max-width: 1380px;
+
+  [dir='rtl'] & {
+    padding: 0 $cd-container-padding 0 0; // Padding-right is on Nav toggle button.
+  }
+
+  @include tablet {
+    padding: 0 0 0 $cd-container-padding-tablet; // Padding-right is on Lang toggle button.
+
+    [dir='rtl'] & {
+      padding: 0 $cd-container-padding-tablet 0 0; // Padding-right is on Lang toggle button.
+    }
+  }
+
+  //@include xlarge {
+  //  padding: 0 16px 0 $cd-container-padding-xlarge; // Some padding-right is on Lang toggle button.
+  //}
 
   @supports(display: grid) {
     display: grid;

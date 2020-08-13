@@ -46,7 +46,7 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{{ attach_library('whd/hero-video') }}
+{#{{ attach_library('whd/hero-video') }}#}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
@@ -54,13 +54,24 @@
       <div id="player" class="hero__video"></div>
     </div>
     <div id="hero__image" class="hero__image">
-      <div id="hero__play-button" class="hero__play-button">
+      {{ content.field_media_content_hero_image }}
+    </div>
+
+    <div class="hero__wrapper">
+      <div class="page-title">{{ content.field_hero_title }}</div>
+{#      <div id="hero__play-button" class="hero__play-button">#}
+      {% if language == 'en' %}
+        <a id="hero__play-button" class="hero__play-button use-ajax" data-dialog-type="modal" href="/video">
+      {% else %}
+          <a id="hero__play-button" class="hero__play-button use-ajax" data-dialog-type="modal" href="/{{ language }}/video">
+      {% endif %}
         <svg class="cd-icon cd-icon--play">
           <use xlink:href="#cd-icon--play"></use>
         </svg>
         {% trans %}Play the film{% endtrans %}
-      </div>
-      {{ content.field_media_content_hero_image }}
+      </a>
+{#      </div>#}
     </div>
+
   </div>
 {% endblock paragraph %}

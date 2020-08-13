@@ -7,6 +7,8 @@ dependencies:
     - field.field.node.basic_page.body
     - field.field.node.basic_page.field_learn_more
     - field.field.node.basic_page.field_media_content
+    - field.field.node.basic_page.field_social_sharing_image
+    - field.field.node.basic_page.field_social_sharing_title
     - node.type.basic_page
   module:
     - entity_reference_revisions
@@ -52,5 +54,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_social_sharing_image: true
+  field_social_sharing_title: true
   langcode: true
   links: true

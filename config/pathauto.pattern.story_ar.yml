@@ -1,0 +1,33 @@
+uuid: 1f4c0b71-bea0-4864-9c0f-048eb22e89ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: story_ar
+label: 'Story - AR'
+type: 'canonical_entities:node'
+pattern: 'القصص/[node:title]'
+selection_criteria:
+  d14539b5-b23a-4c9a-be11-2dcdeecc4374:
+    id: node_type
+    bundles:
+      story: story
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d14539b5-b23a-4c9a-be11-2dcdeecc4374
+  31c521fe-d2df-414d-8e3f-ce8e9b11c1d6:
+    id: language
+    langcodes:
+      ar: ar
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 31c521fe-d2df-414d-8e3f-ce8e9b11c1d6
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

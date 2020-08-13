@@ -1,0 +1,40 @@
+// WYSIWYG Styles.
+.small {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.blue {
+  color: $whd-blue;
+}
+
+.dark {
+  color: $whd-black;
+}
+
+.white {
+  color: $cd-white;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid $whd-grey--light;
+  margin: 2rem 0;
+  width: 1rem;
+}
+
+a.link--exposure {
+  color: $cd-white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 0 1rem 4rem;
+  background: url('../img/decorative/arrows--white.svg') no-repeat 0 50%;
+  background-size: 50px 50px;
+
+  &:hover,
+  &:focus {
+    color: $cd-white;
+  }
+}

@@ -1,16 +1,16 @@
-uuid: 8b9d9a68-8e16-4368-ade3-2886bda87004
+uuid: d2bb2df8-3b7f-4157-b706-9665850d2e00
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_media_content_video
-    - media.type.video
-    - paragraphs.paragraphs_type.hero
-id: paragraph.hero.field_media_content_video
-field_name: field_media_content_video
-entity_type: paragraph
-bundle: hero
-label: video
+    - field.storage.node.field_social_sharing_image
+    - media.type.image
+    - node.type.story
+id: node.story.field_social_sharing_image
+field_name: field_social_sharing_image
+entity_type: node
+bundle: story
+label: 'Social sharing image'
 description: ''
 required: false
 translatable: true
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      video: video
+      image: image
     sort:
       field: _none
     auto_create: false

@@ -10,15 +10,16 @@
 .cd-language-switcher__btn {
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0 0 0 15px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   box-sizing: content-box;
   line-height: $cd-global-header-height;
   height: $cd-global-header-height;
+  color: $whd-blue;
 
   @include tablet {
-    padding: 0 0 0 20px;
+    padding: 0 24px;
   }
 
   // Language switcher is always on the far edge of the global header.
@@ -31,10 +32,19 @@
   .cd-icon--arrow-down {
     min-height: 100%; // IE11 fix.
     margin: auto; // Center vertically in macOS 10
+    fill: $whd-blue !important;
   }
 
   &:focus {
     outline: 3px solid $whd-blue;
+  }
+}
+
+.cd-site-header__lang-holder {
+  @include max-width(md) {
+    @supports (display: flex) {
+      order: 1;
+    }
   }
 }
 
@@ -47,6 +57,11 @@
     width: 125px;
     left: auto;
     right: 0;
+
+    [dir='rtl'] & {
+      left: 0;
+      right: auto;
+    }
   }
 
   li {
@@ -92,6 +107,18 @@
       background-repeat: no-repeat;
       background-position: 0 50%;
       background-size: 14px 14px;
+    }
+  }
+}
+
+[dir='rtl'] .cd-user-menu__dropdown-link {
+  &.is-active {
+    padding-left: 12px;
+    padding-right: 0;
+
+    &::after {
+      left: 0;
+      right: unset;
     }
   }
 }

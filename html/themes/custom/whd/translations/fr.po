@@ -31,8 +31,42 @@ msgstr "Voir son histoire"
 
 #: unknown:1
 msgid "Read more"
-msgstr "阅读更多"
+msgstr "En savoir plus"
 
 #: unknown:2
 msgid "Read the comic"
-msgstr "阅读漫画"
+msgstr "Lire la bande dessinée"
+
+#: templates/content/node--reference.html.twig:90
+msgid "The Origins"
+msgstr "Les origines de la Journée mondiale de l’aide humanitaire"
+
+#: templates/book/book-navigation.html.twig:36
+msgid "Story navigation links"
+msgstr "Liens de navigation"
+
+#: templates/book/book-navigation.html.twig:55-56
+msgid "See next story"
+msgstr "Voir l'histoire suivante"
+
+#: templates/page--maintenance.html.twig:55-56
+msgid "World Humanitarian Day Website live August 18"
+msgstr "Le site de la Journée mondiale de l'aide humanitaire accessible le 18 août"
+
+#: templates/paragraph/paragraph--screenreader-text.html.twig:53
+msgid "Display screenreader-friendly text"
+msgstr "Afficher le texte"
+msgid "Hide screenreader-friendly text"
+msgstr "Masquer le texte"
+
+#: templates/paragraph/paragraph--screenreader-text.html.twig:54
+msgid "Screenreader-friendly text"
+msgstr "Texte adapté à l'écran"
+
+#: templates/paragraph/paragraph--hero.html.twig:71
+msgid "Play the film"
+msgstr "Voir le film"
+
+#: templates/block/block--system-menu-block--main.html.twig:71
+msgid "Menu"
+msgstr "Menu"
