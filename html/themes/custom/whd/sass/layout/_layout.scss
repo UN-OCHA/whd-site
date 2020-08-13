@@ -127,6 +127,11 @@ body:not(.path-frontpage) .cd-layout-container .cd-container--main {
       margin-bottom: 0;
       margin-left: 3rem;
       margin-right: 0;
+
+      [dir="rtl"] & {
+        margin-right: 3rem;
+        margin-left: 0;
+      }
     }
   }
 }
@@ -147,12 +152,22 @@ section.cd-layout-two-col {
     @include tablet {
       margin-left: 2rem;
       flex: 0 1 500px;
+
+      [dir="rtl"] & {
+        margin-right: 2rem;
+        margin-left: 0;
+      }
     }
 
     @include desktop {
       margin-left: 4rem;
       flex: 1 0 500px;
       flex-grow: 999;
+
+      [dir="rtl"] & {
+        margin-right: 4rem;
+        margin-left: 0;
+      }
     }
   }
 
@@ -164,6 +179,15 @@ section.cd-layout-two-col {
       flex: 1 0 50%;
       margin-bottom: 0;
       text-align: left;
+
+      [dir="rtl"] & {
+        text-align: right;
+      }
+
+      // Let the image shrink to accommodate the text, so word with 16 characters don't break layout or need to be break between chars.
+      [lang='ru'] & {
+        flex: 0 1 auto;
+      }
     }
 
     @include desktop {

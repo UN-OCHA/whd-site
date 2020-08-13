@@ -133,7 +133,7 @@
   text-transform: uppercase;
   cursor: pointer;
   padding: 1rem 2rem 0;
-  max-width: 300px;
+  max-width: 400px;
   color: $cd-white;
   text-decoration: none;
 
@@ -155,6 +155,11 @@
     height: 3.5rem;
     fill: $cd-white;
     margin-right: 1rem;
+
+    [dir="rtl"] & {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
   }
 
   &:hover .cd-icon--play,
