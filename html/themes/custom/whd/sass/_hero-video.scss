@@ -8,9 +8,7 @@
 .paragraph--type--video {
   margin: 0 auto;
   max-width: $cd-max-body-width;
-}
 
-.paragraph--type--video {
   // https://alistapart.com/article/creating-intrinsic-ratios-for-video/
   .hero__video-container .field--name-field-video-embed-formatted,
   .hero__video-container .field--name-field-media-oembed-video {
@@ -34,6 +32,10 @@
 }
 
 .hero__image {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
   .field--name-field-media-image {
     height: 334px;
     width: auto;
@@ -63,13 +65,6 @@
       width: 100%;
     }
   }
-}
-
-
-.hero__image {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
 
   .field--name-field-media-content-hero-image {
     width: 100%;
@@ -98,9 +93,9 @@
     margin-top: -580px;
   }
 
-  @include xl {
-    //padding: 0 0 0 3rem;
-  }
+  //@include xl {
+  //  padding: 0 0 0 3rem;
+  //}
 }
 
 .page-title {
@@ -187,6 +182,7 @@
 .ui-dialog .ui-dialog-titlebar {
   border: 0 none;
   background: transparent;
+
   // Hide page title.
   .ui-dialog-title {
     display: none;
@@ -196,14 +192,6 @@
 .ui-dialog .ui-dialog-titlebar-close {
   border: 0;
   background: none;
-}
-
-.ui-dialog .ui-dialog-buttonpane {
-  margin-top: 0;
-  padding: 0.3em 1em;
-  border-width: 1px 0 0 0;
-  border-color: #ccc;
-  background: #f3f4ee;
 }
 
 .ui-icon-closethick {

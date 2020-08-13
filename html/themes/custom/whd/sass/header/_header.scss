@@ -30,9 +30,9 @@
     padding: 0 0 0 $cd-container-padding-tablet; // Padding-right is on Lang toggle button.
   }
 
-  @include xlarge {
-    //padding: 0 16px 0 $cd-container-padding-xlarge; // Some padding-right is on Lang toggle button.
-  }
+  //@include xlarge {
+  //  padding: 0 16px 0 $cd-container-padding-xlarge; // Some padding-right is on Lang toggle button.
+  //}
 
   @supports(display: grid) {
     display: grid;

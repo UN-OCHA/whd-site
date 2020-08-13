@@ -157,7 +157,7 @@
       position: absolute;
       bottom: 50%;
       left: 20%;
-      transform: translate(-50%,50%);
+      transform: translate(-50%, 50%);
 
       @include desktop {
         width: 350px;
@@ -294,7 +294,7 @@
   }
 
   .field--name-field-frame-description .field__item {
-    padding: 0 0 2rem 0;
+    padding: 0 0 2rem;
 
     @include tablet {
       padding: 0 2rem 2rem 0;
