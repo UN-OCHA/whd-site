@@ -368,6 +368,10 @@
   width: 100%;
   max-width: $cd-max-body-width;
 
+  @media all and (-ms-high-contrast: none) {
+    overflow: hidden;
+  }
+
   @include xl {
     padding: 0;
   }
