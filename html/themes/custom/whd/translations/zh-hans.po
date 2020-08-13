@@ -43,25 +43,25 @@ msgstr "起源"
 
 #: templates/book/book-navigation.html.twig:36
 msgid "Story navigation links"
-msgstr ""
+msgstr "故事导航链接"
 
 #: templates/book/book-navigation.html.twig:55-56
 msgid "See next story"
-msgstr ""
+msgstr "查看下一个故事"
 
 #: templates/page--maintenance.html.twig:55-56
 msgid "World Humanitarian Day Website live August 18"
-msgstr ""
+msgstr "世界人道主义日网站8月18日上线"
 
 #: templates/paragraph/paragraph--screenreader-text.html.twig:53
 msgid "Display screenreader-friendly text"
-msgstr ""
+msgstr "显示对屏幕阅读器友好的文本"
 msgid "Hide screenreader-friendly text"
-msgstr ""
+msgstr "隐藏对屏幕阅读器友好的文本"
 
 #: templates/paragraph/paragraph--screenreader-text.html.twig:54
 msgid "Screenreader-friendly text"
-msgstr ""
+msgstr "屏幕阅读器友好文本"
 
 #: templates/paragraph/paragraph--hero.html.twig:71
 msgid "Play the film"
@@ -69,4 +69,4 @@ msgstr "播放电影"
 
 #: templates/block/block--system-menu-block--main.html.twig:71
 msgid "Menu"
-msgstr ""
+msgstr "菜单"
