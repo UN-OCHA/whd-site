@@ -134,8 +134,13 @@
       }
 
       &::before {
-        top: -2rem;
-        right: -2rem;
+        top: -1rem;
+        right: -1rem;
+
+        @include sm {
+          top: -2rem;
+          right: -2rem;
+        }
 
         @include tablet {
           top: -1rem;
@@ -152,7 +157,7 @@
 
   &:nth-child(even) {
     .field--name-field-teaser-image article {
-      padding: 2rem 1rem 0 2rem;
+      padding: 2rem 0 0 2rem;
 
       @include tablet {
         padding: 2rem 0 0 2rem;
@@ -163,9 +168,14 @@
       }
 
       &::before {
-        top: -2rem;
-        left: -2rem;
+        top: -1rem;
+        left: -1rem;
         background-position: 0 0;
+
+        @include sm {
+          top: -2rem;
+          left: -2rem;
+        }
 
         @include tablet {
           top: -1rem;

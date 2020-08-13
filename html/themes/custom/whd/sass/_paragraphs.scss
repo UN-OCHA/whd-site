@@ -151,17 +151,18 @@
     &::before {
       content: '';
       background: url('../img/decorative/bluebox.svg') no-repeat 50% 50%;
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       display: block;
       position: absolute;
       bottom: 50%;
-      left: 20%;
+      left: 30%;
       transform: translate(-50%, 50%);
 
       @include desktop {
         width: 350px;
         height: 350px;
+        left: 20%;
       }
     }
   }
@@ -277,6 +278,10 @@
 .paragraph--type--stories {
   margin: 0 auto;
   max-width: $cd-max-body-width;
+
+  @include tablet {
+    padding: 2rem 0 4rem;
+  }
 }
 
 .paragraph--type--screenreader-text {
