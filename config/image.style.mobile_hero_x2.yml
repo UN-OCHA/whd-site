@@ -1,0 +1,15 @@
+uuid: e493c493-3dbf-4474-94ab-8d49e1103e00
+langcode: en
+status: true
+dependencies: {  }
+name: mobile_hero_x2
+label: 'mobile hero x2'
+effects:
+  01004703-e363-4241-a544-47f240689309:
+    uuid: 01004703-e363-4241-a544-47f240689309
+    id: image_scale
+    weight: 1
+    data:
+      width: 1152
+      height: null
+      upscale: false
