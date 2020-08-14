@@ -18,39 +18,52 @@ label: 'Responsive thumbnail'
 image_style_mappings:
   -
     breakpoint_id: whd.xl
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 50vw
+      sizes_image_styles:
+        - xlarge_thumbnail_x1
+  -
+    breakpoint_id: whd.xl
     multiplier: 2x
     image_mapping_type: sizes
     image_mapping:
-      sizes: 100vw
+      sizes: 50vw
       sizes_image_styles:
         - xlarge_thumbnail_x2
   -
     breakpoint_id: whd.lg
     multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: xlarge_thumbnail_x1
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 50vw
+      sizes_image_styles:
+        - xlarge_thumbnail_x1
   -
     breakpoint_id: whd.lg
     multiplier: 2x
     image_mapping_type: sizes
     image_mapping:
-      sizes: 100vw
+      sizes: 50vw
+      sizes_image_styles:
+        - xlarge_thumbnail_x2
+  -
+    breakpoint_id: whd.md
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 50vw
+      sizes_image_styles:
+        - desktop_thumbnail_x1
+  -
+    breakpoint_id: whd.md
+    multiplier: 2x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 50vw
       sizes_image_styles:
         - desktop_thumbnail_x2
-        - xlarge_thumbnail_x2
-  -
-    breakpoint_id: whd.md
-    multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: desktop_thumbnail_x1
-  -
-    breakpoint_id: whd.md
-    multiplier: 2x
-    image_mapping_type: sizes
-    image_mapping:
-      sizes: 100vw
-      sizes_image_styles:
-        - tablet_thumbnail_x2
   -
     breakpoint_id: whd.sm
     multiplier: 1x
