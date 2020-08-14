@@ -5,11 +5,11 @@ dependencies: {  }
 name: xlarge_x
 label: 'xlarge x2'
 effects:
-  d2adca2c-0573-4678-b5b1-5738a92dce50:
-    uuid: d2adca2c-0573-4678-b5b1-5738a92dce50
+  91863d3c-92b3-4ebd-803d-721d20760948:
+    uuid: 91863d3c-92b3-4ebd-803d-721d20760948
     id: image_scale
     weight: 1
     data:
-      width: 3200
+      width: 2400
       height: null
       upscale: false
