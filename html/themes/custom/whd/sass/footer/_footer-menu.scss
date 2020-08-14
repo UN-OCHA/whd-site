@@ -17,11 +17,15 @@
 
   @include tablet {
     display: inline-block;
-    margin: 0 8px;
+    margin: 0 8px 12px;
   }
 
   @include desktop {
-    margin: 0 0 0 32px;
+    margin: 0 0 12px 32px;
+
+    [dir='rtl'] & {
+      margin: 0 32px 12px 0;
+    }
   }
 }
 

@@ -37,44 +37,40 @@
     width: 100%;
     max-width: $cd-max-body-width;
 
-    @supports (display: flex) {
-      @include tablet {
-        display: flex;
-        //flex-wrap: wrap;
-        justify-content: space-between;
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
 
-        .field--name-field-media-content-title {
-          flex: 1 0 100%;
-        }
+      .field--name-field-media-content-title {
+        flex: 1 0 100%;
       }
     }
   }
 }
 
-@supports (display: flex) {
-  .paragraph__image--align-left,
-  .paragraph__image--align-right {
-    .paragraph__text {
-      order: 2;
-    }
+.paragraph__image--align-left,
+.paragraph__image--align-right {
+  .paragraph__text {
+    order: 2;
+  }
 
-    .paragraph__image {
-      order: 1;
-    }
+  .paragraph__image {
+    order: 1;
+  }
 
-    .paragraph__text {
-      @include tablet {
-        flex: 0 1 60%;
-      }
+  .paragraph__text {
+    @include tablet {
+      flex: 0 1 60%;
     }
+  }
 
-    .paragraph__image {
-      @include tablet {
-        flex: 1 0 40%;
-      }
+  .paragraph__image {
+    @include tablet {
+      flex: 1 0 40%;
     }
   }
 }
+
 
 .paragraph__image--align-left {
   .paragraph__image {
@@ -95,15 +91,13 @@
     text-align: right;
   }
 
-  @supports (display: flex) {
-    @include tablet {
-      .paragraph__text {
-        order: 1;
-      }
+  @include tablet {
+    .paragraph__text {
+      order: 1;
+    }
 
-      .paragraph__image {
-        order: 2;
-      }
+    .paragraph__image {
+      order: 2;
     }
   }
 }
@@ -159,10 +153,20 @@
       left: 30%;
       transform: translate(-50%, 50%);
 
+      [dir='rtl'] & {
+        right: 50%;
+        left: auto;
+        transform: translate(50%, 50%);
+      }
+
       @include desktop {
         width: 350px;
         height: 350px;
         left: 20%;
+
+        [dir='rtl'] & {
+          left: auto;
+        }
       }
     }
   }
@@ -203,6 +207,10 @@
     @include xl {
       padding: 2rem 0 2rem 3rem;
       flex: 1 0 585px;
+
+      [dir='rtl'] & {
+        padding: 2rem 3rem 2rem 0;
+      }
     }
 
     @include xxl {
@@ -288,14 +296,31 @@
   text-align: right;
   padding: 0 2rem 8rem;
 
+  [dir='rtl'] & {
+    text-align: left;
+  }
+
   @include xxl {
     padding: 0 0 8rem;
   }
 
   > div {
-    padding: 2rem 2rem 4rem;
+    padding: 2rem 0 4rem;
     text-align: left;
     background: url('../img/decorative/rule--long-blue.svg') no-repeat 0 100%;
+
+    // IE.
+    @media all and (-ms-high-contrast: none) {
+      background-image: none;
+    }
+
+    [dir='rtl'] & {
+      text-align: right;
+    }
+
+    @include tablet {
+      padding: 2rem 2rem 4rem;
+    }
   }
 
   .field--name-field-frame-description .field__item {
@@ -303,6 +328,10 @@
 
     @include tablet {
       padding: 0 2rem 2rem 0;
+
+      [dir='rtl'] & {
+        padding: 0 0 2rem 2rem;
+      }
     }
   }
 
@@ -341,6 +370,7 @@
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
+    text-align: left;
 
     .cd-icon--down-arrow {
       width: 2rem;

@@ -54,12 +54,10 @@
     padding: 0 $cd-container-padding-xlarge;
   }
 
-  @supports (display: flex) {
-    @include tablet {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }
 
@@ -68,6 +66,10 @@
     text-align: left;
     float: right;
     width: 70%;
+
+    [dir='rtl'] & {
+      text-align: left;
+    }
   }
 }
 
@@ -80,9 +82,10 @@
 }
 
 .cd-footer__section--donate {
+  max-width: 420px;
+
   @include desktop {
     float: left;
-    max-width: 320px;
     width: 30%;
   }
 
@@ -118,54 +121,58 @@
     float: right;
     max-width: 350px;
     width: 40%;
+
+    [dir='rtl'] & {
+      text-align: left;
+    }
   }
 
   .dark-horse-logo {
     height: 50px;
     margin-right: 1rem;
+
+    [dir='rtl'] & {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
   }
 }
 
+.cd-footer__section {
+  float: none;
+}
 
-@supports (display: flex) {
-  .cd-footer__section {
-    float: none;
+.cd-footer__section--menu {
+  @include tablet {
+    flex: 1 0 100%;
   }
-
-  .cd-footer__section--menu {
-    @include tablet {
-      flex: 1 0 100%;
-    }
-    @include desktop {
-      text-align: right;
-      flex: 1 0 50%;
-    }
+  @include desktop {
+    text-align: right;
+    flex: 1 0 50%;
   }
+}
 
-  .cd-footer__section--social {
-    @include tablet {
-      flex: 1 0 100%;
-    }
-    @include desktop {
-      flex: 0 1 auto;
-    }
+.cd-footer__section--social {
+  @include tablet {
+    flex: 1 0 100%;
   }
-
-  .cd-footer__section--donate {
-    max-width: 320px;
-
-    @include tablet {
-      flex: 1 0 320px;
-    }
+  @include desktop {
+    flex: 0 1 auto;
   }
+}
 
-  .cd-footer__section--logo {
-    @include tablet {
-      flex: 1 0 100%;
-    }
-    @include desktop {
-      flex: 0 1 350px;
-      margin: 0;
-    }
+.cd-footer__section--donate {
+  @include tablet {
+    flex: 1 0 320px;
+  }
+}
+
+.cd-footer__section--logo {
+  @include tablet {
+    flex: 1 0 100%;
+  }
+  @include desktop {
+    flex: 0 1 350px;
+    margin: 0;
   }
 }

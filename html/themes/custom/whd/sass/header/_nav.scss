@@ -43,6 +43,10 @@
     &:focus {
       background: $whd-black;
     }
+
+    .cd-icon {
+      fill: $whd-blue;
+    }
   }
 
   &:hover,

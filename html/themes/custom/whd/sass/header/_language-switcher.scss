@@ -57,6 +57,11 @@
     width: 125px;
     left: auto;
     right: 0;
+
+    [dir='rtl'] & {
+      left: 0;
+      right: auto;
+    }
   }
 
   li {
@@ -102,6 +107,18 @@
       background-repeat: no-repeat;
       background-position: 0 50%;
       background-size: 14px 14px;
+    }
+  }
+}
+
+[dir='rtl'] .cd-user-menu__dropdown-link {
+  &.is-active {
+    padding-left: 12px;
+    padding-right: 0;
+
+    &::after {
+      left: 0;
+      right: unset;
     }
   }
 }
