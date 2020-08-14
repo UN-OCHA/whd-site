@@ -1,0 +1,15 @@
+uuid: 364ce8e5-f7e1-4d51-b0ec-0c02c79c64e5
+langcode: en
+status: true
+dependencies: {  }
+name: xl_hero_x2
+label: 'xl hero x2'
+effects:
+  d1be20bd-9da7-46c0-ad65-28c4002d7515:
+    uuid: d1be20bd-9da7-46c0-ad65-28c4002d7515
+    id: image_scale
+    weight: 1
+    data:
+      width: 5760
+      height: null
+      upscale: false

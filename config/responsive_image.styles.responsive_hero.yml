@@ -4,16 +4,34 @@ status: true
 dependencies:
   config:
     - image.style.desktop_hero_x1
+    - image.style.desktop_hero_x2
     - image.style.tablet_hero_x1
+    - image.style.xl_hero_x1
+    - image.style.xl_hero_x2
   theme:
     - whd
 id: responsive_hero
 label: 'Responsive hero'
 image_style_mappings:
   -
+    breakpoint_id: whd.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: xl_hero_x1
+  -
+    breakpoint_id: whd.lg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: xl_hero_x2
+  -
     breakpoint_id: whd.md
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: desktop_hero_x1
+  -
+    breakpoint_id: whd.md
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: desktop_hero_x2
 breakpoint_group: whd
 fallback_image_style: tablet_hero_x1

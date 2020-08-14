@@ -5,11 +5,11 @@ dependencies: {  }
 name: tablet_hero_x1
 label: 'tablet hero x1'
 effects:
-  dcd3c8c8-1981-4928-b2d6-b64d5b840219:
-    uuid: dcd3c8c8-1981-4928-b2d6-b64d5b840219
+  586261b7-3a13-4bfe-b0e3-ff043f283546:
+    uuid: 586261b7-3a13-4bfe-b0e3-ff043f283546
     id: image_scale
     weight: 1
     data:
-      width: null
-      height: 480
+      width: 1200
+      height: null
       upscale: false
