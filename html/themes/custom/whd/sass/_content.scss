@@ -222,6 +222,11 @@
     text-decoration: none;
     padding: 1rem 0;
 
+    &:focus {
+      outline: 3px solid $whd-blue;
+      outline-offset: 3px;
+    }
+
     svg {
       height: 50px;
       width: 54px;

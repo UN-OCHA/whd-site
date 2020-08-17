@@ -309,6 +309,11 @@
     text-align: left;
     background: url('../img/decorative/rule--long-blue.svg') no-repeat 0 100%;
 
+    &:focus {
+      outline: 3px solid $whd-blue;
+      outline-offset: -3px;
+    }
+
     // IE.
     @media all and (-ms-high-contrast: none) {
       background-image: none;
@@ -382,6 +387,11 @@
     &[aria-expanded='true'] .cd-icon--down-arrow {
       transform: rotate(180deg);
       fill: $whd-blue--dark;
+    }
+
+    &:focus {
+      outline: 3px solid $whd-blue;
+      color: $whd-blue;
     }
   }
 }

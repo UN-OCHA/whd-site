@@ -7,6 +7,11 @@
   text-decoration: none;
   color: #fff;
   margin: 0.5em;
+
+  &:focus {
+    outline: 3px solid $whd-blue;
+    color: $whd-blue;
+  }
 }
 
 .resp-sharing-button {

@@ -142,6 +142,11 @@
     color: rgba($cd-white, 0.8);
   }
 
+  &:focus {
+    outline: 3px solid $whd-blue;
+    outline-offset: -3px;
+  }
+
   @include tablet {
     padding: 1rem 2rem 2rem;
   }
