@@ -1,0 +1,23 @@
+uuid: 638b7c7c-af74-49fc-a8da-7691191a73bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hide_for_this_language
+    - paragraphs.paragraphs_type.screenreader_text
+id: paragraph.screenreader_text.field_hide_for_this_language
+field_name: field_hide_for_this_language
+entity_type: paragraph
+bundle: screenreader_text
+label: 'Hide for this language'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
