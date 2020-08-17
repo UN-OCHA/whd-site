@@ -116,30 +116,45 @@
 }
 
 .cd-footer__section--logo {
-  @include desktop {
-    text-align: right;
-    float: right;
-    max-width: 350px;
-    width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    display: block;
+    text-align: center;
 
     [dir='rtl'] & {
       text-align: left;
     }
   }
 
-  .dark-horse-logo {
-    height: 50px;
-    margin-right: 1rem;
+  @include desktop {
+    text-align: right;
+    float: right;
 
     [dir='rtl'] & {
-      margin-left: 1rem;
-      margin-right: 0;
+      text-align: left;
     }
   }
-}
 
-.cd-footer__section {
-  float: none;
+  .cd-footer-logo {
+    flex: 1 0 100%;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-left: 1rem;
+      display: inline-block;
+
+      [dir='rtl'] & {
+        margin-right: 1rem;
+        margin-left: 0;
+      }
+    }
+  }
+
+  .cd-footer-logo img {
+    height: 38px;
+  }
 }
 
 .cd-footer__section--menu {
@@ -171,8 +186,8 @@
   @include tablet {
     flex: 1 0 100%;
   }
-  @include desktop {
-    flex: 0 1 350px;
-    margin: 0;
-  }
+  //@include desktop {
+  //  flex: 0 1 350px;
+  //  margin: 0;
+  //}
 }
