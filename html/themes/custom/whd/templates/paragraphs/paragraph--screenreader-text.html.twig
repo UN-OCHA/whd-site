@@ -49,6 +49,7 @@
 {% set heading_id = 'screenreader-text__heading' %}
 
 {% block paragraph %}
+  {% if paragraph.field_hide_for_this_language.value != 1 %}
   <div{{ attributes.addClass(classes)}}>
     <div aria-labelledby="{{ heading_id }}"
          id="screenreader-text"
@@ -66,4 +67,5 @@
       {% endblock %}
     </div>
   </div>
+  {% endif %}
 {% endblock paragraph %}
