@@ -155,6 +155,11 @@
         color: $cd-white;
         outline: none; // default browser outline is replaced by background colour change.
       }
+
+      &:focus {
+        outline: 3px solid $whd-blue;
+        outline-offset: -3px;
+      }
     }
 
     button {

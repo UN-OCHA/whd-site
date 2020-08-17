@@ -222,6 +222,11 @@
     text-decoration: none;
     padding: 1rem 0;
 
+    &:focus {
+      outline: 3px solid $whd-blue;
+      outline-offset: 3px;
+    }
+
     svg {
       height: 50px;
       width: 54px;
@@ -296,7 +301,7 @@
 }
 
 .node--type-story.node--view-mode-full .node__content {
-  padding: 0 2rem 2rem;
+  padding: 8rem 2rem 2rem;
 }
 
 .node--type-story.node--view-mode-full .field--name-field-profile-image {

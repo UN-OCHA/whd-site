@@ -57,6 +57,8 @@
   {% else %}
     <div{{ attributes.addClass(classes) }}>
   {% endif %}
+
+  {% if style != 'hidden' %}
     <div class="paragraph--type--text-and-image__inner">
 
       <div class="paragraph__image">
@@ -82,5 +84,6 @@
       </div>
 
     </div>
+  {% endif %}
   </div>
 {% endblock paragraph %}
