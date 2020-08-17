@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.screenreader_text.field_frame_description
+    - field.field.paragraph.screenreader_text.field_hide_for_this_language
     - paragraphs.paragraphs_type.screenreader_text
   module:
     - text
@@ -19,4 +20,5 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  field_hide_for_this_language: true
