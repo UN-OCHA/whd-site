@@ -294,14 +294,14 @@
 
 .paragraph--type--screenreader-text {
   text-align: right;
-  padding: 0 2rem 8rem;
+  padding: 0 2rem;
 
   [dir='rtl'] & {
     text-align: left;
   }
 
   @include xxl {
-    padding: 0 0 8rem;
+    padding: 0;
   }
 
   > div {
