@@ -1,0 +1,15 @@
+uuid: cb8f7031-d070-4714-bedb-bb6c91ea3bee
+langcode: en
+status: true
+dependencies: {  }
+name: desktop_hero_x2
+label: 'desktop hero x2'
+effects:
+  505f32cb-23cf-4792-acdd-592628a4cf4b:
+    uuid: 505f32cb-23cf-4792-acdd-592628a4cf4b
+    id: image_scale
+    weight: 1
+    data:
+      width: 2048
+      height: null
+      upscale: false

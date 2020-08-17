@@ -1,0 +1,15 @@
+uuid: 4bc43c36-71ff-4f3d-87ad-d1bae2b67bb2
+langcode: en
+status: true
+dependencies: {  }
+name: mobile_hero_x1
+label: 'mobile hero x1'
+effects:
+  70c0b8db-b26f-40bb-a4bb-9a3ca2b56ef3:
+    uuid: 70c0b8db-b26f-40bb-a4bb-9a3ca2b56ef3
+    id: image_scale
+    weight: 1
+    data:
+      width: 576
+      height: null
+      upscale: false

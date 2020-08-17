@@ -33,3 +33,10 @@ whd.xl:
   multipliers:
     - 1x
     - 2x
+whd.xxl:
+  label: xxlarge
+  mediaQuery: "(min-width: 1440px)"
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
