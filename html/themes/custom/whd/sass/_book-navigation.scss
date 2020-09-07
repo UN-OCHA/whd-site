@@ -57,6 +57,12 @@
       }
     }
 
+    &:focus {
+      outline: 3px solid $whd-blue;
+      color: $whd-blue;
+      outline-offset: 3px;
+    }
+
     &:hover svg,
     &:focus svg {
       fill: $whd-blue--dark;
