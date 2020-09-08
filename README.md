@@ -110,3 +110,41 @@ fin drush config-set -y social_auth_hid.settings base_url http://hid.iasc8.local
 fin drush config-set -y social_auth_hid.settings client_id client
 fin drush config-set -y social_auth_hid.settings client_secret clientsecret
 ```
+
+## Static version
+
+Add `$settings['tome_static_directory'] = '../docs';` to `settings.php`.
+
+```bash
+fin composer require drupal/tome --dev
+fin drush en stage_file_proxy
+fin drush en tome_static -y
+fin drush pm-uninstall google-tag -y
+```
+
+```bash
+mkdir -p docs
+rm -rf docs/*
+fin drush tome:static -l https://un-ocha.github.io/whd-site-2020/
+```
+
+```bash
+git clone git@github.com:UN-OCHA/whd-site-2020.git
+rm -rf whd-site-2020/*
+cp -r docs/whd-site-2020/* whd-site-2020/
+```
+
+```bash
+mkdir -p assets
+wget2 --mirror --page-requisites --directory-prefix=assets --adjust-extension --convert-links --output-file=assets.log --no-host-directories --no-parent https://www.worldhumanitarianday.org/
+cp -r assets/sites/* whd-site-2020/sites/
+cp -r assets/themes/* whd-site-2020/themes/
+```
+
+```bash
+find . -type f -name 'index.html' | xargs sed -i -e 's/src="\/sites/src="\/whd-site-2020\/sites/'
+find . -type f -name 'index.html' | xargs sed -i -e 's/, \/sites/, \/whd-site-2020\/sites/'
+find . -type f -name 'index.html' | xargs sed -i -e 's/srcset="\/sites/srcset="\/whd-site-2020\/sites/'
+find . -type f -name 'index.html' | xargs sed -i -e 's/src="\/themes/src="\/whd-site-2020\/themes/'
+find . -type f -name 'index.html' | xargs sed -i -e 's/href="\/story/href="\/whd-site-2020\/story/'
+```

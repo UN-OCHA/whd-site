@@ -27,3 +27,8 @@
 /node_modules
 
 buildlog.txt
+
+/docs
+/assets
+/assets.log
+/whd-site-2020
