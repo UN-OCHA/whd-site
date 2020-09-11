@@ -125,20 +125,20 @@ fin drush pm-uninstall google-tag -y
 ```bash
 mkdir -p docs
 rm -rf docs/*
-fin drush tome:static -l https://un-ocha.github.io/whd-site-2020/
+fin drush tome:static -l https://2020.worldhumanitarianday.org/
 ```
 
 ```bash
 git clone git@github.com:UN-OCHA/whd-site-2020.git
 rm -rf whd-site-2020/*
-cp -r docs/whd-site-2020/* whd-site-2020/
+cp -r docs/* whd-site-2020/
 ```
 
 ```bash
 mkdir -p assets
 wget2 --mirror --page-requisites --directory-prefix=assets --adjust-extension --convert-links --output-file=assets.log --no-host-directories --no-parent https://www.worldhumanitarianday.org/
-cp -r assets/sites/* whd-site-2020/sites/
-cp -r assets/themes/* whd-site-2020/themes/
+cp -r assets/sites/* ./whd-site-2020/sites/
+cp -r assets/themes/* ./whd-site-2020/themes/
 ```
 
 ```bash
