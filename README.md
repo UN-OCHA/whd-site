@@ -141,6 +141,12 @@ cp -r assets/sites/* whd-site-2020/sites/
 cp -r assets/themes/* whd-site-2020/themes/
 ```
 
+### Fix video link
+
+find . -type f -name 'index.html' | xargs sed -i -e 's/use-ajax" data-dialog-type="modal"/"/'
+
+### Only when in a sub dir
+
 ```bash
 find . -type f -name 'index.html' | xargs sed -i -e 's/src="\/sites/src="\/whd-site-2020\/sites/'
 find . -type f -name 'index.html' | xargs sed -i -e 's/, \/sites/, \/whd-site-2020\/sites/'
