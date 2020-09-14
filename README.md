@@ -125,13 +125,13 @@ fin drush pm-uninstall google-tag -y
 ```bash
 mkdir -p docs
 rm -rf docs/*
-fin drush tome:static -l https://un-ocha.github.io/whd-site-2020/
+fin drush tome:static -l https://2020.worldhumanitarianday.org/
 ```
 
 ```bash
 git clone git@github.com:UN-OCHA/whd-site-2020.git
 rm -rf whd-site-2020/*
-cp -r docs/whd-site-2020/* whd-site-2020/
+cp -r docs/* whd-site-2020/
 ```
 
 ```bash
@@ -143,7 +143,9 @@ cp -r assets/themes/* whd-site-2020/themes/
 
 ### Fix video link
 
+```bash
 find . -type f -name 'index.html' | xargs sed -i -e 's/use-ajax" data-dialog-type="modal"/"/'
+```
 
 ### Only when in a sub dir
 
