@@ -137,9 +137,17 @@ cp -r docs/* whd-site-2020/
 ```bash
 mkdir -p assets
 wget2 --mirror --page-requisites --directory-prefix=assets --adjust-extension --convert-links --output-file=assets.log --no-host-directories --no-parent https://www.worldhumanitarianday.org/
-cp -r assets/sites/* ./whd-site-2020/sites/
-cp -r assets/themes/* ./whd-site-2020/themes/
+cp -r assets/sites/* whd-site-2020/sites/
+cp -r assets/themes/* whd-site-2020/themes/
 ```
+
+### Fix video link
+
+```bash
+find . -type f -name 'index.html' | xargs sed -i -e 's/use-ajax" data-dialog-type="modal"/"/'
+```
+
+### Only when in a sub dir
 
 ```bash
 find . -type f -name 'index.html' | xargs sed -i -e 's/src="\/sites/src="\/whd-site-2020\/sites/'
