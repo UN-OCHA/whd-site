@@ -1,0 +1,110 @@
+{
+    "behat/mink-selenium2-driver": {
+        "version": "v1.4.0"
+    },
+    "composer/ca-bundle": {
+        "version": "1.2.8"
+    },
+    "composer/composer": {
+        "version": "1.10.19"
+    },
+    "composer/spdx-licenses": {
+        "version": "1.5.5"
+    },
+    "drupal/core-composer-scaffold": {
+        "version": "8.9.11"
+    },
+    "drupal/core-dev": {
+        "version": "8.9.11"
+    },
+    "drupal/core-recommended": {
+        "version": "8.9.11"
+    },
+    "drupal/social_api": {
+        "version": "2.0.0-rc3"
+    },
+    "drupal/social_auth": {
+        "version": "2.0.0-rc3"
+    },
+    "drupal/social_auth_hid": {
+        "version": "2.5.0"
+    },
+    "drupal/tome": {
+        "version": "1.4.0"
+    },
+    "drupal/tome_base": {
+        "version": "1.4.0"
+    },
+    "drupal/tome_static": {
+        "version": "1.4.0"
+    },
+    "drupal/tome_sync": {
+        "version": "1.4.0"
+    },
+    "instaclick/php-webdriver": {
+        "version": "1.4.7"
+    },
+    "jcalderonzumba/gastonjs": {
+        "version": "v1.2.0"
+    },
+    "jcalderonzumba/mink-phantomjs-driver": {
+        "version": "v0.3.3"
+    },
+    "justinrainbow/json-schema": {
+        "version": "5.2.10"
+    },
+    "league/oauth2-client": {
+        "version": "2.6.0"
+    },
+    "mikey179/vfsstream": {
+        "version": "v1.6.8"
+    },
+    "php": {
+        "version": "7.3"
+    },
+    "phpunit/php-token-stream": {
+        "version": "3.1.2"
+    },
+    "seld/jsonlint": {
+        "version": "1.8.3"
+    },
+    "seld/phar-utils": {
+        "version": "1.1.1"
+    },
+    "sirbrillig/phpcs-variable-analysis": {
+        "version": "v2.10.0"
+    },
+    "symfony/flex": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "c0eeb50665f0f77226616b6038a9b06c03752d8e"
+        },
+        "files": [
+            ".env"
+        ]
+    },
+    "symfony/lock": {
+        "version": "v3.4.47"
+    },
+    "symfony/phpunit-bridge": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "7e941371431f5245d05c6490ada44c17eb0d27ed"
+        },
+        "files": [
+            ".env.test",
+            "bin/phpunit",
+            "phpunit.xml.dist",
+            "tests/bootstrap.php"
+        ]
+    },
+    "un-ocha/oauth2-hid": {
+        "version": "v1.0.2"
+    }
+}
